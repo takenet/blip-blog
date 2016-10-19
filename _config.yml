@@ -26,7 +26,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-paginate: 1
+paginate: 5
 theme: minima
 sass:
   style: compressed
