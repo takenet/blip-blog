@@ -6,7 +6,7 @@ layout: default
   <h1 class="page-heading">Artigos</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -16,6 +16,21 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous"><</a>
+    {% else %}
+      <span class="previous"><</span>
+    {% endif %}
+    <span class="page_number ">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">></a>
+    {% else %}
+      <span class="next ">></span>
+    {% endif %}
+  </div>
 
   <p class="rss-subscribe">Assine <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
