@@ -1,0 +1,67 @@
+$color-primary: #00BCD4;
+$color-primary-light: lighten($color-primary, 9%);
+$color-primary-dark: darken($color-primary, 9%);
+
+$color-secondary: #546E7A;
+$color-secondary-light: lighten($color-secondary, 12%);
+$color-secondary-dark: darken($color-secondary, 12%);
+
+$color-tertiary: #263238;
+$color-tertiary-light: lighten($color-tertiary, 6%);
+$color-tertiary-dark: darken($color-tertiary, 6%);
+
+$color-success: $color-primary;
+$color-info: #73D0FF;
+$color-danger: #FF7474;
+$color-disabled: #B1B1B1;
+
+$color-accent: #B2DFDB;
+
+$color-gray: $color-disabled;
+$color-gray-light: #D3D3D3;
+$color-gray-dark: #999999;
+
+$color-text: #666666;
+$color-text-light: #999999;
+$color-text-dark: #4A4A4A;
+
+$color-background: #F6F8F8;
+$color-white: #FFFFFF;
+$color-white-dark: #ECEFF0;
+
+$color-facebook: #3C5A99;
+$color-facebook-dark: darken($color-facebook, 9%);
+
+html {
+  background-color: $color-background;
+}
+
+.text { color: $color-text; }
+.text-light { color: $color-text-light; }
+.text-primary { color: $color-primary; }
+.text-secondary { color: $color-secondary; }
+.text-accent { color: $color-accent; }
+.text-white { color: $color-white; }
+.text-black { color: $color-text-dark; }
+.text-info { color: $color-info; }
+.text-gray { color: $color-text-light; }
+.text-gray-dark { color: $color-text; }
+
+.text-disabled { color: $color-gray-light; }
+.text-danger { color: $color-danger; }
+.text-success { color: $color-success; }
+.text-info { color: $color-info; }
+
+.bg { color: $color-background; }
+.bg-primary { background-color: $color-primary; }
+.bg-secondary { background-color: $color-secondary; }
+.bg-secondary-light { background-color: $color-secondary-light; }
+.bg-white { background-color: $color-white; }
+.bg-white-dark { background-color: $color-white-dark; }
+.bg-accent { background-color: $color-accent; }
+.bg-gray { background-color: $color-gray; }
+
+.bg-disabled { background-color: $color-gray-light; }
+.bg-danger { background-color: $color-danger; }
+.bg-success { background-color: $color-success; }
+.bg-info { background-color: $color-info; }

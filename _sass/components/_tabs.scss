@@ -1,0 +1,39 @@
+.tabs {
+
+    .tabs-header {
+
+        list-style: none;
+        border: none;
+
+        li {
+            display: inline-block;
+        }
+
+        td {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        label {
+            border-bottom: 6px transparent solid;
+
+            padding: 0.9rem 0;
+            text-align: center;
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 6px $color-primary solid;
+                &.invalid {
+                    border-bottom: 6px $color-danger solid;
+                }
+            }
+            &.invalid {
+                color: $color-danger;
+            }
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import "normalize.css";
+@import "skeleton.css";
+
+@mixin desktop-large {
+    @media (min-width: 1075px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 750px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 550px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 549px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 749px) {
+        @content;
+    }
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin box-shadow($args...) {
+    -webkit-box-shadow: $args;
+    -moz-box-shadow: $args;
+    -ms-box-shadow: $args;
+    -o-box-shadow: $args;
+    box-shadow: $args;
+}
+
+@mixin clear-after {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.clear-after {
+    @include clear-after;
+}
+
+@import "base/module";
+@import "components/module";
+@import "layout/module";
+@import "pages/module";
+@import "utils/module";

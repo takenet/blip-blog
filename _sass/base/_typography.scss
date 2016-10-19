@@ -1,0 +1,151 @@
+// Weights
+$light: 300;
+$regular: 400;
+$semibold: 500;
+$bold: 700;
+
+// Weight classes
+.text-lightw    { font-weight: $light; }
+.text-regular  { font-weight: $regular; }
+.text-semibold { font-weight: $semibold; }
+.text-bold     { font-weight: $bold; }
+
+// Alignment
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+
+.text-uppercase { text-transform: uppercase; }
+
+// Base
+$base-font-family: 'Work Sans', 'Helvetica', 'Arial', sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 1.6rem;
+$base-letter-spacing: -0.04em;
+
+$serif-font-family: 'Merriweather', serif;
+
+$small-font-size: 1.28rem;
+
+body {
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+    font-size: 1.6em;
+    color: $color-text-dark;
+    letter-spacing: $base-letter-spacing;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialised;
+}
+
+p {
+    color: $color-text;
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+p, span, a, i, b, strong, small, em {
+    line-height: 1.6em;
+}
+
+.text-big { font-size: 2.4rem; }
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    color: $color-text;
+    font-weight: $regular;
+    margin-bottom: 2.4rem;
+}
+h1.text-huge { font-size: 8.1rem; }
+h1 {
+    font-size: 4.2rem;
+    margin-bottom: 3.0rem;
+}
+h2 {
+    font-size: 3.6rem;
+    font-weight: $light;
+    margin-bottom: 3.0rem;
+}
+h3 {
+    font-size: 3.0rem;
+    font-weight: $regular;
+}
+h4 { font-size: 2.4rem; }
+h5 {
+    font-size: 1.8rem;
+    font-weight: $semibold;
+}
+h6 {
+    font-size: $base-font-size;
+    font-weight: $semibold;
+    letter-spacing: $base-letter-spacing;
+    text-transform: uppercase;
+}
+
+@media (min-width: 550px) {
+    h1.text-huge { font-size: 12.0rem; }
+    h1 { font-size: 6.0rem; }
+    h2 { font-size: 4.8rem; }
+    h3 { font-size: 3.6rem; }
+    h4 { font-size: 2.4rem; }
+    h5 { font-size: 1.8rem; }
+    h6 { font-size: $base-font-size; }
+}
+
+small {
+    color: $color-text-light;
+    font-size: $small-font-size;
+    letter-spacing: 0.0em;
+}
+
+sup,
+sub {
+    font-family: $serif-font-family;
+}
+
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+b, strong {
+    font-weight: $semibold;
+}
+
+// Anchors
+a {
+    font-weight: $semibold;
+    color: $color-primary;
+    text-decoration: none;
+}
+a:hover {
+    color: $color-primary-dark;
+    text-decoration: underline;
+    &.text { color: $color-text-dark; }
+}
+
+label {
+    text-transform: uppercase;
+    font-size: $small-font-size;
+    letter-spacing: 0.05rem;
+    color: $color-secondary;
+    margin: 0 0 0.6rem;
+
+    small {
+        text-transform: none;
+        letter-spacing: normal;
+    }
+}
+.input-group label {
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    font-weight: $semibold;
+    color: $color-text;
+    letter-spacing: 0.01rem;
+    margin: 0;
+}

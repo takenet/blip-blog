@@ -1,0 +1,55 @@
+$contact-height: 20.0rem;
+
+.contact {
+    position: relative;
+    padding-left: 1.8rem;
+
+    .card {
+        height: $contact-height;
+
+        &.card-dashed:hover {
+            border-color: $color-text;
+            .text-light {
+                color: $color-text;
+            }
+        }
+    }
+
+    .contact-name {
+        font-weight: $semibold;
+        color: $color-secondary;
+        line-height: 1.3em;
+        margin: 1.5rem 0;
+    }
+
+    .contact-data {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        margin: 1.5rem 0;
+
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.contact-list {
+    margin: -0.9rem 0 0 -1.8rem;
+    width: 100%;
+    @include clear-after;
+
+    .contact {
+        float: left;
+        width: 100%;
+        @include tablet {
+            width: 50%;
+        }
+        @include desktop {
+            width: 33.33333%;
+        }
+        @include desktop-large {
+            width: 25%;
+        }
+    }
+}

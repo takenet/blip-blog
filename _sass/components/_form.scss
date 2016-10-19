@@ -1,0 +1,166 @@
+input,
+textarea,
+select {
+    margin-bottom: 0;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    background: none;
+    border: none;
+    border-bottom: 1px $color-gray solid;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    height: 3.6rem;
+
+    letter-spacing: $base-letter-spacing;
+
+    &:focus {
+        border: none;
+        border-bottom: 1px $color-primary solid;
+    }
+
+    &[disabled],
+    &[disabled="disabled"],
+    &[readonly],
+    &[readonly="readonly"] {
+        background-color: $color-gray-light;
+        border-color: $color-gray-light;
+        padding: 0 0.9rem;
+    }
+
+    &.ng-invalid.ng-dirty {
+        border-color: $color-danger;
+    }
+}
+
+.input-file {
+    background-color: $color-white-dark;
+    border: 1px $color-disabled dashed;
+    border-radius: 0;
+    color: $color-text;
+    text-align: center;
+    overflow: hidden;
+    > label {
+        line-height: 6.8rem;
+        margin: 0;
+        pointer-events: none;
+        button {
+            pointer-events: all;
+        }
+    }
+    > input[type="file"].has-file-reader {
+        position: absolute;
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        overflow: hidden;
+        z-index: -1;
+    }
+    > img {
+        margin-top: 0.6rem;
+        max-width: 100%;
+    }
+
+    &.drag-over {
+        background-color: darken($color-gray-light, 6%);
+        color: $color-text-dark;
+        button {
+            display: none;
+        }
+    }
+}
+
+textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px $color-gray solid;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    min-height: 3.0rem;
+    overflow: hidden;
+    resize: none;
+
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
+.label-required::after {
+    content: " *";
+}
+
+.form-group {
+    padding-bottom: 3.0rem;
+    vertical-align: middle;
+}
+.form-group-small {
+    padding-bottom: 1.5rem;
+    vertical-align: middle;
+}
+
+.input-group {
+    position: relative;
+    .input-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 3.6rem;
+        height: 3.6rem;
+
+        padding: 0;
+        margin: 0;
+        line-height: 3.6rem;
+        text-align: center;
+
+        border: 0;
+        border-radius: 0;
+    }
+    .input-left + input,
+    .input-left + textarea,
+    input.input-to-right,
+    textarea.input-to-right {
+        padding-left: 4.2rem;
+    }
+
+    .input-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        width: auto;
+        height: 3.6rem;
+
+        padding: 0 0.9rem;
+        margin: 0;
+        line-height: 3.6rem;
+        text-align: center;
+
+        border: 0;
+        border-radius: 0;
+    }
+    .input-right + input,
+    .input-right + textarea,
+    input.input-to-left,
+    textarea.input-to-left {
+        padding-right: 4.2rem;
+    }
+}
+
+.border-box {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+}

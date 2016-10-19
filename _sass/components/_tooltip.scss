@@ -1,0 +1,15 @@
+.tooltip {
+    position: absolute;
+    border-radius: 0;
+    padding: 10px 0;
+    text-align: center;
+    visibility: hidden;
+    width: 180px;
+    z-index: 1;
+}
+
+// Show the tooltip text when you mouse over the tooltip trigger
+.tooltip-trigger:hover ~ .tooltip,
+.tooltip:hover {
+    visibility: visible;
+}

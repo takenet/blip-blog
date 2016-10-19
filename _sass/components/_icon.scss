@@ -1,0 +1,119 @@
+.icon {
+    background-size: cover;
+    background-position: center center;
+
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+    &.icon-xxs {
+        font-size: 8px;
+        line-height: 8px;
+        width: 8px;
+        height: 8px;
+    }
+    &.icon-xs {
+        font-size: 16px;
+        line-height: 16px;
+        width: 16px;
+        height: 16px;
+    }
+    &.icon-ss {
+        font-size: 20px;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+    }
+    &.icon-s {
+        font-size: 24px;
+        line-height: 24px;
+        width: 24px;
+        height: 24px;
+        &.icon-filled {
+            padding: 1.2rem;
+            width: 48px;
+            height: 48px;
+        }
+    }
+    &.icon-sm {
+        font-size: 36px;
+        line-height: 36px;
+        width: 36px;
+        height: 36px;
+    }
+    &.icon-m {
+        font-size: 48px;
+        line-height: 48px;
+        width: 48px;
+        height: 48px;
+    }
+    &.icon-l {
+        font-size: 72px;
+        line-height: 72px;
+        width: 72px;
+        height: 72px;
+    }
+
+    &.icon-padded {
+        margin: 0.3rem;
+    }
+    &.icon-left {
+        margin-right: 0.9rem;
+    }
+    &.icon-right {
+        margin-left: 0.9rem;
+    }
+    &.icon-bottom {
+        vertical-align: bottom;
+    }
+
+    &.icon-border {
+        border: 1px $color-text-light solid;
+    }
+
+    &.icon-avatar {
+        background-image: url(../../img/icons/avatar-default.png);
+    }
+
+    &.icon-material {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+
+        -moz-osx-font-smoothing: grayscale;
+
+        font-feature-settings: 'liga';
+    }
+
+    &.icon-circle {
+        background: none;
+        border: 1px $color-disabled solid;
+        border-radius: 50%;
+        &.active {
+            background-color: $color-primary;
+            border: 1px $color-primary solid;
+        }
+        &.inactive {
+            background-color: $color-danger;
+            border: 1px $color-danger solid;
+        }
+    }
+}
+
+.round {
+    border-radius: 50%;
+}

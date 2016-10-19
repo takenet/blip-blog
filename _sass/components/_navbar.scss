@@ -1,0 +1,165 @@
+$navbar-height: 7.2rem;
+$navbar-height-desktop: 10.2rem;
+
+.navbar-placeholder {
+    line-height: $navbar-height;
+    @include desktop {
+        line-height: $navbar-height-desktop;
+    }
+}
+
+.navbar {
+    min-height: $navbar-height;
+    max-height: 30.0rem;
+    @include transition(max-height 0.3s ease-in-out);
+    position: fixed;
+    width: 100%;
+    z-index: 999 !important;
+
+    @include mobile {
+        overflow: hidden;
+        &.collapsed {
+            max-height: $navbar-height;
+        }
+        .container {
+            width: 100%;
+            height: $navbar-height;
+            padding: 0;
+        }
+    }
+
+    .brand {
+        padding: 2.1rem 0 0 2.1rem;
+        text-decoration: none;
+        height: $navbar-height - 0.1rem;
+
+        a {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+
+        img {
+            height: 3.6rem;
+        }
+
+        span {
+            font-size: 2.4rem;
+        }
+    }
+
+    .hamburger {
+        padding: 0;
+        margin: 0.4rem 2.4rem 0 0;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: none;
+
+        hr {
+            background-color: $color-secondary;
+            height: 1px;
+            margin: 0.4rem 0;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 0.3rem $color-primary solid;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        li {
+            margin: 0;
+
+            @include desktop {
+                float: left;
+            }
+
+            a {
+                font-size: 1.4rem;
+                font-weight: $semibold;
+                color: $color-secondary;
+                text-decoration: none;
+                text-align: center;
+                text-transform: uppercase;
+
+                padding: 1.8rem 1.8rem;
+                display: block;
+
+                &.active {
+                    color: $color-primary
+                }
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    .navbar-border {
+        position: absolute;
+        border-bottom: 0.3rem $color-primary solid;
+        top: $navbar-height - 0.3rem;
+
+        @include desktop {
+            border-bottom: 0.6rem $color-primary solid;
+            top: $navbar-height-desktop - 0.6rem;
+        }
+
+        width: 100%;
+        left: 0;
+        right: 100%;
+        display: block;
+
+        &.loading {
+            animation: loading-border 0.9s linear infinite;
+        }
+    }
+
+    @include desktop {
+        min-height: $navbar-height-desktop;
+        max-height: $navbar-height-desktop;
+
+        .brand {
+            padding: 3.5rem 0 0 1.2rem;
+        }
+
+        .container {
+            height: $navbar-height-desktop;
+        }
+
+        ul {
+            display: inherit;
+            border: none;
+        }
+
+        ul > li > a {
+            padding: 4.0rem 2.4rem;
+        }
+    }
+
+    @keyframes loading-border {
+        0% {
+            width: 0%;
+            left: 0;
+            right: 0;
+        }
+        50% {
+            width: 100%;
+            left: 0;
+            right: 100%;
+        }
+        100% {
+            width: 0%;
+            left: 100%;
+            right: 100%;
+        }
+    }
+}

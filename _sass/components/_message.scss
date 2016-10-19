@@ -1,0 +1,184 @@
+$message-border-radius: 12px;
+
+.message {
+    @include clear-after;
+
+    margin: 6px 0 18px;
+    display: table;
+
+    .message-body {
+        background-color: $color-white;
+        border-radius: $message-border-radius;
+        overflow: hidden;
+    }
+    > .message-body {
+        display: table-cell;
+    }
+
+    &.message-disabled {
+        .message-body {
+            background-color: $color-background;
+        }
+        color: $color-text-light;
+    }
+
+    &.message-received .message-body {
+        border-top-left-radius: 0;
+    }
+
+    .message-avatar {
+        position: relative;
+        width: 48px;
+        padding: 0 9px 0 0;
+        vertical-align: top;
+        display: table-cell;
+        > img {
+            border-radius: 3px;
+            width: 48px;
+            height: 48px;
+        }
+        > .message-channel {
+            position: absolute;
+            top: 36px;
+            left: 36px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &.message-sent {
+        .message-body {
+            border-bottom-right-radius: 0;
+        }
+        .message-avatar {
+            padding: 0 0 0 9px;
+            vertical-align: bottom;
+            > .message-channel {
+                position: absolute;
+                left: auto;
+                top: auto;
+                bottom: -4px;
+                right: 36px;
+            }
+        }
+    }
+
+    .message-title {
+        font-size: 0.88em;
+        padding: 0.9rem 1.2rem 0 1.2rem;
+        vertical-align: middle;
+        @include clear-after;
+
+        ~ .message-media {
+            padding: 0.3rem 1.2rem 0;
+            width: auto;
+            max-height: auto;
+
+            .media-image {
+                max-width: 192px;
+                max-height: 192px;
+                > img {
+                    border-radius: 3px;
+                    width: 100%;
+                    max-width: 192px;
+                    max-height: 192px;
+                }
+            }
+
+            audio {
+                border-radius: 3px;
+                width: 100%;
+            }
+
+            video {
+                border-radius: 3px;
+                width: 100%;
+                max-width: 360px;
+                max-height: 360px;
+            }
+        }
+
+        .message-from {
+            font-weight: 500;
+            line-height: 1.33;
+            color: $color-text;
+            @include mobile {
+                display: block;
+            }
+        }
+
+        .message-date-status {
+            float: right;
+            @include mobile {
+                float: left;
+            }
+
+            .message-date {
+                font-weight: 300;
+                text-align: right;
+                color: $color-text-light;
+                @include mobile {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .message-media {
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+
+        .media-image {
+            background: $color-white-dark;
+            display: block;
+        }
+        img,
+        audio,
+        video {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            max-height: 180px;
+        }
+    }
+
+    .message-content {
+        padding: 0.6rem 1.2rem 1.2rem;
+    }
+
+    .message-actions {
+        padding: 0.6rem 1.2rem;
+    }
+
+    hr {
+        background: $color-white-dark;
+        border: none;
+        margin: 0;
+        width: 100%;
+        height: 0.1rem;
+    }
+
+    &.message-composer {
+        margin: 6px 0 9px;
+        .message-content {
+            padding: 1.2rem;
+        }
+        .message-attach {
+            @include transition(0.15s all ease-in-out);
+            max-height: 100px;
+            overflow: hidden;
+            padding: 0 1.2rem;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            opacity: 1;
+            &.ng-hide {
+                opacity: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+                max-height: 0px;
+            }
+        }
+    }
+}

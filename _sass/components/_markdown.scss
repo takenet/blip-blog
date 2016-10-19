@@ -1,0 +1,49 @@
+.markdown {
+    pre,
+    code {
+        padding: .2rem .5rem;
+        background: $color-white;
+        border: 1px solid $color-white-dark;
+        border-radius: 0;
+
+        > .pl-k {
+            color: $color-secondary;
+            font-weight: $bold;
+        }
+        > .pl-s {
+            color: $color-primary;
+        }
+        > .pl-en {
+            color: $color-info;
+        }
+        > .pl-smi {
+            color: $color-secondary-light;
+        }
+        > .pl-c {
+            font-style: italic;
+            color: $color-text-light;
+        }
+    }
+
+    pre {
+        background: $color-white;
+        > code {
+            border: none;
+            background: none;
+            display: block;
+            padding: 1rem 1.5rem;
+            white-space: pre;
+        }
+    }
+
+    code {
+        margin: 0 .2rem;
+        font-size: 90%;
+        white-space: nowrap;
+    }
+
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}

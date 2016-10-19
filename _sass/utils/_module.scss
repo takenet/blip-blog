@@ -1,0 +1,33 @@
+.u-hide { display: none; }
+
+.u-hide-mobile { display: none; }
+@include desktop {
+  .u-hide-mobile { display: inherit; }
+  .u-hide-desktop { display: none; }
+}
+
+@media (max-width: 549px) {
+    .u-pull-left-mobile { float: left; }
+    .u-pull-right-mobile { float: right; }
+}
+
+.u-full-height { height: 100%; }
+
+.u-half-width { width: 100%; }
+@include desktop {
+    .u-half-width { width: 50%; }
+}
+
+.u-relative { position: relative; }
+.u-absolute { position: absolute; }
+.u-fixed { position: fixed; }
+
+.u-clear { clear: both; }
+
+.u-no-margin { margin: 0; }
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}

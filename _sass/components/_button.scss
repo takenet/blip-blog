@@ -1,0 +1,130 @@
+button,
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    border-color: $color-primary;
+    border-radius: 0;
+    color: $color-primary;
+
+    font-size: $small-font-size;
+    vertical-align: middle;
+
+    padding: 0 1.5rem;
+    height: 4.2rem;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+        border-color: $color-primary-light;
+        color: $color-primary-light;
+        text-decoration: none;
+    }
+
+    &.button-primary {
+        border-color: $color-primary;
+        background-color: $color-primary;
+
+        &:hover,
+        &:focus {
+            border-color: $color-primary-dark;
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &.button-text {
+        border: none;
+        background: none;
+
+        &:hover,
+        &:focus {
+            border: none;
+            background: none;
+        }
+    }
+
+    &.button-danger {
+        border-color: $color-danger;
+        background-color: $color-danger;
+        color: $color-white;
+
+        &:hover,
+        &:focus {
+            border-color: darken($color-danger, 9%);
+            background-color: darken($color-danger, 9%);
+        }
+    }
+
+    &.button-white {
+        border-color: $color-white;
+        background-color: $color-white;
+
+        &:hover,
+        &:focus {
+            border-color: $color-white-dark;
+            background-color: $color-white-dark;
+            color: $color-primary-light;
+        }
+    }
+
+    &[disabled="disabled"] {
+        border-color: $color-gray;
+        background-color: $color-gray;
+        &:hover {
+            border-color: $color-gray;
+            background-color: $color-gray;
+        }
+    }
+
+    &.button-small {
+        padding: 0 1.8rem;
+        height: 3.0rem;
+        line-height: 3.0rem;
+    }
+
+    &.button-normal {
+        font-size: $base-font-size;
+        background: none;
+        border: none;
+        color: inherit;
+        letter-spacing: $base-letter-spacing;
+        text-transform: none;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        line-height: inherit;
+        vertical-align: top;
+    }
+
+    &.no-style {
+        background: none;
+        border: none;
+        color: inherit;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        line-height: inherit;
+        vertical-align: top;
+    }
+
+    &.button-facebook {
+        border-color: $color-facebook;
+        background-color: $color-facebook;
+        color: $color-white;
+        height: auto;
+        padding-left: 0.9rem;
+        &:hover {
+            border-color: $color-facebook-dark;
+            background-color: $color-facebook-dark;
+        }
+    }
+}
+
+.button-primary.loading {
+    cursor: progress;
+    > img {
+        height: 1.6rem;
+        vertical-align: middle;
+    }
+}

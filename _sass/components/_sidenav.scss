@@ -1,0 +1,164 @@
+@import "subnavbar";
+
+$sidenav-width: 240px;
+
+.sidenav {
+    background-color: $color-tertiary;
+    color: $color-white;
+
+    position: absolute;
+    left: 0;
+    top: $navbar-height;
+    bottom: $footer-height;
+    transition: max-width 0.3s ease-in-out;
+    &.sidenav-subnavbar {
+        top: $navbar-height + $subnavbar-height;
+    }
+
+    margin-top: 0;
+    padding-top: 3.6rem;
+    z-index: 99 !important;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: $sidenav-width;
+    max-width: $sidenav-width;
+
+    &.collapsed {
+        max-width: 36px;
+    }
+
+    header {
+        padding: 0 0.6rem;
+        margin-bottom: 1.5rem;
+
+        width: $sidenav-width;
+        max-width: $sidenav-width;
+
+        height: 4.8rem;
+        line-height: 4.8rem;
+
+        display: table;
+
+        &[href]:hover {
+            background-color: $color-tertiary-light;
+        }
+
+        > div {
+            padding-right: 1.2rem;
+            display: table-cell;
+            vertical-align: middle;
+            > span,
+            > small {
+                max-width: 162px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+        }
+    }
+
+    // generic list
+    ul,
+    ol {
+        margin: 0;
+        list-style: none;
+        list-style-type: none;
+    }
+
+    li {
+        width: $sidenav-width;
+        margin: 0;
+        a {
+            border-left: 3px transparent solid;
+            padding: 0.9rem 0.9rem 0.9rem 0.6rem;
+            color: inherit;
+            display: block;
+            text-decoration:none;
+            &:hover { cursor: pointer; }
+        }
+
+        .icon {
+            line-height: 0.9;
+        }
+    }
+
+    ol {
+        counter-reset: listCounter;
+    }
+    ol li {
+        counter-increment: listCounter;
+    }
+    ol li a:before {
+        content: counter(listCounter) " ";
+        padding-left: 0.3rem;
+        padding-right: 1.2rem;
+        display: inline;
+    }
+
+    // first level list
+    li:first-child {
+        margin-top: 0.9rem;
+    }
+    li.active,
+    li:hover {
+        background-color: $color-tertiary-light;
+    }
+    li.active > a,
+    li > a.active {
+        border-left: 3px $color-primary solid;
+    }
+
+    // second level list
+    li.active > ul, ol {
+        display: block;
+    }
+    ul.nav-second-level,
+    ol.nav-second-level {
+        background-color: $color-tertiary-dark;
+        border-top: 2px $color-tertiary-dark solid;
+        padding: 0 0 0.3rem 2.4rem;
+
+        display: none;
+
+        &.expanded {
+            display: block;
+        }
+
+        li { width: auto; }
+
+        li > a {
+            padding-left: 0.9rem;
+            font-weight: $light;
+            width: 92%;
+        }
+        li.active > a,
+        li > a.active {
+            font-weight: $semibold;
+        }
+    }
+
+    &.collapsed {
+        ul.nav-second-level.expanded,
+        ol.nav-second-level.expanded {
+            display: none;
+        }
+    }
+
+    @include desktop {
+        top: $navbar-height-desktop;
+        bottom: $footer-height-desktop;
+        left: 0;
+
+        &.sidenav-subnavbar {
+            top: $navbar-height-desktop + $subnavbar-height-desktop;
+        }
+    }
+}
+
+.sidenav + article {
+    @include desktop {
+        margin-left: $sidenav-width;
+    }
+}

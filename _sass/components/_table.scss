@@ -1,0 +1,121 @@
+table {
+    overflow-x: auto;
+    display: block;
+
+    @include desktop {
+        overflow: inherit;
+        display: table;
+    }
+
+    th,
+    td {
+        white-space: nowrap;
+    }
+
+    th {
+        font-size: 0.9em;
+        color: $color-primary;
+        white-space: nowrap;
+
+        &:first-child { padding-left: 1.2rem; }
+
+        @include desktop {
+            font-size: $base-font-size;
+        }
+
+        border-bottom: 2px $color-primary solid;
+    }
+    td {
+        text-align: inherit;
+    }
+
+    &.no-style {
+        border: none;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        td {
+            border: none;
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.table {
+    display: table;
+    border-spacing: 0;
+
+    &.table-fixed {
+        table-layout: fixed;
+    }
+
+    @include mobile {
+        &.table-responsive {
+            display: block;
+            .column,
+            .columns {
+                display: block;
+            }
+        }
+    }
+
+    .column,
+    .columns {
+        display: table-cell;
+        margin: 0;
+        float: none;
+        vertical-align: middle;
+    }
+
+    .column-auto {
+        width: auto;
+    }
+
+    &.table-grid {
+        width: 100%;
+        vertical-align: middle;
+
+        .column,
+        .columns {
+            vertical-align: middle;
+            display: table-cell;
+            margin: 0;
+            float: none;
+        }
+
+        .column-top { vertical-align: top; }
+        .column-bottom { vertical-align: bottom; }
+
+        .gutter {
+            display: table-cell;
+            margin: 0;
+            width: 4%;
+            float: none;
+        }
+    }
+
+    @include mobile {
+        &.table-grid {
+            display: block;
+            height: auto;
+            .column,
+            .columns {
+                display: block;
+            }
+            .gutter {
+                display: block;
+                width: auto;
+                height: 1.2rem;
+            }
+        }
+
+        &.table-responsive {
+            display: block;
+            .column {
+                display: block;
+            }
+        }
+    }
+}

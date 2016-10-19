@@ -1,0 +1,22 @@
+.panel {
+    position: relative;
+
+    border-radius: 3px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    &.panel-border {
+        border: 1px $color-gray-light solid;
+    }
+    
+    .panel-toolbar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1.2rem;
+    }
+}
+
+.panel-inline {
+    padding: 0.6rem 0.3rem 0.3rem;
+}

@@ -1,0 +1,107 @@
+$modal-transition-duration: 0.12s;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    @include transition(visibility $modal-transition-duration ease-in-out);
+
+    > .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        @include transition(opacity $modal-transition-duration ease-in-out);
+        width: 100%;
+        height: 100%;
+    }
+
+    > .modal-dialog {
+        position: relative;
+        border-radius: 2px;
+        padding: 1.8rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        z-index: 1000;
+
+        @include transition(
+            opacity $modal-transition-duration ease-in-out,
+            margin-top $modal-transition-duration ease-in-out);
+
+        max-height: 80%;
+        overflow-y: auto;
+
+        @include mobile {
+            &.modal-small,
+            &.modal-medium,
+            &.modal-large {
+                margin-left: 0.6rem;
+                margin-right: 0.6rem;
+            }
+        }
+
+        .modal-toolbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1.8rem;
+        }
+
+        @include desktop {
+            &.modal-small {
+                width: 30%;
+            }
+            &.modal-medium {
+                width: 50%;
+            }
+            &.modal-large {
+                width: 80%;
+            }
+        }
+    }
+
+
+    // ANIMATION
+    &.ng-enter {
+        > .modal-overlay { opacity: 0; }
+        > .modal-dialog {
+            margin-top: 3.0rem;
+            opacity: 0;
+        }
+    }
+    &.ng-enter.ng-enter-active,
+    &.ng-show {
+        > .modal-overlay { opacity: 1; }
+        > .modal-dialog {
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+    &.ng-leave {
+        > .modal-overlay { opacity: 1; }
+        > .modal-dialog {
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+    &.ng-leave.ng-leave-active,
+    &.ng-hide {
+        visibility: hidden;
+        > .modal-overlay { opacity: 0; }
+        > .modal-dialog {
+            margin-top: 3.0rem;
+            opacity: 0;
+        }
+    }
+}
+
+
+.border-box {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+}

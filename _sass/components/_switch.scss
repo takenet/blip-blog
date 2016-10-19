@@ -1,0 +1,48 @@
+input[type="checkbox"].switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: -1;
+    margin: 0;
+
+    + label {
+        position: relative;
+        background: $color-text-light;
+
+        transition: background-color 0.33s ease;
+
+        width: 48px;
+        height: 24px;
+        line-height: 1.5em;
+        vertical-align: top;
+
+        border-radius: 36px;
+
+        margin: 0 0 -0.3rem 0;
+        cursor: pointer;
+        display: inline-block;
+
+        > span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background: $color-white;
+            border-radius: 50%;
+            transition: left 0.33s ease;
+        }
+    }
+
+    &:checked + label {
+        background: $color-primary;
+        > span {
+            left: 25px;
+        }
+    }
+    &:disabled + label {
+        background: $color-text;
+    }
+}

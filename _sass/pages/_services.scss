@@ -1,0 +1,25 @@
+#services {
+    @media (max-width: 900px) {
+        > #info {
+            .four.columns {
+                width: 100%;
+                margin: 0;
+                &:not(:last-child) { margin: 0 0 3.0rem; }
+                clear: both;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        > #profiles-row {
+            .eight.columns {
+                width: 100%;
+                margin: 0;
+            }
+            .eight.columns + .four.columns {
+                width: 100%;
+                margin: 0;
+                clear: both;
+            }
+        }
+    }
+}

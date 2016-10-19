@@ -1,0 +1,48 @@
+$footer-height: 180px;
+$footer-height-desktop: 100px;
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    padding-bottom: $footer-height;
+}
+
+footer {
+    position: relative;
+    font-size: $small-font-size * 0.9;
+    font-weight: $light;
+    background-color: $color-tertiary-light;
+    color: $color-white;
+    margin-top: $footer-height * -1;
+    z-index: 100 !important;
+
+    width: 100%;
+    height: $footer-height;
+
+    padding: 24px 0;
+
+    a {
+        color: $color-white;
+        font-weight: $semibold;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white-dark;
+        }
+
+        &:not(:first-child) { margin-left: 1.8rem; }
+    }
+}
+
+@include desktop {
+    #wrapper { padding-bottom: $footer-height-desktop; }
+    footer {
+        margin-top: $footer-height-desktop * -1;
+        height: $footer-height-desktop;
+        .column,
+        .columns {
+            line-height: 48px;
+        }
+    }
+}

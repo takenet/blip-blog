@@ -1,0 +1,142 @@
+$toast-spacing: 18px;
+
+.alert {
+    border-radius: 2px;
+    background-color: $color-text-dark;
+    color: $color-white;
+
+    padding: 1.2rem 2.4rem;
+    display: inline-block;
+}
+
+.alert-success {
+    background-color: $color-success;
+    &:hover { background-color: darken($color-primary, 3%); }
+}
+
+.alert-warning {
+    background-color: $color-danger;
+    &:hover { background-color: darken($color-danger, 3%); }
+}
+
+.alert-info {
+    background-color: $color-info;
+    &:hover { background-color: darken($color-info, 3%); }
+}
+
+.alert-danger {
+    background-color: $color-danger;
+    &:hover { background-color: darken($color-danger, 3%); }
+}
+
+/*!
+ * ngToast v2.0.0 (http://tameraydin.github.io/ngToast)
+ * Copyright 2016 Tamer Aydin (http://tamerayd.in)
+ * Licensed under MIT (http://tameraydin.mit-license.org/)
+ */
+.ng-toast {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 0;
+    margin-top: 30px;
+    text-align: center;
+
+    // top: auto;
+    // bottom: $footer-height;
+    top: $navbar-height;
+    bottom: auto;
+    @include desktop {
+        top: $navbar-height-desktop;
+    }
+
+    .ng-toast--top {
+        top: 0;
+        bottom: auto;
+
+        .ng-toast__list {
+            top: 0;
+            bottom: auto;
+        }
+
+        .ng-toast--center .ng-toast__list {
+            position: static;
+        }
+      }
+
+    .ng-toast__list {
+        display: inline-block;
+        // position: absolute;
+        // top: 0;
+        // bottom: auto;
+        // right: 0;
+        // left: auto;
+        margin: 0 auto;
+        margin-right: $toast-spacing;
+        padding: 0;
+        list-style: none;
+        min-width: 240px;
+    }
+
+    .ng-toast__message {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        button.close {
+            position: relative;
+            right: -1.8rem;
+            float: right;
+            height: auto;
+            line-height: 2.0em;
+            padding: 0 1.2rem;
+            border: none;
+            color: $color-white;
+
+            &:hover {
+                color: $color-text-light;
+            }
+        }
+
+        .alert {
+            z-index: 90;
+            width: 100%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .ng-toast__message__count {
+        display: inline-block;
+        margin: 0 $toast-spacing / 4*3 0 $toast-spacing / 4;
+    }
+
+    // animations
+    &.ng-toast--animate-slide {
+        .ng-toast__message {
+            position: relative;
+            @include transition(
+                bottom 0.3s ease-in-out,
+                margin-bottom 0.3s ease-in-out,
+                opacity 0.3s ease-in-out
+                );
+            &.ng-enter {
+                opacity: 0;
+                bottom: -30px;
+            }
+            &.ng-enter.ng-enter-active {
+                opacity: 1;
+                bottom: 0;
+            }
+            &.ng-leave {
+                opacity: 1;
+                bottom: 0;
+            }
+            &.ng-leave.ng-leave-active {
+                opacity: 0;
+                margin-bottom: -(52px + $toast-spacing);
+            }
+        }
+    }
+}

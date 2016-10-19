@@ -1,0 +1,75 @@
+$subnavbar-height: 6.6rem;
+$subnavbar-height-desktop: 6.6rem;
+
+.subnavbar {
+    position: fixed;
+    top: $navbar-height;
+    left: 0;
+    width: 100%;
+    height: $subnavbar-height;
+
+    z-index: 998;
+
+    padding: 9px 0;
+
+    @include mobile {
+        overflow: hidden;
+        &.collapsed {
+            max-height: $subnavbar-height;
+        }
+    }
+
+    @include desktop {
+        top: $navbar-height-desktop;
+        height: $subnavbar-height-desktop;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        li {
+            margin: 0;
+
+            @include desktop {
+                float: left;
+            }
+
+            a {
+                font-weight: $semibold;
+                color: $color-text;
+                text-decoration: none;
+                text-align: center;
+                line-height: 1.5em;
+                padding: 15px 15px;
+                display: block;
+
+                &.active {
+                    border-bottom: 5px $color-primary solid;
+                }
+                &:hover {
+                    border-bottom: 5px $color-primary solid;
+                }
+            }
+        }
+
+    }
+
+    @include desktop {
+        ul {
+            display: inherit;
+        }
+    }
+}
+
+.subnavbar-placeholder {
+    line-height: $subnavbar-height;
+    @include desktop {
+        line-height: $subnavbar-height-desktop;
+    }
+}
