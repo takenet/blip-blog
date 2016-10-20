@@ -26,7 +26,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    minima (1.2.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     rb-fsevent (0.9.7)
@@ -43,7 +42,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.2.1)
   jekyll-paginate
-  minima (= 1.2.0)
+  rouge (= 1.11.1)
 
 RUBY VERSION
    ruby 2.3.1p112

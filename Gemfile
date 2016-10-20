@@ -12,9 +12,11 @@ ruby RUBY_VERSION
 gem "jekyll", "3.2.1"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "1.2.0"
+#gem "minima", "1.2.0"
 
 gem "jekyll-paginate"
+
+gem "rouge", "1.11.1"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
