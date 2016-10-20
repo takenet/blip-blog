@@ -16,6 +16,9 @@ gems: [jekyll-paginate]
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Blog do Blip MessagingHub 
+url: "http://blog.blip.ai"
+
+repository: takenet/blip-blog
 
 # Build settings
 markdown: kramdown
@@ -27,7 +30,7 @@ sass:
 
 kramdown:
   input: GFM
-  
+
 defaults:
   -
     scope:
