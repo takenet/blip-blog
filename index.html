@@ -14,7 +14,7 @@ layout: default
         <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span>
         {{ post.excerpt }}
         {% if post.content contains site.excerpt_separator %}
-          <a href="{{ site.baseurl }}{{ post.url }}">Leia mais</a>
+          <a class="post-more" href="{{ site.baseurl }}{{ post.url }}">Leia mais</a>
         {% endif %}                
       </li>
     {% endfor %}

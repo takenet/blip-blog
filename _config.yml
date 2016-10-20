@@ -22,6 +22,14 @@ markdown: kramdown
 excerpt_separator: <!--preview-->
 permalink: /:year/:month/:day/:title.html
 paginate: 5
-theme: minima
 sass:
   style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true  
+      layout: post
