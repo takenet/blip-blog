@@ -2,9 +2,15 @@
 layout: default
 ---
 
+{% assign author = site.data.authors[page.author] %}
+
 <article class='post'>
   <h2 class='post-title'>{{ page.title }}</h2>
   <div class="post-date">{{ page.date | date: "%d/%m/%Y" }}</div>
+{% if author %}
+  <div class="post-author">Por <a href="{{ author.web }}" target="_blank">{{ author.name }}</a></div>
+{% endif %}
+
   {{ content }}
 </article>
 
