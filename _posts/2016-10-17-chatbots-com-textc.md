@@ -1,7 +1,7 @@
 ---
 title:  "Construíndo um bot assistente virtual utilizando o Textc"
 date:   2016-10-17 15:04:47 +0000
-categories: jekyll update
+categories: textc c#
 ---
 
 Os bots de mensagem - ou **chatbots** - são programas que permitem a interação através de mensagens para oferecer algum tipo de serviço. Apesar de não ser uma tecnologia nova, recentemente vem ganhando destaque nas notícias desde que o Facebook, Microsoft e outras empresas anunciaram investimentos em plataformas para construção deste tipo de aplicação.
