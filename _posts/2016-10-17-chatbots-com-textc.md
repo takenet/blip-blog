@@ -17,6 +17,7 @@ De maneira resumida, a **Textc permite a definição de sintaxes de texto e asso
 ## Mãos a obra
 
 Antes de tudo, imagine que temos a classe `Calendar` abaixo:
+
 ```csharp
 public class Calendar
 {
@@ -26,6 +27,7 @@ public class Calendar
     }
 }
 ```
+
 O método `AddReminderAsync` desta classe deverá chamada pelo Textc para o armazenamento dos lembretes, retornando um texto de resposta ao usuário. Devemos agora configurar o Textc para realizar esta chamada a partir das entradas dos usuários.
 
 O primeiro passo é enumerar as diferentes formas que o usuário poderá solicitar o armazenamento de um lembrete. Alguns exemplos:
@@ -45,33 +47,42 @@ Cada informação é mapeada em um ou mais **tokens** e conjunto destes é chama
 3. (Me lembre de) (fazer compras) (hoje a tarde)
 
 Para representarmos as sintaxes e seus tokens no Textc, utilizaremos a CSDL - *Command Syntax Definition Language* - uma notação simples oferecida pela biblioteca. Uma declaração CSDL é constituída de um ou mais tokens, sendo cada token representado da seguinte forma:
+
 ```
 name:Type(initializer)
 ```
+
 Onde:
 - **name** - O nome do token que será extraido da entrada. Este valor pode ser utilizado no mapeamento com os parâmetros do método de uma classe. Opcional.
 - **type** - O tipo do token no texto. A biblioteca define alguns tipos como `Word` (uma palavra), `Text` (uma ou mais palavras) e `Integer` (número inteiro). Obrigatório.
 - **initializer** - Valor de inicialização, sendo utilizado para limitar os valores válidos para o tipo. Por exemplo, no tipo `Word`, determina quais são as palavras válidas para serem consideradas na entrada do usuário. Opcional.
 
 A representação da primeira sintaxe fica da seguinte forma:
+
 ```
 :Word(lembrar) :Word?(de) reminder:Text
 ```
+
 Os dois primeiros tokens são anônimos pois a informação dos mesmos não será utilizada na chamada do método de nossa classe e por isso podem ser ignoradas. Alguns tokens podem ser marcados como **opcionais** em uma sintaxe, bastando incluir um ponto-de-interrogação depois da declaração do tipo - como fizemos na preposição *de* acima. Neste caso, a sintaxe é válida para entradas como *lembrar de ir ao médico* ou *lembrar médico*.
 
 A segunda sintaxe é semelhante a primeira, com uma informação adicional - a data do lembrete. Ela também inclui outros tokens que não estão presentes na primeira mas que apenas constituem a estrutura do texto. Representando-a com CSDL, temos:
+
 ```
 :Word(lembre) :Word?(me) date:Word?(hoje,amanha,eventualmente) :Word?(de) reminder:Text
 ```
 
 Por fim, precisamos configurar a terceira sintaxe, que a princípio parece simples:
+
 ```
 :Word?(me) :Word(lembre) :Word?(de) reminder:Text date:Word?(hoje,amanha,eventualmente) :Word?(a) time:Word?(manha,tarde,noite)
 ```
+
 Só que existe um problema: desta forma, o token **reminder** capturará todo o restante da entrada do usuário, e nunca teríamos *match* dos demais tokens à direita do mesmo (*date* e *time*). Isso acontece porque o tipo de token **Text** é **guloso** ou seja, consome todo o restante da entrada do usuário. Por este motivo, ele deve ser o último token a ser processado em uma sintaxe. Por padrão, o processamento ocorre da **esquerda para a direita**, mas podemos alterar a direção em qualquer ponto da sintaxe ao incluirmos o modificador **~** (til) após o tipo de um token. 
 
 Como precisamos que o token **reminder** seja o último a ser processado, a direção de parse deve mudar após o processamento do token imediatamente a esquerda deste - no caso a palavra *de*. Neste caso, teríamos:
+
 ```
 :Word?(me) :Word(lembre) :Word~(de) reminder:Text date:Word?(hoje,amanha,eventualmente) :Word?(a) time:Word?(manha,tarde,noite)
 ```
+
 Assim, logo após o *match* da palavra *de*, o parse continuará a partir do final da sintaxe, buscando no final da entrada o valor do token *time*.
