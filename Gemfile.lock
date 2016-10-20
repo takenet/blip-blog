@@ -138,9 +138,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll (= 3.2.1)
-  jekyll-paginate
-  rouge (= 1.11.1)
 
 RUBY VERSION
    ruby 2.2.4p230
