@@ -3,16 +3,19 @@ layout: default
 ---
 <div class="home">
 
-  <h1 class="page-heading">Artigos</h1>
+  <h4 class="page-heading">Blog do Blip.ai</h4>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
+        <h3>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
+        </h3>
+        <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span>
+        {{ post.excerpt }}
+        {% if post.content contains site.excerpt_separator %}
+          <a href="{{ site.baseurl }}{{ post.url }}">Leia mais</a>
+        {% endif %}                
       </li>
     {% endfor %}
   </ul>
