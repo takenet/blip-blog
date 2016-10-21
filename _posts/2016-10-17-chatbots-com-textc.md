@@ -1,7 +1,8 @@
 ---
 title:  "Construíndo um bot assistente virtual utilizando o Textc"
 date:   2016-10-17 15:04:47 +0000
-categories: textc c#
+categories: [Casos de uso]
+tags: [Textc, C#]
 author: andreb
 ---
 

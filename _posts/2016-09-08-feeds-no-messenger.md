@@ -1,7 +1,8 @@
 ---
 title:  "Receba seus feeds no Messenger"
 date:   2016-09-08 14:00:00 +0000
-categories: webhook zapier
+categories: [Casos de uso]
+tags: [Webhook, Zapier]
 author: andre
 ---
 
