@@ -2,6 +2,7 @@
 title:  "Receba seus feeds no Messenger"
 date:   2016-09-08 14:00:00 +0000
 categories: webhook zapier
+author: andre
 ---
 
 [Webhook](https://blip.ai/portal/#/docs/webhook) é um modelo do Blip que abre os recursos da plataforma para qualquer linguagem de programação, já que praticamente todas as linguagens modernas possuem algum tipo de biblioteca para envio e recebimento de requisições HTTP.

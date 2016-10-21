@@ -11,6 +11,17 @@
 .post {
     .post-date {
         margin-top: -1em;
-        margin-bottom: 2em;
+    }
+
+    .post-author {
+        margin-bottom: 2em;        
+    }
+
+    .avatar {
+        width: 32px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 7px;
+        vertical-align: middle;
     }
 }
