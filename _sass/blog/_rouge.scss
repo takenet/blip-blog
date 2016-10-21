@@ -1,8 +1,7 @@
 $primary-color: #333;
 
-.highlight {
-    color: $primary-color;
-    .p, .n {
-        color: $primary-color;
+.highlight {    
+    code {
+        background: $primary-color;
     }
 } 

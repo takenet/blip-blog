@@ -4,20 +4,20 @@ layout: default
 
 {% assign author = site.data.authors[page.author] %}
 
-<article class='post'>
-  <h2 class='post-title'>{{ page.title }}</h2>
-  <div class="post-date">{{ page.date | date: "%d/%m/%Y" }}</div>
+<article class="post container">
+  <h2 class="post-title">{{ page.title }}</h2>
+
 {% if author %}
   <div class="post-author">
-    Por <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> {% if author.photo %}<img class="avatar" src="{{author.photo}}"> {% endif %}
+    {% if author.photo %}<img class="avatar" src="{{author.photo}}"> {% endif %} Por <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> 
   </div>
 {% endif %}
-
+  <div class="post-date">{{ page.date | date: "%d/%m/%Y" }}</div>
   {{ content }}
 </article>
 
 {% if page.comments %}
-<div id="disqus_thread"></div>
+<div id="disqus_thread" class="container"></div>
 <script>
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
