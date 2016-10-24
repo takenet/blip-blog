@@ -31,6 +31,9 @@ sass:
 kramdown:
   input: GFM
 
+# Google services
+google_analytics: UA-79317370-2
+
 defaults:
   -
     scope:
