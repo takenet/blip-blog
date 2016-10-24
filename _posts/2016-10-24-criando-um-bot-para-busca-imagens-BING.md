@@ -10,6 +10,8 @@ author: breno
 
 Neste tutorial vamos usar a API do BING (https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato que busca imagens de acordo com o texto enviado utilizando Webhooks.
 
+<!--preview--> 
+
 ## Passo 1 - Criando o projeto
 
 Para este projeto iremos utilizar o [node.js](https://nodejs.org/). Para criar um projeto node, basta criar um diretório qualquer e executar o comando `npm init` neste diretório.
