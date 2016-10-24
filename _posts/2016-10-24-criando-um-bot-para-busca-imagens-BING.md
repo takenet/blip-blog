@@ -6,7 +6,7 @@ tags: [Webhook, MediaLink, javascript]
 author: breno
 ---
 
-Neste tutorial vamos usar a API do BING (https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato que busca imagens de acordo com o texto enviado utilizando Webhooks.
+Neste tutorial vamos usar a API do [BING](https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato que busca imagens de acordo com o texto enviado utilizando Webhooks.
 
 <!--preview--> 
 
@@ -22,17 +22,17 @@ Para instalar estas dependências basta executar o seguinte comando:
 npm install --save request request-promise uuid
 ```
 
-Para mais informações acessar a documentação: https://blip.ai/portal/#/docs/home
+Para mais informações acessar a [documentação](https://blip.ai/portal/#/docs/home).
 
 ## Passo 2 - Configurando o Bot
 
-Como estamos criando um Bot que utilizará os recursos Webhook do blip.ai, precisamos obter uma chave de acesso e urls para recebimento e envio de mensagens. Para isto, acesse o portal http://blip.ai e registre o seu contato utilizando a opção Webhook. Após a criação do seu contato você encontrará as informações necessárias para o desenvolvimento do bot no menu configuração. Guarde o **Cabeçalho de autenticação**, pois ele será necessário para enviar mensagens.
+Como estamos criando um Bot que utilizará os recursos Webhook do blip.ai, precisamos obter uma chave de acesso e urls para recebimento e envio de mensagens. Para isto, acesse o [portal](http://blip.ai) e registre o seu contato utilizando a opção Webhook. Após a criação do seu contato você encontrará as informações necessárias para o desenvolvimento do bot no menu configuração. Guarde o **Cabeçalho de autenticação**, pois ele será necessário para enviar mensagens.
 
 Com isso já temos um Bot conectado à plataforma que consegue enviar e receber mensagens. Para habilitar o seu contato nos canais, basta acessar o menu **Publicações** e escolher o canal onde deseja publicar seu contato (no site [blip.ai](https://blip.ai/) há um guia sobre a ativação dos canais).
 
 ## Passo 3 - Ativando a Bing News Search API
 
-Agora precisamos ativar a sua conta da Microsoft para usar o serviço Bing News Search API. Isto pode ser feito acessando-se url https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api. Clique em Letsgo e selecione Bing Search. Após aceitar os termos você terá acesso à sua chave.
+Agora precisamos ativar a sua conta da Microsoft para usar o serviço Bing News Search API. Isto pode ser feito acessando-se [esta url](https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api). Clique em Letsgo e selecione Bing Search. Após aceitar os termos você terá acesso à sua chave.
 
 ## Passo 4 - Mão na massa
 
@@ -161,9 +161,9 @@ Por ser uma aplicação Node.js, o Bot criado deve ser hospedado em um servidor 
 
 Após hospedar seu bot, você deve ainda incluir sua **URL para receber mensagens** nas configurações do seu Bot no [Painel Blip](https://blip.ai/portal/) como a URL onde seu bot está hospedado.
 
-## License
+## Licença
 
 [Apache 2.0 License](https://github.com/takenet/messaginghub-client-csharp/blob/master/LICENSE)
 
 
-O código deste e outros exemplos estão <a href="https://github.com/takenet/messaginghub-client-js/tree/master/examples/bing-image-search">no Github</a>.
+O código deste e outros exemplos estão [no Github](https://github.com/takenet/messaginghub-client-js/tree/master/examples/bing-image-search).
