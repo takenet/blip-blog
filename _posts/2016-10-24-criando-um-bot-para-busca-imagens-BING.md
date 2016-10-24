@@ -6,8 +6,6 @@ tags: [Webhook, MediaLink, javascript]
 author: breno
 ---
 
-## Introdução
-
 Neste tutorial vamos usar a API do BING (https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato que busca imagens de acordo com o texto enviado utilizando Webhooks.
 
 <!--preview--> 
