@@ -203,7 +203,7 @@ public class MessagesController : ApiController
 
    public MessagesController()
    {
-       webClientService = new WebClientService(new Uri("https://msging.net/messages"), "aXhkYWJocXVpemJvdDpGN2VsaW0ya3Vpc0FQNFhWT0pHbg==");
+       webClientService = new WebClientService(new Uri("https://msging.net/messages"), "<your-api-key-here>");
    }
         
    // POST api/messages
