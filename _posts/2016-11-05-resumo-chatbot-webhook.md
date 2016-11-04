@@ -14,7 +14,7 @@ O Blip.ai entrega ao desenvolvedor duas formas diferentes para a construção do
 [JavaScript](http://takenet.github.io/messaginghub-client-js/), neste modelo o desenvolvedor tem total flexibilidade para incluir o chat bot em sua aplicação. 
 A outra forma de realizar a integração é através de um [Webhook](https://blip.ai/portal/#/docs/webhook). De forma simplista, um Webhook é a exposição de um endpoint http em sua aplicação 
 para possibilitar que API's de terceiros faça requisições em seus serviços. Nesta estrutura o Blip.ai realiza requisições em um endpoint definido pelo desenvolvedor do bot sempre que 
-novas mensagens ou notificações estiverem disponíveis. Outra vantagem é não estar amarrado as nenhuma linguagem específica para construir seu chatbot.
+novas mensagens ou notificações estiverem disponíveis. Outra vantagem é não estar amarrado a nenhuma linguagem específica para construir seu chatbot.
 
 O objetivo deste artigo é demonstrar, passo a passo, a criação e publicação de um chatbot **currículo**, através do [blip.ai](https://blip.ai/), utilizando o modelo de integração *Webhook*. 
 Para isso será implementado um bot *simples* que responderá à alguns comandos básicos sobre informações de um profissional hipotético.
@@ -30,18 +30,18 @@ trabalhos que utilizam esta nova tendência conversacional para apresentar suas 
 [Esther Crawford](https://medium.com/the-mission/how-i-turned-my-resume-into-a-bot-and-how-you-can-too-f03847352baa#.3hw9lyi3a) e 
 [Caio Calado](https://medium.com/@caio_caladoo/ola-caiobot-meu-linkedin-como-um-chatbot-no-messenger-9db6fa736f70#.4awx67ut0) como referências para este assunto.
 
-Assim, nosso objetivo aqui é representar, a partir de um bot, as informações mais importantes sobre a carreira de um profissional. 
+Assim, o objetivo aqui é apresentar, a partir de um bot, as informações mais importantes sobre a carreira de um profissional. 
 
 Para simplificar vamos reduzir o escopo do bot para tratar apenas os seguintes cenários:
 
-1. Envio de informações gerais: Nome, idade, telefone, email e site
-2. Envio de informações sobre formação acadêmica
-3. Envio das principais experiências profissionais
-4. Envio de uma lista com as principais habilidades
+1. **Envio de informações gerais**: Nome, idade, telefone, email e site
+2. Envio de **informações** sobre **formação acadêmica**
+3. Envio das **principais experiências profissionais**
+4. Envio de uma **lista** com as **principais habilidades**
 
 Embora seja possível, não vamos nos preocupar, inicialmente, com uma interpretação elaborada de linguagem natural. O artigo do André Bires 
-([Construíndo um bot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca Textc para melhorar 
-a interpretação de texto de seu bot.
+([Construíndo um bot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca [Textc](https://github.com/takenet/textc-csharp) 
+para melhorar a interpretação de texto de seu bot.
 
 # Mãos a obra
 
@@ -55,10 +55,10 @@ Antes de mais nada, precisamos criar um novo contato (chatbot) na plataforma [bl
 
 ## Criando uma API para receber as requisições do blip
 
-Para este artigo utilizarei uma [ASP.NET Web API](https://www.asp.net/web-api) desenvolvida em C#. Entretanto tenha em mente que a tecnologia escolhida para construir a API não importa, escolha 
-aquela que lhe for mais conveniente. Para ver um exemplo de webhook utilizando uma API escrita em Node.JS veja este [post](http://blog.blip.ai/2016/10/24/criando-um-bot-para-busca-imagens-BING.html).
+Para este artigo apresentarei uma api desenvolvida em C# utilizando o framework [ASP.NET Web API](https://www.asp.net/web-api). Entretanto tenha em mente que a tecnologia escolhida para construir a API não importa, escolha 
+aquela que lhe for mais conveniente. Para ver um outro exemplo de webhook, utilizando uma API escrita em Node.JS, veja este [post](http://blog.blip.ai/2016/10/24/criando-um-bot-para-busca-imagens-BING.html).
 
-1. Crie um novo projeto de uma *ASP.NET Web API* no VisualStudio
+1. Crie um novo projeto de uma aplicação *ASP.NET Web API* no VisualStudio
 
 O mínimo que precisamos fazer agora é criar dois endpoints na API, um para receber as mensagens enviadas pelos usuários de seu bot e outra para receber notificações.
 
@@ -93,15 +93,15 @@ public class NotificationsController : ApiController
 ## Publicando a API no azure
 
 Mais uma vez essa é uma escolha pessoal. Você pode publicar sua API onde se sentir mais confortável, no Azure, AWS, Heroku ou na infrastrutura privada de sua empresa. A única coisa que precisamos é 
-de um endereço externo, público e válido. A API criada neste arquivo foi publicada no endereço http://resumebottemplate.azurewebsites.net.
+de um endereço externo, público e válido. A API criada neste artigo foi publicada no endereço http://resumebottemplate.azurewebsites.net.
 
 ## Configuração dos endpoints no portal Blip
 
 1. Vá até o portal blip.ai, selecione seu bot e clique **Configurações** na barra lateral esquerda.
 
-2. Insira os endpoints de sua API nos campos 'Url de Mensagens' e 'Url de Notificações' (por exemplo: http://resumebottemplate.azurewebsites.net/api/messages e http://resumebottemplate.azurewebsites.net/api/notifications no meu caso)
+2. Insira os endpoints de sua API nos campos 'Url de Mensagens' e 'Url de Notificações' (por exemplo: **http://resumebottemplate.azurewebsites.net/api/messages** e **http://resumebottemplate.azurewebsites.net/api/notifications** no meu caso)
 
-Pronto, seu bot já está devidamente configurado e pronto para receber a regra de resposta das mensagens. 
+Pronto, seu bot já está devidamente configurado e pronto para implementar a regra de resposta das mensagens. 
 
 ## Implementado as respostas de seu bot
 
