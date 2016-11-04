@@ -6,15 +6,15 @@ tags: [Webhook, c#]
 author: pacheco
 ---
 
-Através da plataforma [blip.ai](https://blip.ai/) você consegue criar chatbots (também conhecidos como 'bots', 'smart contacts', contatos inteligentes ou contatos que entregam serviços) 
+Através da plataforma [blip.ai](https://blip.ai/) você consegue criar chatbots (também conhecidos como '*bots*', '*smart contacts*', contatos inteligentes ou contatos que entregam serviços) 
 nos principais canais de menssageria do mercado, como: [Facebook Messenger](https://www.messenger.com/), [Telegram](https://telegram.org/), [Skype](https://www.skype.com/), SMS, Whatsapp 
 (em breve) ou pelo aplicativo [Blip](https://play.google.com/store/apps/details?id=net.take.omni) disponível para android.
 
-O Blip.ai entrega ao desenvolvedor duas formas diferentes para a construção dos bots. A primeira delas é através dos SDK's [C#](https://github.com/takenet/messaginghub-client-csharp/) e 
+O Blip.ai entrega ao desenvolvedor duas formas diferentes para a construção dos *bots*. A primeira delas é através dos SDK's [C#](https://github.com/takenet/messaginghub-client-csharp/) e 
 [JavaScript](http://takenet.github.io/messaginghub-client-js/), neste modelo o desenvolvedor tem total flexibilidade para incluir o chat bot em sua aplicação. 
-A outra forma de realizar a integração é através de um [Webhook](https://blip.ai/portal/#/docs/webhook). De forma simplista, um Webhook é a exposição de um endpoint http em sua aplicação 
-para possibilitar que API's de terceiros faça requisições em seus serviços. Nesta estrutura o Blip.ai realiza requisições em um endpoint definido pelo desenvolvedor do bot sempre que 
-novas mensagens ou notificações estiverem disponíveis. Outra vantagem é não estar amarrado a nenhuma linguagem específica para construir seu chatbot.
+A outra forma de realizar a integração é através de um [Webhook](https://blip.ai/portal/#/docs/webhook). De forma simplista, um *Webhook* é a exposição de um endpoint http em sua aplicação 
+para possibilitar que API's de terceiros faça requisições em seus serviços. Nesta estrutura o Blip.ai realiza requisições em um *endpoint* definido pelo desenvolvedor do bot sempre que 
+novas mensagens ou notificações estiverem disponíveis. Outra vantagem é não estar amarrado a nenhuma linguagem específica para construir seu *chatbot*.
 
 O objetivo deste artigo é demonstrar, passo a passo, a criação e publicação de um chatbot **currículo**, através do [blip.ai](https://blip.ai/), utilizando o modelo de integração *Webhook*. 
 Para isso será implementado um bot *simples* que responderá à alguns comandos básicos sobre informações de um profissional hipotético.
@@ -25,12 +25,12 @@ Para isso será implementado um bot *simples* que responderá à alguns comandos
 
 Atualmente, quase todo profissional possui um currículo no formato tradicional. Folha A4, tópicos relevantes, preferencialmente com no máximo 2 laudas e algumas seções básicas como: 
 *informações gerais*, *formação acadêmica*, *experiência profissional*, *principais habilidades* e *alguma proeficiência em línguas* por exemplo. Existem também versões menos tradicionais 
-no formato digital, como portifólios, jogos e vídeos explicativos. Recentemente, com a explosão dos chatbots como nova interface de interação entre pessoas e serviços, surgiram alguns 
+no formato digital, como portifólios, jogos e vídeos explicativos. Recentemente, com a explosão dos *chatbots* como nova interface de interação entre pessoas e serviços, surgiram alguns 
 trabalhos que utilizam esta nova tendência conversacional para apresentar suas experiências profissionais. Destaco aqui, os trabalhos de 
 [Esther Crawford](https://medium.com/the-mission/how-i-turned-my-resume-into-a-bot-and-how-you-can-too-f03847352baa#.3hw9lyi3a) e 
 [Caio Calado](https://medium.com/@caio_caladoo/ola-caiobot-meu-linkedin-como-um-chatbot-no-messenger-9db6fa736f70#.4awx67ut0) como referências para este assunto.
 
-Assim, o objetivo aqui é apresentar, a partir de um bot, as informações mais importantes sobre a carreira de um profissional. 
+Assim, o objetivo aqui é apresentar, a partir de um *bot*, as informações mais importantes sobre a carreira de um profissional. 
 
 Para simplificar vamos reduzir o escopo do bot para tratar apenas os seguintes cenários:
 
@@ -47,22 +47,22 @@ para melhorar a interpretação de texto de seu bot.
 
 ## Criando seu chatbot
 
-Antes de mais nada, precisamos criar um novo contato (chatbot) na plataforma [blip.ai](https://blip.ai/).
+Antes de mais nada, precisamos criar um novo contato (*chatbot*) na plataforma [blip.ai](https://blip.ai/).
 
 1. Basta acessar a plataforma, fazer login e clicar no botão **Criar Contato**
 2. Escolha o modelo para desenvolvedores **Webhook**
-3. Preencha as informações básicas de seu bot (nome e foto)
+3. Preencha as informações básicas de seu *bot* (nome e foto)
 
 ## Criando uma API para receber as requisições do blip
 
 Para este artigo apresentarei uma api desenvolvida em C# utilizando o framework [ASP.NET Web API](https://www.asp.net/web-api). Entretanto tenha em mente que a tecnologia escolhida para construir a API não importa, escolha 
 aquela que lhe for mais conveniente. Para ver um outro exemplo de webhook, utilizando uma API escrita em JavaScript usando Node.JS, veja este [post](http://blog.blip.ai/2016/10/24/criando-um-bot-para-busca-imagens-BING.html).
 
-1. Crie um novo projeto de uma aplicação *ASP.NET Web API* no VisualStudio
+1. Crie um novo projeto de uma aplicação *ASP.NET Web API* no *VisualStudio*
 
 O mínimo que precisamos fazer agora é criar dois endpoints na API, um para receber as mensagens enviadas pelos usuários de seu bot e outra para receber notificações.
 
-2. Crie um Controller para Mensagens, com uma action **Post**
+2. Crie um *Controller* para Mensagens, com uma *action* **Post**
 
 ```csharp
 public class MessagesController : ApiController
@@ -77,7 +77,7 @@ public class MessagesController : ApiController
 }
 ```
 
-3. Crie um Controller para Notificações, com uma action **Post**
+3. Crie outro *Controller* para Notificações, com uma *action* **Post**
 
 ```csharp
 public class NotificationsController : ApiController
@@ -97,7 +97,7 @@ de um endereço externo, público e válido. A API criada neste artigo foi publi
 
 ## Configuração dos endpoints no portal Blip
 
-1. Vá até o portal blip.ai, selecione seu bot e clique **Configurações** na barra lateral esquerda.
+1. Vá até o portal blip.ai, selecione seu *bot* e clique **Configurações** na barra lateral esquerda.
 
 2. Insira os endpoints de sua API nos campos 'Url de Mensagens' e 'Url de Notificações' (por exemplo: **http://resumebottemplate.azurewebsites.net/api/messages** e **http://resumebottemplate.azurewebsites.net/api/notifications** no meu caso)
 
@@ -105,7 +105,7 @@ Pronto, seu bot já está devidamente configurado e pronto para implementar a re
 
 ## Implementado as respostas de seu bot
 
-Conforme destacado anteriormente, nosso bot não terá uma regra muito complexa. O objetivo aqui é apenas provocar o leitor para mais uma aplicabilidade dos chatbots. 
+Conforme destacado anteriormente, nosso bot não terá uma regra muito complexa. O objetivo aqui é apenas provocar o leitor para mais uma aplicabilidade dos *chatbots*. 
 Neste sentido, o bot será capaz de interpretar comandos de texto com as seguintes sentenças:
 
 <table>
@@ -183,7 +183,14 @@ public class MessagesController : ApiController
             break;
         }
 
-        var replyMessage = "{'id': '"+ Guid.NewGuid() + "', 'to': '" + from + "', 'type': 'text/plain', 'content': '" + messageContent + "'}";
+        var replyMessage = new
+        {
+            id = Guid.NewGuid(),
+            to = from,
+            type = "text/plain",
+            content = messageContent
+        };
+
         await ReplyMessageAsync(replyMessage);
 
         return Ok();
@@ -194,7 +201,7 @@ public class MessagesController : ApiController
 Caso a mensagem enviada possua alguma das sentenças o bot deverá responder o conteúdo específico daquele comando. 
 Para isso será necessário enviar uma mensagem de resposta para o usuário com as informações referentes a pergunta.
 
-O método ReplyMessageAsync(string text) envia uma mensagem de resposta com um texto qualquer.
+O método **ReplyMessageAsync(string text)** envia uma mensagem de resposta com um texto qualquer.
 
 ```csharp
 public class MessagesController : ApiController
@@ -212,18 +219,18 @@ public class MessagesController : ApiController
      ... Código de tratamento das mensagens recebidas pelo bot 
    }
 
-   private async Task ReplyMessageAsync(string message)
+   private async Task ReplyMessageAsync(object message)
    {
        var response = await webClientService.SendMessageAsync(message);
    }
 ```
 
-Para isso foi utilizado um client Http simples que executa um post em uma url específica da plataforma blip. Note que para enviar a resposta é necessário
+Para isso foi utilizado um client Http simples que executa um *post* em uma url específica da plataforma blip. Note que para enviar a resposta é necessário
 obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Configurações** de seu bot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
 
 {% include image.html name="image_1.png" alt="Tela de configurações de um bot WebHook" %}
 
-Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (default case) o bot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
+Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (*default case*) o bot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
 
 ## Publicando e testando seu chatbot
 
@@ -242,7 +249,7 @@ A imagem abaixo mostra uma interação simples com o bot.
 # Conclusão
 
 Neste artigo discutimos um pouco sobre uma aplicação válida para um chatbot, um currículo digital. De forma rápida e simples foi apresentado um passo a passo de como criar, configurar
-e publicar um chatbot, usando Webhook, através do [blip.ai](https://blip.ai/).
+e publicar um *chatbot*, usando *Webhook*, através do [blip.ai](https://blip.ai/).
 
-Todo o código desenvolvido para este artigo está disponível no [github](https://github.com/takenet/messaginghub-docs/tree/master/samples/webhook/ResumeBot) com informações *fake*. Caso tenha gostado sinta-se a vontade para utilizá-lo como template para criar o seu chatbot currículo.
-Nos próximos dias continuarei evoluindo este bot, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos posts.     
+Todo o código desenvolvido para este artigo está disponível no [github](https://github.com/takenet/messaginghub-docs/tree/master/samples/webhook/ResumeBot) com informações *fake*. Caso tenha gostado sinta-se a vontade para utilizá-lo como template para criar o seu *chatbot* currículo.
+Nos próximos dias continuarei evoluindo este *bot*, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos *posts*.     
