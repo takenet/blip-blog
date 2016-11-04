@@ -56,7 +56,7 @@ Antes de mais nada, precisamos criar um novo contato (chatbot) na plataforma [bl
 ## Criando uma API para receber as requisições do blip
 
 Para este artigo apresentarei uma api desenvolvida em C# utilizando o framework [ASP.NET Web API](https://www.asp.net/web-api). Entretanto tenha em mente que a tecnologia escolhida para construir a API não importa, escolha 
-aquela que lhe for mais conveniente. Para ver um outro exemplo de webhook, utilizando uma API escrita em Node.JS, veja este [post](http://blog.blip.ai/2016/10/24/criando-um-bot-para-busca-imagens-BING.html).
+aquela que lhe for mais conveniente. Para ver um outro exemplo de webhook, utilizando uma API escrita em JavaScript usando Node.JS, veja este [post](http://blog.blip.ai/2016/10/24/criando-um-bot-para-busca-imagens-BING.html).
 
 1. Crie um novo projeto de uma aplicação *ASP.NET Web API* no VisualStudio
 
