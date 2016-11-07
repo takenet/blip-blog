@@ -8,13 +8,13 @@ author: andre
 
 [Webhook](https://blip.ai/portal/#/docs/webhook) é um modelo do Blip que abre os recursos da plataforma para qualquer linguagem de programação, já que praticamente todas as linguagens modernas possuem algum tipo de biblioteca para envio e recebimento de requisições HTTP.
 
-Porém a explosão atual de API’s HTTP nos permite criar chatbots sem a necessidade de uma única linha de código! Ferramentas como [If This Than That](https://ifttt.com/) e [Zapier](https://zapier.com/) oferecem interfaces intuitivas para combinar API´s de forma fácil.
+Mas a explosão atual de API’s HTTP nos permite criar chatbots sem a necessidade de uma única linha de código! Ferramentas como [If This Than That](https://ifttt.com/) e [Zapier](https://zapier.com/) oferecem interfaces intuitivas para combinar API´s de forma fácil.
 
 Para demonstrar o poder desta integração, que tal criar um chatbot que envia as última notícias de um *feed* para você no Facebook Messenger (ou em qualquer um dos canais suportados pelo Blip)?
 
 <!--preview-->
 
-Vamos começar criando um novo *zap* no Zapier (você pode clicar [aqui](https://zapier.com/app/editor) para ir direto para o editor; não esqueça que é preciso de uma conta, que pode ser gratuita mesmo). 
+Vamos começar criando um novo *zap* no Zapier (você pode clicar [aqui](https://zapier.com/app/editor) para ir direto para o editor. Não esqueça que é preciso ter uma conta, que pode ser gratuita mesmo). 
 
 Para a *trigger app*, escolha "RSS by Zapier". 
 
@@ -24,11 +24,11 @@ Escolha a opção "New item in Feed" (deve ser a única) e clique em “Save + C
 
 {% include image.html name="image_1.png" alt="Use 'new item in Feed'" %}
 
-No passo seguinte, adicione o endereço do *feed RSS* que lhe interessar (como exemplo usei o endereço do *feed* do *blog* Visual Studio). Pode deixar os demais campos em branco e clique no botão "Continue". 
+No passo seguinte, adicione o endereço do *feed RSS* que lhe interessar (como exemplo usei o endereço do *feed* do *blog* Visual Studio). Pode deixar os demais campos em branco e clique em "Continue". 
 
 {% include image.html name="image_2.png" alt="Endereço do feed rss" %}
 
-Em seguida, clique em "Fetch & Contine" para que seja feito um teste no endereço do *feed*. Este passo deve ocorrer sem problemas, então clique no botão “Continue” para configurarmos a ação que será tomada quando uma nova notícia for recuperada do *feed*.
+Em seguida, clique em "Fetch & Contine" para que seja feito um teste no endereço do *feed*. Este passo deve ocorrer sem problemas, então clique em “Continue” para configurarmos a ação que será tomada quando uma nova notícia for recuperada do *feed*.
 
 Para a *action app*, escolha "Webhooks by Zapier".
 
@@ -89,5 +89,5 @@ Cliquem agora no botão "Continue". A página seguinte deverá produzir um conte
 
 Para que o feed seja monitorado e as novas notícias sejam enviadas automaticamente, ligue este novo zap clicando no botão do canto superior direito do Zapier, para que fique na posição "ON". Clique então no botão “Finish”, e aproveite as novidades do seu *feed* favorito ;)
 
-Você pode utilizar outros recursos do Zapier para tornar seu contato ainda mais interessante, como por exemplo criar um *[feed único que agregue todos os seus feeds favoritos](https://zapier.com/blog/make-your-own-rss-superfeed/), e utilizar o endereço deste *feed* agregado, gerado pelo Zapier, neste zap. Ou usar como *trigger app* o Webhook do Zapier, recebendo notícias de serviços especializados de *feed* como [Feedly](https://developer.feedly.com/) ou [SuperFeedr](https://superfeedr.com/subscriber).
+Você pode utilizar outros recursos do Zapier para tornar seu contato ainda mais interessante, como por exemplo criar um *[feed único que agregue todos os seus feeds favoritos](https://zapier.com/blog/make-your-own-rss-superfeed/) e utilizar o endereço deste *feed* agregado, gerado pelo Zapier, neste zap. Você pode ainda usar como *trigger app* o Webhook do Zapier, recebendo notícias de serviços especializados de *feed* como [Feedly](https://developer.feedly.com/) ou [SuperFeedr](https://superfeedr.com/subscriber).
 

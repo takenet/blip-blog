@@ -1,12 +1,14 @@
 ---
-title:  "Criando um bot para busca de imagens no BING"
+title:  "Criando um chatbot para busca de imagens no BING"
 date:   2016-10-24 14:04:47 +0000
 categories: [Casos de uso]
 tags: [Webhook, MediaLink, javascript]
 author: breno
+redirect_from:
+    - /2016/10/24/criando-um-bot-para-busca-imagens-BING.html
 ---
 
-Neste tutorial vamos usar a API do [BING](https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato que busca imagens de acordo com o texto enviado utilizando Webhooks.
+Neste tutorial vamos usar a API do [BING](https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato inteligente (chatbot) que busca imagens de acordo com o texto enviado utilizando Webhooks.
 
 <!--preview--> 
 
@@ -14,7 +16,7 @@ Neste tutorial vamos usar a API do [BING](https://www.microsoft.com/cognitive-se
 
 Para este projeto iremos utilizar o [node.js](https://nodejs.org/). Para criar um projeto node, basta criar um diretório qualquer e executar o comando `npm init` neste diretório.
 
-Após criado o projeto node, precisamos instalar os pacotes de dependências que iremos utilizar. Para utilizar Webhooks, precisamos fazer chamadas HTTP no endereço `https://msging.net/messages`, portanto serão necessários os pacotes `request` e `request-promise`. Além disto, para enviar mensagens via HTTP, precisamos gerar _uuids_ válidos, portanto será necessário utilizar o pacote `uuid`.
+Após criado o projeto node, precisamos instalar os pacotes de dependências que iremos utilizar. Para utilizar Webhooks, precisamos fazer chamadas HTTP no endereço `https://msging.net/messages`. Serão necessários os pacotes `request` e `request-promise`. Além disto, para enviar mensagens via HTTP, precisamos gerar _uuids_ válidos, portanto será necessário utilizar o pacote `uuid`.
 
 Para instalar estas dependências basta executar o seguinte comando:
 
@@ -24,11 +26,11 @@ npm install --save request request-promise uuid
 
 Para mais informações acessar a [documentação](https://blip.ai/portal/#/docs/home).
 
-## Passo 2 - Configurando o Bot
+## Passo 2 - Configurando o chatbot
 
-Como estamos criando um Bot que utilizará os recursos Webhook do blip.ai, precisamos obter uma chave de acesso e urls para recebimento e envio de mensagens. Para isto, acesse o [portal](http://blip.ai) e registre o seu contato utilizando a opção Webhook. Após a criação do seu contato você encontrará as informações necessárias para o desenvolvimento do bot no menu configuração. Guarde o **Cabeçalho de autenticação**, pois ele será necessário para enviar mensagens.
+Como estamos criando um chatbot que utilizará os recursos Webhook do blip.ai, precisamos obter uma chave de acesso e urls para recebimento e envio de mensagens. Para isto, acesse o [portal](http://blip.ai) e registre o seu contato utilizando a opção Webhook. Após a criação do seu contato você encontrará as informações necessárias para o desenvolvimento do bot no menu configuração. Guarde o **Cabeçalho de autenticação**, pois ele será necessário para enviar mensagens.
 
-Com isso já temos um Bot conectado à plataforma que consegue enviar e receber mensagens. Para habilitar o seu contato nos canais, basta acessar o menu **Publicações** e escolher o canal onde deseja publicar seu contato (no site [blip.ai](https://blip.ai/) há um guia sobre a ativação dos canais).
+Com isso já temos um chatbot conectado à plataforma que consegue enviar e receber mensagens. Para habilitar o seu contato nos canais, basta acessar o menu **Publicações** e escolher o canal onde deseja publicar seu contato (no site [blip.ai](https://blip.ai/) há um guia sobre a ativação dos canais).
 
 ## Passo 3 - Ativando a Bing News Search API
 
@@ -36,7 +38,7 @@ Agora precisamos ativar a sua conta da Microsoft para usar o serviço Bing News 
 
 ## Passo 4 - Mão na massa
 
-Primeiramente precisamos criar um servidor HTTP Node que recebe as mensagens através da url para receber mensagens que configuramos no passo 2.
+Precisamos criar um servidor HTTP Node que recebe as mensagens através da url para receber mensagens que configuramos no passo 2.
 
 ```javascript
 const SERVER_PORT = process.env.PORT || 3000;
@@ -63,7 +65,7 @@ server.listen(SERVER_PORT, () => {
 });
 ```
 
-Como próximo passo, precisamos abstrair o envio de mensagens. Para isto vamos criar uma classe `MessagingHubHttpClient` que, suprida com a urls para envio de mensagens e a chave de acesso do bot, envia mensagens através de requisições HTTP:
+Como próximo passo, precisamos abstrair o envio de mensagens. Para isto vamos criar uma classe `MessagingHubHttpClient` que, suprida com a urls para envio de mensagens e a chave de acesso do chatbot, envia mensagens através de requisições HTTP:
 
 ```javascript
 let request = require('request-promise');
@@ -155,11 +157,11 @@ function handleMessage(message) {
 }
 ```
 
-## Passo 5 - Hospedando o Bot
+## Passo 5 - Hospedando o chatbot
 
-Por ser uma aplicação Node.js, o Bot criado deve ser hospedado em um servidor de hospedagem que seja compatível com esta ferramenta. Alguns bons exemplos de serviços de hospedagem gratuitos para Node.js incluem [Heroku](https://www.heroku.com/), [Nodejitsu](https://www.nodejitsu.com/) e [Microsoft Azure](https://azure.microsoft.com/).
+Por ser uma aplicação Node.js, o chatbot criado deve ser hospedado em um servidor de hospedagem que seja compatível com esta ferramenta. Alguns bons exemplos de serviços de hospedagem gratuitos para Node.js incluem [Heroku](https://www.heroku.com/), [Nodejitsu](https://www.nodejitsu.com/) e [Microsoft Azure](https://azure.microsoft.com/).
 
-Após hospedar seu bot, você deve ainda incluir sua **URL para receber mensagens** nas configurações do seu Bot no [Painel Blip](https://blip.ai/portal/) como a URL onde seu bot está hospedado.
+Após hospedar seu chatbot, você deve ainda incluir sua **URL para receber mensagens** nas configurações dele no [Painel Blip](https://blip.ai/portal/) como a URL onde ele está hospedado.
 
 ## Licença
 
