@@ -1,22 +1,22 @@
 ---
-title:  "Construíndo um bot assistente virtual utilizando o Textc"
+title:  "Construindo um chatbot assistente virtual utilizando o Textc"
 date:   2016-10-17 15:04:47 +0000
 categories: [Casos de uso]
 tags: [Textc, C#]
 author: andreb
 ---
 
-Os bots de mensagem - ou **chatbots** - são programas que permitem a interação através de mensagens para oferecer algum tipo de serviço. Apesar de não ser uma tecnologia nova, recentemente vem ganhando destaque nas notícias desde que o Facebook, Microsoft e outras empresas anunciaram investimentos em plataformas para construção deste tipo de aplicação.
+Os **chatbots** são programas que permitem a interação através de mensagens para oferecer algum tipo de serviço. Apesar de não ser uma tecnologia nova, desde que o Facebook, Microsoft e outras empresas anunciaram investimentos em plataformas para construção deste tipo de aplicação, essa tecnologia ganha cada vez mais destaque nas notícias.
 
 <!--preview--> 
 
-Um dos principais argumentos para o uso dos bots é que o modelo de **distribuição de serviços através de aplicativos móveis está saturado**. Existe uma resistência por parte dos usuários de instalar novos aplicativos para uso de serviços simples. Por exemplo, imagine que se cada pizzaria de sua cidade oferecesse um aplicativo para realizar o pedido de pizza, você precisaria ter aplicativos diferentes para pedir pizza em lugares variados. Mas e se você não precisasse instalar nenhum aplicativo novo e **utilizar os próprios aplicativos de mensagem que você (provavelmente) já possui para este fim**? É esta oportunidade que o Facebook, Microsoft, Google, Slack e outras grandes empresas estão tentando explorar.
+Um dos principais argumentos favoráveis ao uso dos chatbots, é que o atual modelo de **distribuição de serviços através de aplicativos móveis está saturado**. Existe uma resistência por parte dos usuários de instalar novos aplicativos para uso de serviços simples. Por exemplo, imagine que se cada pizzaria de sua cidade oferecesse um aplicativo para realizar o pedido de pizza, você precisaria ter aplicativos diferentes para pedir pizza em lugares variados. E se você não precisasse instalar nenhum aplicativo novo e **utilizar os próprios apps de mensagem que você (provavelmente) já possui para este fim**? É esta oportunidade que o Facebook, Microsoft, Google, Slack e outras grandes empresas estão tentando explorar.
 
 <img class="alignnone size-full wp-image-197" src="https://andrebires.files.wordpress.com/2016/10/bots1.png" alt="bots1" width="864" height="519" />
 
-Oferecer uma interface amigável aos usuários de bots é um grande desafio, já que a forma de entrada padrão disponível é o texto - uma interface sem estrutura. Afinal, **não há garantia do que o usuário vai escrever**, nem da forma, gramática, sintaxe, etc. Existem soluções para tentar contornar esta limitação - como o uso de botões nos canais de mensagem (como Telegram e Messenger) que conduzem a navegação do usuário ou inteligência artificial para tentar "adivinhar" o que o usuário está querendo dizer. Cada uma tem seus prós e contras e neste artigo iremos demonstrar como fazer isso utilizando a **biblioteca de processamento de linguagem natural [Textc](https://github.com/takenet/textc-csharp)**. A biblioteca está disponível para C# e pode ser instalada através do [Nuget](https://www.nuget.org/packages/Takenet.Textc).
+Oferecer uma interface amigável aos usuários de chatbots é um grande desafio, já que a forma de entrada padrão disponível é o texto - uma interface sem estrutura. Afinal, **não há garantia do que o usuário vai escrever**, nem da forma, gramática, sintaxe, etc. Existem soluções para tentar contornar esta limitação - como o uso de botões nos canais de mensagem (como Telegram e Messenger) que conduzem a navegação do usuário ou inteligência artificial para tentar "adivinhar" o que o usuário está querendo dizer. Cada uma tem seus prós e contras e neste artigo iremos demonstrar como fazer isso utilizando a **biblioteca de processamento de linguagem natural [Textc](https://github.com/takenet/textc-csharp)**. A biblioteca está disponível para C# e pode ser instalada através do [Nuget](https://www.nuget.org/packages/Takenet.Textc).
 
-De maneira resumida, a **Textc permite definir de sintaxes de texto e associá-las a chamadas de métodos de uma classe**. Uma sintaxe define uma estrutura de texto, com tokens e seus tipos, sendo cada token mapeado a parâmetros de um método. Para ilustrar iremos construir um **assistente virtual que permite o armazenamento de lembretes**, de forma semelhante ao que o Google Now oferece.
+De maneira resumida, a **Textc permite definir de sintaxes de texto e associá-las a chamadas de métodos de uma classe**. Uma sintaxe define uma estrutura de texto, com tokens e seus tipos, sendo cada token mapeado a parâmetros de um método. Para ilustrar, vamos construir um **assistente virtual que permite o armazenamento de lembretes**, de forma semelhante ao que o Google Now oferece.
 
 ## Desenhando a conversa
 
@@ -24,10 +24,10 @@ O primeiro passo é enumerar as diferentes formas que o usuário poderá interag
 
 1. Lembrar de ir ao médico
 2. Lembre me amanhã de pagar a conta de luz
-3. Me lembre de fazer compras hoje a tarde
+3. Me lembre de fazer compras hoje à tarde
 
 São estruturas de texto diferentes mas que possuem informações parecidas:
-- O **comando** para adicionar um lembrete: *Lembrar de, Lembre me, Me lembre de*
+- O **comando** para adicionar um lembrete: *Lembrar de, lembre me, me lembre de*
 - O **texto** do lembrete: *ir ao médico, pagar a conta de luz, fazer compras*
 - A **data** do lembrete: *amanhã, hoje*
 - A **hora** do lembrete: *a tarde*
@@ -53,7 +53,7 @@ name:Type(initializer)
 ```
 
 Onde:
-- **name** - O nome do token que será extraido da entrada. Este valor pode ser utilizado no mapeamento com os parâmetros do método de uma classe. Opcional.
+- **name** - O nome do token que será extraído da entrada. Este valor pode ser utilizado no mapeamento com os parâmetros do método de uma classe. Opcional.
 - **type** - O tipo do token no texto. A biblioteca define alguns tipos como `Word` (uma palavra), `Text` (uma ou mais palavras) e `Integer` (número inteiro). Obrigatório.
 - **initializer** - Valor de inicialização, sendo utilizado para limitar os valores válidos para o tipo. Por exemplo, no tipo `Word`, determina quais são as palavras válidas para serem consideradas na entrada do usuário. Opcional.
 
@@ -117,7 +117,7 @@ var syntax2 = CsdlParser.Parse(
 var syntax3 = CsdlParser.Parse(
     ":Word?(me) :Word(lembre) :Word~(de) reminder:Text date:Word?(hoje,amanha,eventualmente) :Word?(a) time:Word?(manha,tarde,noite)");
 
-// Incluimos um OutputProcessor para dar saída à resposta dos métodos no Console
+// Incluímos um OutputProcessor para dar saída à resposta dos métodos no Console
 var addReminderOutputProcessor = new DelegateOutputProcessor(
     (text, context) => Console.WriteLine(text));
 
@@ -156,7 +156,7 @@ textProcessor.TextPreprocessors.Add(new ToLowerCasePreprocessor());
 
 ```
 
-E é isso, seu bot já esta pronto para funcionar como um assistente virtual básico:
+E é isso, seu chatbot já está pronto para funcionar como um assistente virtual básico:
 
 ```csharp
 try
