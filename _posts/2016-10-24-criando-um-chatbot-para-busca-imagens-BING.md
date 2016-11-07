@@ -4,6 +4,8 @@ date:   2016-10-24 14:04:47 +0000
 categories: [Casos de uso]
 tags: [Webhook, MediaLink, javascript]
 author: breno
+redirect_from:
+    - /2016/10/24/criando-um-bot-para-busca-imagens-BING.html
 ---
 
 Neste tutorial vamos usar a API do [BING](https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api) para criar um contato inteligente (chatbot) que busca imagens de acordo com o texto enviado utilizando Webhooks.
