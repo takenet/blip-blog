@@ -235,7 +235,7 @@ Para testarmos nossa aplicação vou publicá-la no Facebook Messenger.
 
 A imagem abaixo mostra uma interação simples com o chatbot.
 
-{% include image.html name="image_2.png" alt="Interação simples com o ResumeBotTemplate" %}
+{% include image.html name="image_2.jpg" alt="Interação simples com o ResumeBotTemplate" %}
 
 [Clique aqui](https://m.me/744908842324712) para testar o ResumeBotTemplate no Facebook Messenger.
 
