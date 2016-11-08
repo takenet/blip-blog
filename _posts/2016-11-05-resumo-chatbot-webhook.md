@@ -11,7 +11,7 @@ nos principais canais de menssageria do mercado, como: [Facebook Messenger](http
 (em breve) ou pelo aplicativo [Blip](https://play.google.com/store/apps/details?id=net.take.omni) disponível para android.
 
 O Blip.ai entrega ao desenvolvedor duas formas diferentes para a construção dos bots. A primeira delas é através dos SDK's [C#](https://github.com/takenet/messaginghub-client-csharp/) e 
-[JavaScript](http://takenet.github.io/messaginghub-client-js/), neste modelo o desenvolvedor tem total flexibilidade para incluir o chat bot em sua aplicação. 
+[JavaScript](http://takenet.github.io/messaginghub-client-js/), neste modelo o desenvolvedor tem total flexibilidade para incluir o chatbot em sua aplicação. 
 A outra forma de realizar a integração é através de um [Webhook](https://blip.ai/portal/#/docs/webhook). De forma simplista, um Webhook é a exposição de um endpoint http em sua aplicação 
 para possibilitar que API's de terceiros faça requisições em seus serviços. Nesta estrutura o Blip.ai realiza requisições em um endpoint definido pelo desenvolvedor do bot sempre que 
 novas mensagens ou notificações estiverem disponíveis. Outra vantagem é não estar amarrado as nenhuma linguagem específica para construir seu chatbot.
@@ -179,7 +179,7 @@ public class MessagesController : ApiController
 
           default:
             //default message if user send a unknow command
-            messageContent = "Oi, eu sou o chat bot do Jonh :) \nPosso lhe passar várias informações profissionais sobre ele. \n\nSe quiser saber mais me mande um dos comandos abaixo: \n\n about \n education \n experience \n skills!";
+            messageContent = "Oi, eu sou o chatbot do Jonh :) \nPosso lhe passar várias informações profissionais sobre ele. \n\nSe quiser saber mais me mande um dos comandos abaixo: \n\n about \n education \n experience \n skills!";
             break;
         }
 
@@ -209,7 +209,7 @@ public class MessagesController : ApiController
    // POST api/messages
    public async Task<IHttpActionResult> Post(JObject message)
    {
-     ... Código de tratamento das mensagens recebidas pelo bot 
+     ... Código de tratamento das mensagens recebidas pelo chatbot 
    }
 
    private async Task ReplyMessageAsync(string message)
@@ -219,11 +219,11 @@ public class MessagesController : ApiController
 ```
 
 Para isso foi utilizado um client Http simples que executa um post em uma url específica da plataforma blip. Note que para enviar a resposta é necessário
-obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Configurações** de seu bot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
+obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Configurações** de seu chatbot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
 
-{% include image.html name="image_1.png" alt="Tela de configurações de um bot WebHook" %}
+{% include image.html name="image_1.png" alt="Tela de configurações de um chatbot WebHook" %}
 
-Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (default case) o bot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
+Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (default case) o chatbot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
 
 ## Publicando e testando seu chatbot
 
@@ -231,9 +231,9 @@ Para testarmos nossa aplicação vou publicá-la no Facebook Messenger.
 
 1. Para isso, basta ir até o portal blip.ai e clicar na opção **Publicações**, no meunu lateral esquerdo
 2. Depois escolha o seu canal de preferência (por exemplo **Facebook Messenger*)
-3. Siga o passo a passo indicado e seu bot já estará disponível.
+3. Siga o passo a passo indicado e seu chatbot já estará disponível.
 
-A imagem abaixo mostra uma interação simples com o bot.
+A imagem abaixo mostra uma interação simples com o chatbot.
 
 {% include image.html name="image_2.png" alt="Interação simples com o ResumeBotTemplate" %}
 
@@ -245,4 +245,4 @@ Neste artigo discutimos um pouco sobre uma aplicação válida para um chatbot, 
 e publicar um chatbot, usando Webhook, através do [blip.ai](https://blip.ai/).
 
 Todo o código desenvolvido para este artigo está disponível no [github](https://github.com/takenet/messaginghub-docs/tree/master/samples/webhook/ResumeBot) com informações *fake*. Caso tenha gostado sinta-se a vontade para utilizá-lo como template para criar o seu chatbot currículo.
-Nos próximos dias continuarei evoluindo este bot, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos posts.     
+Nos próximos dias continuarei evoluindo este chatbot, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos posts.     
