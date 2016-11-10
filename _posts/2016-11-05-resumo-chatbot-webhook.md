@@ -21,7 +21,7 @@ Para isso será implementado um chatbot *simples* que responderá à alguns coma
 
 <!--preview-->
 
-# Sobre o Chatbot 'currículo'
+# Sobre o chatbot 'currículo'
 
 Atualmente, quase todo profissional possui um currículo no formato tradicional. Folha A4, tópicos relevantes, preferencialmente com no máximo 2 laudas e algumas seções básicas como: 
 *informações gerais*, *formação acadêmica*, *experiência profissional*, *principais habilidades* e *alguma proeficiência em línguas* por exemplo. Existem também versões menos tradicionais 
