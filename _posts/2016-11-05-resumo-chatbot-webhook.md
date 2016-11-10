@@ -21,7 +21,7 @@ Para isso será implementado um chatbot *simples* que responderá à alguns coma
 
 <!--preview-->
 
-# Sobre o chatbot 'currículo'
+## Sobre o chatbot 'currículo'
 
 Atualmente, quase todo profissional possui um currículo no formato tradicional. Folha A4, tópicos relevantes, preferencialmente com no máximo 2 laudas e algumas seções básicas como: 
 *informações gerais*, *formação acadêmica*, *experiência profissional*, *principais habilidades* e *alguma proeficiência em línguas* por exemplo. Existem também versões menos tradicionais 
@@ -43,9 +43,9 @@ Embora seja possível, não vamos nos preocupar, inicialmente, com uma interpret
 ([Construíndo um chatbot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca Textc para melhorar 
 a interpretação de texto de seu chatbot.
 
-# Mãos a obra
+## Mãos a obra
 
-## Criando seu chatbot
+### Criando seu chatbot
 
 Antes de mais nada, precisamos criar um novo contato (chatbot) na plataforma [blip.ai](https://blip.ai/).
 
@@ -53,7 +53,7 @@ Antes de mais nada, precisamos criar um novo contato (chatbot) na plataforma [bl
 2. Escolha o modelo para desenvolvedores **Webhook**
 3. Preencha as informações básicas de seu chatbot (nome e foto)
 
-## Criando uma API para receber as requisições do blip
+### Criando uma API para receber as requisições do blip
 
 Para este artigo utilizarei uma [ASP.NET Web API](https://www.asp.net/web-api) desenvolvida em C#. Entretanto tenha em mente que a tecnologia escolhida para construir a API não importa, escolha 
 aquela que lhe for mais conveniente. Para ver um exemplo de webhook utilizando uma API escrita em Node.JS veja este [post](http://blog.blip.ai/2016/10/24/criando-um-bot-para-busca-imagens-BING.html).
@@ -90,12 +90,12 @@ public class NotificationsController : ApiController
 }
 ```
 
-## Publicando a API no azure
+### Publicando a API no azure
 
 Mais uma vez essa é uma escolha pessoal. Você pode publicar sua API onde se sentir mais confortável, no Azure, AWS, Heroku ou na infrastrutura privada de sua empresa. A única coisa que precisamos é 
 de um endereço externo, público e válido. A API criada neste arquivo foi publicada no endereço http://resumebottemplate.azurewebsites.net.
 
-## Configuração dos endpoints no portal Blip
+### Configuração dos endpoints no portal Blip
 
 1. Vá até o portal blip.ai, selecione seu chatbot e clique **Configurações** na barra lateral esquerda.
 
@@ -103,7 +103,7 @@ de um endereço externo, público e válido. A API criada neste arquivo foi publ
 
 Pronto, seu chatbot já está devidamente configurado e pronto para receber a regra de resposta das mensagens. 
 
-## Implementado as respostas de seu chatbot
+### Implementado as respostas de seu chatbot
 
 Conforme destacado anteriormente, nosso chatbot não terá uma regra muito complexa. O objetivo aqui é apenas provocar o leitor para mais uma aplicabilidade dos chatbots. 
 Neste sentido, o chatbot será capaz de interpretar comandos de texto com as seguintes sentenças:
@@ -225,7 +225,7 @@ obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Co
 
 Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (default case) o chatbot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
 
-## Publicando e testando seu chatbot
+### Publicando e testando seu chatbot
 
 Para testarmos nossa aplicação vou publicá-la no Facebook Messenger. 
 
@@ -239,7 +239,7 @@ A imagem abaixo mostra uma interação simples com o chatbot.
 
 [Clique aqui](https://m.me/744908842324712) para testar o ResumeBotTemplate no Facebook Messenger.
 
-# Conclusão
+## Conclusão
 
 Neste artigo discutimos um pouco sobre uma aplicação válida para um chatbot, um currículo digital. De forma rápida e simples foi apresentado um passo a passo de como criar, configurar
 e publicar um chatbot, usando Webhook, através do [blip.ai](https://blip.ai/).
