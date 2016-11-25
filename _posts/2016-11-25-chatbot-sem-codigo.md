@@ -11,7 +11,7 @@ tanto que você pode criar um chatbot sem precisar usar uma única linha de cód
 
 <!--preview-->
 
-Todo a conversa será configurada usando o arquivo JSON utilizado pelo SDK, mas ainda assim será preciso usar o Visual Studio 2015.
+Toda a conversa será configurada usando o arquivo JSON utilizado pelo SDK, mas ainda assim será preciso usar o Visual Studio 2015.
 Existem 2 *templates* do SDK C# que podem ser utilizados, um para uma [*console application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.Template/)
 e outro para uma [*web application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.WebTemplate/). Neste exemplo vamos criar uma *web application*.
 
