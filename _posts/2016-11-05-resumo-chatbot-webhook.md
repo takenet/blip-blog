@@ -30,11 +30,7 @@ trabalhos que utilizam esta nova tendência conversacional para apresentar suas 
 [Esther Crawford](https://medium.com/the-mission/how-i-turned-my-resume-into-a-bot-and-how-you-can-too-f03847352baa#.3hw9lyi3a) e 
 [Caio Calado](https://medium.com/@caio_caladoo/ola-caiobot-meu-linkedin-como-um-chatbot-no-messenger-9db6fa736f70#.4awx67ut0) como referências para este assunto.
 
-<<<<<<< HEAD
-Assim, o objetivo aqui é apresentar, a partir de um *bot*, as informações mais importantes sobre a carreira de um profissional. 
-=======
 Assim, nosso objetivo aqui é representar, a partir de um chatbot, as informações mais importantes sobre a carreira de um profissional. 
->>>>>>> master
 
 Para simplificar vamos reduzir o escopo do chatbot para tratar apenas os seguintes cenários:
 
@@ -44,13 +40,8 @@ Para simplificar vamos reduzir o escopo do chatbot para tratar apenas os seguint
 4. Envio de uma **lista** com as **principais habilidades**
 
 Embora seja possível, não vamos nos preocupar, inicialmente, com uma interpretação elaborada de linguagem natural. O artigo do André Bires 
-<<<<<<< HEAD
-([Construíndo um bot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca [Textc](https://github.com/takenet/textc-csharp) 
-para melhorar a interpretação de texto de seu bot.
-=======
 ([Construíndo um chatbot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca Textc para melhorar 
 a interpretação de texto de seu chatbot.
->>>>>>> master
 
 ## Mãos a obra
 
@@ -60,11 +51,7 @@ Antes de mais nada, precisamos criar um novo contato (*chatbot*) na plataforma [
 
 1. Basta acessar a plataforma, fazer login e clicar no botão **Criar Contato**
 2. Escolha o modelo para desenvolvedores **Webhook**
-<<<<<<< HEAD
-3. Preencha as informações básicas de seu *bot* (nome e foto)
-=======
 3. Preencha as informações básicas de seu chatbot (nome e foto)
->>>>>>> master
 
 ### Criando uma API para receber as requisições do blip
 
@@ -110,29 +97,16 @@ de um endereço externo, público e válido. A API criada neste artigo foi publi
 
 ### Configuração dos endpoints no portal Blip
 
-<<<<<<< HEAD
-1. Vá até o portal blip.ai, selecione seu *bot* e clique **Configurações** na barra lateral esquerda.
-=======
 1. Vá até o portal blip.ai, selecione seu chatbot e clique **Configurações** na barra lateral esquerda.
->>>>>>> master
 
 2. Insira os endpoints de sua API nos campos 'Url de Mensagens' e 'Url de Notificações' (por exemplo: **http://resumebottemplate.azurewebsites.net/api/messages** e **http://resumebottemplate.azurewebsites.net/api/notifications** no meu caso)
 
-<<<<<<< HEAD
-Pronto, seu bot já está devidamente configurado e pronto para implementar a regra de resposta das mensagens. 
-=======
 Pronto, seu chatbot já está devidamente configurado e pronto para receber a regra de resposta das mensagens. 
->>>>>>> master
 
 ### Implementado as respostas de seu chatbot
 
-<<<<<<< HEAD
-Conforme destacado anteriormente, nosso bot não terá uma regra muito complexa. O objetivo aqui é apenas provocar o leitor para mais uma aplicabilidade dos *chatbots*. 
-Neste sentido, o bot será capaz de interpretar comandos de texto com as seguintes sentenças:
-=======
 Conforme destacado anteriormente, nosso chatbot não terá uma regra muito complexa. O objetivo aqui é apenas provocar o leitor para mais uma aplicabilidade dos chatbots. 
 Neste sentido, o chatbot será capaz de interpretar comandos de texto com as seguintes sentenças:
->>>>>>> master
 
 <table>
   <tr>
@@ -251,21 +225,12 @@ public class MessagesController : ApiController
    }
 ```
 
-<<<<<<< HEAD
-Para isso foi utilizado um client Http simples que executa um *post* em uma url específica da plataforma blip. Note que para enviar a resposta é necessário
-obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Configurações** de seu bot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
-=======
 Para isso foi utilizado um client Http simples que executa um post em uma url específica da plataforma blip. Note que para enviar a resposta é necessário
 obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Configurações** de seu chatbot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
->>>>>>> master
 
 {% include image.html name="image_1.png" alt="Tela de configurações de um chatbot WebHook" %}
 
-<<<<<<< HEAD
-Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (*default case*) o bot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
-=======
-Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (default case) o chatbot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
->>>>>>> master
+Finalmente, se o conteúdo recebido não for compatível com nenhuma das sentenças aceitas (*default case*) o chatbot responderá uma mensagem padrão explicando ao usuário quais são os comandos aceitos.
 
 ### Publicando e testando seu chatbot
 
@@ -286,10 +251,5 @@ A imagem abaixo mostra uma interação simples com o chatbot.
 Neste artigo discutimos um pouco sobre uma aplicação válida para um chatbot, um currículo digital. De forma rápida e simples foi apresentado um passo a passo de como criar, configurar
 e publicar um *chatbot*, usando *Webhook*, através do [blip.ai](https://blip.ai/).
 
-<<<<<<< HEAD
-Todo o código desenvolvido para este artigo está disponível no [github](https://github.com/takenet/messaginghub-docs/tree/master/samples/webhook/ResumeBot) com informações *fake*. Caso tenha gostado sinta-se a vontade para utilizá-lo como template para criar o seu *chatbot* currículo.
-Nos próximos dias continuarei evoluindo este *bot*, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos *posts*.     
-=======
 Todo o código desenvolvido para este artigo está disponível no [github](https://github.com/takenet/messaginghub-docs/tree/master/samples/webhook/ResumeBot) com informações *fake*. Caso tenha gostado sinta-se a vontade para utilizá-lo como template para criar o seu chatbot currículo.
-Nos próximos dias continuarei evoluindo este chatbot, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos posts.     
->>>>>>> master
+Nos próximos dias continuarei evoluindo este chatbot, em meu [repositório](https://github.com/ravpacheco/resumebot). Fique atento, para cada nova versão publicarei novos *posts*.     
