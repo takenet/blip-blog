@@ -225,4 +225,7 @@ do Painel do Blip.
 ```
 
 Detalhe importante: a implementação atual do `IStateManager` no SDK C#, responsável pelo armazenamento do estado de cada usuário, é feita em memória. 
-Isto significa que sempre que reiniciar o processo do chatbot ele *esquecerá* o estado e recomeçará a conversa.  
+Isto significa que sempre que reiniciar o processo do chatbot ele *esquecerá* o estado e recomeçará a conversa. 
+
+Uma opção interessante para armazenar permanentemente, que em breve deverá estar disponível no SDK, é utilizar a [extensão de armazenamento](https://blip.ai/portal/#/docs/extensions/bucket) do Blip.
+Se quiser contribuir com uma implementação que armazene os estados em algum outro meio permanente, nosso repositório no Github está [aqui](https://github.com/takenet/messaginghub-client-csharp).  
