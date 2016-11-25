@@ -15,7 +15,7 @@ Todo a conversa será configurada usando o arquivo JSON utilizado pelo SDK, mas 
 Existem 2 *templates* do SDK C# que podem ser utilizados, um para uma [*console application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.Template/)
 e outro para uma [*web application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.WebTemplate/). Neste exemplo vamos criar uma *web application*.
 
-### Projeto básico ### 
+### Projeto básico
 Crie um novo projeto ASP.NET do tipo *ASP.NET Web Application (.NET Framework)*. A versão do *.NET Framework* deve ser 4.6.1 ou superior. 
 Na janela para seleção de *templates* escolha a opção *Empty* e desmarque todas as opções na seção *Add folders and core references*, como na figura abaixo.
 
@@ -54,7 +54,7 @@ mais detalhes sobre estas e outras opções.
 Toda mensagem que chega no chatbot é avaliada contra os filtros definidos no *application.json*, e todos os filtros que casarem com a mensagem terão seus 
 respectivos *MessageReceivers* ativados e executados. 
 
-Porém existe a opção de definir um *MessageReceiver* estático que retorna um conteúdo qualquer, definido diretamente no *application.json*. É este recurso que exploraremos neste exemplo.
+Porém existe a opção de definir um *MessageReceiver* estático que retorna um conteúdo qualquer, definido diretamente no *application.json*. É este recurso que exploraremos neste artigo.
 
 ### O chatbot
 
@@ -77,7 +77,7 @@ Agora vamos definir uma resposta para o caso de responder que é humano:
       "content": "humano|umano|gente|pessoa|homem|mulher",
       "response": {
         "mediaType": "text/plain",
-        "plainContent": "Eu sou um chatbot, mas tenho vários amigos humanos :)"
+        "plainContent": "Eu sou um chatbot, mas tenho vários amigos humanos 😀"
       }
     }
 ```
@@ -119,6 +119,7 @@ Veja que o *MessageReceiver* da mensagem de boas vindas tem o `state` configurad
 Se um `state` não for adicionado significa que o *MessageReceiver* pode ser aplicado em qualquer estado, o que obviamente não é nossa intenção.
 Ainda neste *MessageReceiver* foi configurada o `outState` para *question*. Esta propriedade pode ter qualquer texto, mas é interessante dar um nome 
 representativo.
+
 Por fim, adicionamos ao segundo *MessageReceiver* o `state` configurado para *question*. Sem esta configuração, se a mensagem inicial tivesse qualquer
 uma das palavras configuradas no `content` este *MessageReceiver* também seria ativado.
 
