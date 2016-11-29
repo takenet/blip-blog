@@ -6,8 +6,7 @@ tags: [Webhook, c#]
 author: pacheco
 ---
 
-Através da plataforma [blip.ai](https://blip.ai/) você consegue criar chatbots (também conhecidos como '*bots*', '*smart contacts*', contatos inteligentes ou contatos que entregam serviços) 
-nos principais canais de menssageria do mercado, como: [Facebook Messenger](https://www.messenger.com/), [Telegram](https://telegram.org/), [Skype](https://www.skype.com/), SMS, Whatsapp 
+Através da plataforma [blip.ai](https://blip.ai/) você consegue criar chatbots nos principais canais de mensageria do mercado, como [Facebook Messenger](https://www.messenger.com/), [Telegram](https://telegram.org/), [Skype](https://www.skype.com/), SMS, Whatsapp 
 (em breve) ou pelo aplicativo [Blip](https://play.google.com/store/apps/details?id=net.take.omni) disponível para android.
 
 O Blip.ai entrega ao desenvolvedor duas formas diferentes para a construção dos *chatbots*. A primeira delas é através dos SDK's [C#](https://github.com/takenet/messaginghub-client-csharp/) e 
@@ -16,17 +15,19 @@ A outra forma de realizar a integração é através de um [Webhook](https://bli
 para possibilitar que API's de terceiros faça requisições em seus serviços. Nesta estrutura o Blip.ai realiza requisições em um *endpoint* definido pelo desenvolvedor do chatbot sempre que 
 novas mensagens ou notificações estiverem disponíveis. Outra vantagem é não estar amarrado a nenhuma linguagem específica para construir seu *chatbot*.
 
-O objetivo deste artigo é demonstrar, passo a passo, a criação e publicação de um chatbot **currículo**, através do [blip.ai](https://blip.ai/), utilizando o modelo de integração *Webhook*. 
-Para isso será implementado um chatbot *simples* que responderá à alguns comandos básicos sobre informações de um profissional hipotético.
+O objetivo deste artigo é demonstrar o passo a passo para a criação e publicação de um chatbot **currículo**, através do [blip.ai](https://blip.ai/), utilizando o modelo de integração *Webhook*. 
+Para isso, será implementado um chatbot *simples* que responderá a alguns comandos básicos sobre informações de um profissional hipotético.
 
 <!--preview-->
 
 ## Sobre o chatbot 'currículo'
 
-Atualmente, quase todo profissional possui um currículo no formato tradicional. Folha A4, tópicos relevantes, preferencialmente com no máximo 2 laudas e algumas seções básicas como: 
-*informações gerais*, *formação acadêmica*, *experiência profissional*, *principais habilidades* e *alguma proeficiência em línguas* por exemplo. Existem também versões menos tradicionais 
-no formato digital, como portifólios, jogos e vídeos explicativos. Recentemente, com a explosão dos *chatbots* como nova interface de interação entre pessoas e serviços, surgiram alguns 
-trabalhos que utilizam esta nova tendência conversacional para apresentar suas experiências profissionais. Destaco aqui, os trabalhos de 
+Quase todo profissional possui um currículo no formato tradicional: folha A4, tópicos relevantes, preferencialmente com no máximo 2 laudas e algumas seções básicas como 
+informações gerais, formação acadêmica, experiência profissional, principais habilidades e alguma proficiência em línguas. Existem também versões menos tradicionais 
+no formato digital, como portfólios, jogos e vídeos explicativos. 
+
+Recentemente, com a explosão dos *chatbots* como nova interface de interação entre pessoas e organizações, surgiram alguns 
+trabalhos que utilizam esta nova tendência conversacional para apresentar suas experiências profissionais. Destaco aqui os trabalhos de 
 [Esther Crawford](https://medium.com/the-mission/how-i-turned-my-resume-into-a-bot-and-how-you-can-too-f03847352baa#.3hw9lyi3a) e 
 [Caio Calado](https://medium.com/@caio_caladoo/ola-caiobot-meu-linkedin-como-um-chatbot-no-messenger-9db6fa736f70#.4awx67ut0) como referências para este assunto.
 
@@ -40,16 +41,16 @@ Para simplificar vamos reduzir o escopo do chatbot para tratar apenas os seguint
 4. Envio de uma **lista** com as **principais habilidades**
 
 Embora seja possível, não vamos nos preocupar, inicialmente, com uma interpretação elaborada de linguagem natural. O artigo do André Bires 
-([Construíndo um chatbot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca Textc para melhorar 
+([Construindo um chatbot assistente virtual utilizando o Textc](http://blog.blip.ai/2016/10/17/chatbots-com-textc.html)) dá algumas dicas de como utilizar a biblioteca Textc para melhorar 
 a interpretação de texto de seu chatbot.
 
-## Mãos a obra
+## Mãos à obra
 
 ### Criando seu chatbot
 
 Antes de mais nada, precisamos criar um novo contato (*chatbot*) na plataforma [blip.ai](https://blip.ai/).
 
-1. Basta acessar a plataforma, fazer login e clicar no botão **Criar Contato**
+1. Acesse a plataforma, faça login e clique no botão **Criar Contato**
 2. Escolha o modelo para desenvolvedores **Webhook**
 3. Preencha as informações básicas de seu chatbot (nome e foto)
 
@@ -92,7 +93,7 @@ public class NotificationsController : ApiController
 
 ### Publicando a API no azure
 
-Mais uma vez essa é uma escolha pessoal. Você pode publicar sua API onde se sentir mais confortável, no Azure, AWS, Heroku ou na infrastrutura privada de sua empresa. A única coisa que precisamos é 
+Mais uma vez essa é uma escolha pessoal. Você pode publicar sua API onde se sentir mais confortável, no Azure, AWS, Heroku ou na infraestrutura privada de sua empresa. A única coisa que precisamos é 
 de um endereço externo, público e válido. A API criada neste artigo foi publicada no endereço http://resumebottemplate.azurewebsites.net.
 
 ### Configuração dos endpoints no portal Blip
@@ -225,8 +226,8 @@ public class MessagesController : ApiController
    }
 ```
 
-Para isso foi utilizado um client Http simples que executa um post em uma url específica da plataforma blip. Note que para enviar a resposta é necessário
-obter a Url de resposta e a chave de autenticação no portal blip. Vá nas **Configurações** de seu chatbot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
+Para isso, foi utilizado um client Http simples que executa um post em uma url específica da plataforma BLiP. Note que para enviar a resposta é necessário
+obter a Url de resposta e a chave de autenticação no portal BLiP. Vá nas **Configurações** de seu chatbot no menu lateral esquerdo e copie as url's para envio de mensagens e notificações. A imagem abaixo ilustra onde obter as informações a url para envio de mensagem e a chave de acesso.
 
 {% include image.html name="image_1.png" alt="Tela de configurações de um chatbot WebHook" %}
 
@@ -236,8 +237,8 @@ Finalmente, se o conteúdo recebido não for compatível com nenhuma das senten�
 
 Para testarmos nossa aplicação vou publicá-la no Facebook Messenger. 
 
-1. Para isso, basta ir até o portal blip.ai e clicar na opção **Publicações**, no meunu lateral esquerdo
-2. Depois escolha o seu canal de preferência (por exemplo **Facebook Messenger*)
+1. Para isso, basta ir até o portal blip.ai e clicar na opção **Publicações**, no menu lateral esquerdo
+2. Depois escolha o seu canal de preferência (por exemplo, **Facebook Messenger*)
 3. Siga o passo a passo indicado e seu chatbot já estará disponível.
 
 A imagem abaixo mostra uma interação simples com o chatbot.
