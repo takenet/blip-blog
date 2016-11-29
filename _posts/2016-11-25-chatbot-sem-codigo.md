@@ -6,13 +6,13 @@ tags: [sdk]
 author: andre
 ---
 
-A plataforma [Blip](https://blip.ai) possui um SDK [C#](https://github.com/takenet/messaginghub-client-csharp/) que facilita bastante a criação de chatbots,
+A plataforma [BLiP](https://blip.ai) possui um SDK [C#](https://github.com/takenet/messaginghub-client-csharp/) que facilita bastante a criação de chatbots,
 tanto que você pode criar um chatbot sem precisar usar uma única linha de código em C# &#128512;! 
 
 <!--preview-->
 
 Toda a conversa será configurada usando o arquivo JSON utilizado pelo SDK, mas ainda assim será preciso usar o Visual Studio 2015.
-Existem 2 *templates* do SDK C# que podem ser utilizados, um para uma [*console application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.Template/)
+Existem dois *templates* do SDK C# que podem ser utilizados, um para uma [*console application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.Template/)
 e outro para uma [*web application*](https://www.nuget.org/packages/Takenet.MessagingHub.Client.WebTemplate/). Neste exemplo vamos criar uma *web application*.
 
 ### Projeto básico
@@ -48,17 +48,17 @@ remova a configuração relativa a esta classe. O arquivo deverá ficar com o co
 É interessante entender como o SDK funciona antes de continuarmos. Toda mensagem que seu chatbot receber deverá passar por um *MessageReceiver*. 
 Para isso acontecer, filtros de conteúdos de mensagem devem ser configurados no *application.json*, direcionando a mensagem à uma implementação de um *MessageReceiver*. 
 
-Estes filtros podem ser por tipo de conteúdo (texto puro, imagem, video, etc), pelo conteúdo em si, pelo originador, etc. Veja na [documentação](https://blip.ai/portal/#/docs/sdks/csharp/configuring)
+Estes filtros podem ser por tipo de conteúdo (texto puro, imagem, vídeo, etc), pelo conteúdo em si, pelo originador, entre outros. Veja na [documentação](https://blip.ai/portal/#/docs/sdks/csharp/configuring)
 mais detalhes sobre estas e outras opções. 
 
-Toda mensagem que chega no chatbot é avaliada contra os filtros definidos no *application.json*, e todos os filtros que casarem com a mensagem terão seus 
+Toda mensagem que chega no chatbot é avaliada contra os filtros definidos no *application.json* e todos os filtros que casarem com a mensagem terão seus 
 respectivos *MessageReceivers* ativados e executados. 
 
 Porém existe a opção de definir um *MessageReceiver* estático que retorna um conteúdo qualquer, definido diretamente no *application.json*. É este recurso que exploraremos neste artigo.
 
 ### O chatbot
 
-Neste exemplo, o chatbot vai iniciar enviando uma mensagem de texto de boas vindas com uma pergunta. A configuração do *MessageReceiver* no *application.json* será:
+Neste exemplo, o chatbot vai iniciar enviando uma mensagem de texto de boas-vindas com uma pergunta. A configuração do *MessageReceiver* no *application.json* será:
 
 ```
     {
@@ -86,12 +86,11 @@ Observe que na propriedade `content` foram especificadas várias opções. Esta 
 Esta é uma expressão simples, mas qualquer expressão regular válida em C# pode ser utilizada. 
 Com esta expressão, respostas como por exemplo '*Sou humano*' e '*Claro q sou HUMANO!*' casarão com este *MessageReceiver*.
 
-Bacana, mas nossa configuração tem um defeito. Quando você enviar sua resposta o chatbot responderá com a mensagem acima e também enviará a mensagem de boas vindas...
+Bacana, mas nossa configuração tem um defeito. Quando você enviar sua resposta o chatbot responderá com a mensagem acima e também enviará a mensagem de boas-vindas...
 Isto porque o primeiro *MessageReceiver* não tem filtro nenhum definido. 
 
-Uma maneira interessante de corrigir isso é utilizar **estados**. Cada *MessageReceiver* pode definir o estado em que ele será ativado, adicionalmente a todas as configurações relativas ao conteúdo da mensagem.
-Para isso deve ser definida a propriedade `state`.
-E cada *MessageReceiver* pode também ajustar o estado atual, que será definido ao final da execução, através da propriedade `outState`.
+Uma maneira interessante de corrigir isso é utilizando **estados**. Cada *MessageReceiver* pode definir o estado em que ele será ativado, além de todas as configurações relativas ao conteúdo da mensagem.
+Para tal, deve ser definida a propriedade `state`; e cada *MessageReceiver* pode também ajustar o estado atual, que será definido ao final da execução, através da propriedade `outState`.
 
 Utilizando este novo recurso, nossos *MessageReceivers* ficarão assim:
 
@@ -115,9 +114,9 @@ Utilizando este novo recurso, nossos *MessageReceivers* ficarão assim:
     }
 ``` 
 
-Veja que o *MessageReceiver* da mensagem de boas vindas tem o `state` configurado para *default*, que é o valor inicial configurado pelo SDK. 
+Veja que o *MessageReceiver* da mensagem de boas-vindas tem o `state` configurado para *default*, que é o valor inicial configurado pelo SDK. 
 Se um `state` não for adicionado significa que o *MessageReceiver* pode ser aplicado em qualquer estado, o que obviamente não é nossa intenção.
-Ainda neste *MessageReceiver* foi configurada o `outState` para *question*. Esta propriedade pode ter qualquer texto, mas é interessante dar um nome 
+Ainda neste *MessageReceiver* foi configurado o `outState` para *question*. Esta propriedade pode ter qualquer texto, mas é interessante dar um nome 
 representativo.
 
 Por fim, adicionamos ao segundo *MessageReceiver* o `state` configurado para *question*. Sem esta configuração, se a mensagem inicial tivesse qualquer
@@ -137,7 +136,7 @@ Defeito removido, vamos adicionar a segunda reposta:
     }
 ``` 
 
-Legal. Porém se nenhuma das 2 respostas casar o chatbot não responderá nada. Vamos incluir uma terceira opção, que só será ativada se nenhuma das demais casar.
+Legal, mas se nenhuma das duas respostas casar o chatbot não responderá nada. Vamos incluir uma terceira opção, que só será ativada se nenhuma das demais casar.
 Para isso podemos utilizar a propriedade `priority`, com um valor maior do que zero. Observe que o `state` ainda é o *question*.
 
 Vamos também utilizar um [menu de opções](https://blip.ai/portal/#/docs/content-types/select), para facilitar para o usuário escolher a opção correta desta vez.
@@ -227,5 +226,5 @@ do Painel do Blip.
 Detalhe importante: a implementação atual do `IStateManager` no SDK C#, responsável pelo armazenamento do estado de cada usuário, é feita em memória. 
 Isto significa que sempre que reiniciar o processo do chatbot ele *esquecerá* o estado e recomeçará a conversa. 
 
-Uma opção interessante para armazenar permanentemente, que em breve deverá estar disponível no SDK, é utilizar a [extensão de armazenamento](https://blip.ai/portal/#/docs/extensions/bucket) do Blip.
+Uma opção interessante para armazenar permanentemente, que em breve deverá estar disponível no SDK, é utilizar a [extensão de armazenamento](https://blip.ai/portal/#/docs/extensions/bucket) do BLiP.
 Se quiser contribuir com uma implementação que armazene os estados em algum outro meio permanente, nosso repositório no Github está [aqui](https://github.com/takenet/messaginghub-client-csharp).  
