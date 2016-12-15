@@ -1,5 +1,5 @@
 ---
-title:  "Chatbot sem código"
+title:  "Atualizações da plataforma - dez/2016"
 date:   2016-12-15 10:00:00 +0000
 categories: [Novidades]
 tags: [releases]
@@ -15,6 +15,8 @@ O serviço já está disponível no Painel Blip/Configurações/Resposta Automá
 
 #### Transferência de atendimento
 Disponível como uma extensão no [SDK C#](https://www.nuget.org/packages/takenet.messaginghub.client), esta funcionalidade permite que o desenvolvedor de um chatbot encaminhe mensagens para uma pessoa responder ao usuário, como se fosse o próprio chatbot respondendo.
+
+<!--preview-->
 Este *atendente humano* utilizará o [BLiP Mensagens](https://play.google.com/store/apps/details?id=net.take.omni)
 ou [BLiP Web](https://web.blip.ai/) para receber as mensagens e enviar respostas para o usuário.
 
