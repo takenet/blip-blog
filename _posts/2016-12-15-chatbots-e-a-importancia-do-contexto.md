@@ -37,7 +37,7 @@ José: Não sei, só sei que não podemos mantê-lo por mais tempo.
 
 Se o José fosse seu chefe e se você chegasse alguns segundos depois para ouvir somente este último trecho, poderia até ficar preocupado com seu emprego. Mas como você está *contextualizado*, sabe que estão se referindo ao técnico do time que perdeu ontem. O contexto, portanto, também depende de **informações dinâmicas definidas durante a conversação** e que podem ser alteradas a todo momento.
 
-Conversas naturais possuem contextos bastante complexos e que variam de acordo com a relação entre as pessoas. Pessoas mais próximas precisam trocar menos palavras para se entender, praticamente definindo uma linguagem particular. Já conversas entre pessoas desconhecidas tendem a ser mais formais e padronizadas, como em **conversas de atendimento** - algo que *chatbots* podem desempenhar um papel suficientemente bom para substituir humanos em boa parte das situações. E quanto mais **sensível ao contexto** o *bot* for, maior chance da conversa ser produtiva para o cliente.
+Conversas naturais possuem contextos bastante complexos e que variam de acordo com a relação entre as pessoas. Pessoas mais próximas precisam trocar menos palavras para se entender, praticamente definindo uma linguagem particular. Já conversas entre pessoas desconhecidas tendem a ser mais formais e padronizadas, como em **conversas de atendimento** - onde *chatbots* podem desempenhar um papel suficientemente bom para substituir humanos em boa parte das situações. E quanto mais **sensível ao contexto** o *bot* for, maior chance da conversa ser produtiva para o cliente.
 
 Ao construir um chatbot, deve se considerar que o usuário poderá tentar se comunicar da maneira que ele conversa com outras pessoas da sua lista de contatos. Por outro lado, o **chatbot deve possuir um propósito claro** e delimitar até onde consegue ir. Não adianta tentar responder *qual o sentido da vida* em um bot da pizzaria, seria inviável a implementação devido a complexidade e provavelmente você não atenderia seu cliente bem no que você se propõe - vender pizzas. Desta forma, o contexto do bot da pizzaria deveria se preocupar apenas com informações como nome do cliente, endereço e último pedido que já seria suficiente para atender seu propósito.
 
@@ -95,7 +95,7 @@ public Task<string> ConfirmOrderAsync(string size, string flavor, string address
 }
 ```
 
-No código acima, armazenamos o pedido do cliente no contexto e solicitados a confirmação do cliente. Neste caso, o número do pedido fica em uma variável **orderId** e que poderá ser utilizada na sintaxe de confirmação, de forma que só será satisfeita caso exista a mesma no contexto.
+No código acima, armazenamos o pedido do cliente no contexto e solicitados a confirmação do cliente. Neste caso, o número do pedido fica em uma variável **orderId** e que poderá ser utilizada na sintaxe de confirmação de forma que haverá *match* caso a mesma exista no contexto.
 
 ```
 :Word(sim) orderId:Long
@@ -112,6 +112,7 @@ public Task<string> ProcessOrderAsync(long orderId, IRequestContext context)
     {
         return Task.FromResult("Ops, não encontrei o pedido solicitado :(");
     }
+    _orderDictionary.Remove(orderId);
 
     // 2. Define no contexto as informações do pedido
     context.SetVariable("size", order.Size);
@@ -127,3 +128,66 @@ public Task<string> ProcessOrderAsync(long orderId, IRequestContext context)
     return Task.FromResult(builder.ToString());
 }
 ```
+
+No segundo passo, armazenamos no contexto as informações do pedido do usuário. Desta forma, caso o cliente envie na próxima mensagem apenas `quero uma pizza`, as variáveis faltantes serão extraídas do contexto, ocorrendo o *match*. Isso é válido mesmo caso o cliente envie uma entrada parcial, como `quero uma pizza calabreza` ou `quero uma pizza media de pepperoni`.
+
+E por último, precisamos tratar a negativa do cliente, que deve cancelar o pedido e limpar os dados contexto. A sintaxe ficaria assim:
+
+```
+:Word(nao,não) orderId:Long
+```
+
+E a implementação do método:
+
+```csharp        
+public Task<string> CancelOrderAsync(long orderId, IRequestContext context)
+{
+    _orderDictionary.Remove(orderId);
+    context.Clear();
+    return Task.FromResult("O pedido foi cancelado e suas preferências removidas");
+}
+```
+
+Executando o exemplo, temos:
+
+```
+> Mande uma pizza grande sabor Marguerita para à Rua Acme, 1234
+Seu pedido:
+- Sabor: marguerita
+- Tamanho: grande
+- Endereço para entrega: rua acme 1234
+Você confirma?
+
+> sim
+Seu pedido foi realizado com sucesso!
+Ah, salvamos suas preferências para os próximos pedidos :)
+
+> quero uma pizza calabreza
+Seu pedido:
+- Sabor: calabreza
+- Tamanho: grande
+- Endereço para entrega: rua acme 1234
+Você confirma?
+
+> sim
+Seu pedido foi realizado com sucesso!
+Ah, salvamos suas preferências para os próximos pedidos :)
+
+> quero uma pizza media de pepperoni
+Seu pedido:
+- Sabor: pepperoni
+- Tamanho: media
+- Endereço para entrega: rua acme 1234
+Você confirma?
+
+> nao
+O pedido foi cancelado e suas preferências removidas
+
+> quero uma pizza marguerita
+There's no match for the specified input
+
+```
+
+Apesar de ser um exemplo bastante simples, ilustra como o contexto pode facilitar a navegação por parte do usuário.
+
+O código do Textc e deste e outros exemplos estão <a href="https://github.com/takenet/textc-csharp/tree/master/src/Takenet.Textc.Samples">no Github</a>. 
