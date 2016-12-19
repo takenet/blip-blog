@@ -175,11 +175,11 @@ Ah, salvamos suas preferências para os próximos pedidos :)
 > quero uma pizza média de pepperoni
 Seu pedido:
 - Sabor: pepperoni
-- Tamanho: media
+- Tamanho: média
 - Endereço para entrega: rua acme 1234
 Você confirma?
 
-> nao
+> não
 O pedido foi cancelado e suas preferências removidas
 
 > quero uma pizza marguerita
