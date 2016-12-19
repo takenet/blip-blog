@@ -17,7 +17,7 @@ Se você não é o Miguel ou o Pedro e não os conhece, provavelmente você não
 - De qual esporte estão falando
 - Qual técnico que estão se referindo
 
-Estas informações fazem parte do **contexto** da conversa. O contexto depende de muitas fatores, como por exemplo da **data, horário e local da conversa**. 
+Estas informações fazem parte do **contexto** da conversa. O contexto depende de muitos fatores, como por exemplo da **data, horário e local da conversa**. 
 
 <!--preview--> 
 
