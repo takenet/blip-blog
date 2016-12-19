@@ -51,10 +51,10 @@ Pensando no chatbot da pizzaria, imagine que ele devesse suportar um comando com
 Mande uma pizza grande sabor Marguerita para à Rua Acme, 1234
 ```
 
-Precisariamos da seguinte **sintaxe**:
+Precisaríamos da seguinte **sintaxe**:
 
 ```
-:Word?(quero,mande,solicito) :Word?(uma) :Word?(pizza) size:Word(pequena,media,média,grande,gigante) :Word?(sabor,de) flavor:Word(marguerita,pepperoni,calabreza) :Word?(para) :Word?(à,a,o) address:Text
+:Word?(quero,mande,solicito) :Word?(uma) :Word?(pizza) size:Word(pequena,media,média,grande,gigante) :Word?(sabor,de) flavor:Word(marguerita,pepperoni,calabresa) :Word?(para) :Word?(à,a,o) address:Text
 ```
 
 As variáveis que temos são:
@@ -128,7 +128,7 @@ public Task<string> ProcessOrderAsync(long orderId, IRequestContext context)
 }
 {% endhighlight %}
 
-No segundo passo, armazenamos no contexto as informações do pedido do usuário. Desta forma, caso o cliente envie na próxima mensagem apenas `quero uma pizza`, as variáveis faltantes serão extraídas do contexto, ocorrendo o *match*. Isso é válido mesmo caso o cliente envie uma entrada parcial, como `quero uma pizza calabreza` ou `quero uma pizza media de pepperoni`.
+No segundo passo, armazenamos no contexto as informações do pedido do usuário. Desta forma, caso o cliente envie na próxima mensagem apenas `quero uma pizza`, as variáveis faltantes serão extraídas do contexto, ocorrendo o *match*. Isso é válido mesmo caso o cliente envie uma entrada parcial, como `quero uma pizza calabresa` ou `quero uma pizza media de pepperoni`.
 
 E por último, precisamos tratar a negativa do cliente, que deve cancelar o pedido e limpar os dados contexto. A sintaxe ficaria assim:
 
@@ -161,9 +161,9 @@ Você confirma?
 Seu pedido foi realizado com sucesso!
 Ah, salvamos suas preferências para os próximos pedidos :)
 
-> quero uma pizza calabreza
+> quero uma pizza calabresa
 Seu pedido:
-- Sabor: calabreza
+- Sabor: calabresa
 - Tamanho: grande
 - Endereço para entrega: rua acme 1234
 Você confirma?
