@@ -54,7 +54,7 @@ Mande uma pizza grande sabor Marguerita para à Rua Acme, 1234
 Precisariamos da seguinte **sintaxe**:
 
 ```
-:Word?(quero,mande,solicito) :Word?(uma) :Word?(pizza) size:Word(pequena,media,grande,gigante) :Word?(sabor,de) flavor:Word(marguerita,pepperoni,calabreza) :Word?(para) :Word?(à,a,o) address:Text
+:Word?(quero,mande,solicito) :Word?(uma) :Word?(pizza) size:Word(pequena,media,média,grande,gigante) :Word?(sabor,de) flavor:Word(marguerita,pepperoni,calabreza) :Word?(para) :Word?(à,a,o) address:Text
 ```
 
 As variáveis que temos são:
