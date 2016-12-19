@@ -65,7 +65,7 @@ As variáveis que temos são:
 
 E o seguinte método para processar o pedido:
 
-```csharp
+{% highlight csharp linenos %}
 public Task<string> ConfirmOrderAsync(string size, string flavor, string address, IRequestContext context)
 {
     // 1. Cria e armazena o pedido
@@ -93,7 +93,7 @@ public Task<string> ConfirmOrderAsync(string size, string flavor, string address
 
     return Task.FromResult(builder.ToString());
 }
-```
+{% endhighlight %}
 
 No código acima, armazenamos o pedido do cliente no contexto e solicitados a confirmação do cliente. Neste caso, o número do pedido fica em uma variável **orderId** e que poderá ser utilizada na sintaxe de confirmação de forma que haverá *match* caso a mesma exista no contexto.
 
