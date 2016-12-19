@@ -9,10 +9,10 @@ author: andreb
 Imagine você chegando no seu trabalho de manhã e ouvir, de longe, a seguinte conversa:
 
 ```
-João: Já passou da hora de demitir o treinador!
-José: Pois é, mas a diretoria insiste em mantê-lo.
+Miguel: Já passou da hora de demitir o treinador!
+Nicolas: Pois é, mas a diretoria insiste em mantê-lo.
 ```
-Se você não é o João ou o José ou não os conhece, provavelmente você são sabe:
+Se você não é o Miguel ou o Nicolas ou não os conhece, provavelmente você são sabe:
 
 - De qual esporte estão falando
 - Qual técnico que estão se referindo
@@ -31,11 +31,11 @@ Com esta informação, podemos deduzir que a resposta destas perguntas são:
 Continuando a conversa:
 
 ```
-João: Mas quem podemos contratar se o mandarmos embora?
-José: Não sei, só sei que não podemos mantê-lo por mais tempo.
+Miguel: Mas quem podemos contratar se o mandarmos embora?
+Nicolas: Não sei, só sei que não podemos mantê-lo por mais tempo.
 ```
 
-Se o José fosse seu chefe e se você chegasse alguns segundos depois para ouvir somente este último trecho, poderia até ficar preocupado com seu emprego. Mas como você está *contextualizado*, sabe que estão se referindo ao técnico do time que perdeu ontem. O contexto, portanto, também depende de **informações dinâmicas definidas durante a conversação** e que podem ser alteradas a todo momento.
+Se o Nicolas fosse seu chefe e se você chegasse alguns segundos depois para ouvir somente este último trecho, poderia até ficar preocupado com seu emprego. Mas como você está *contextualizado*, sabe que estão se referindo ao técnico do time que perdeu ontem. O contexto, portanto, também depende de **informações dinâmicas definidas durante a conversação** e que podem ser alteradas a todo momento.
 
 Conversas naturais possuem contextos bastante complexos e que variam de acordo com a relação entre as pessoas. Pessoas mais próximas precisam trocar menos palavras para se entender, praticamente definindo uma linguagem particular. Já conversas entre pessoas desconhecidas - como as que você tem ao ligar para o *callcenter* da sua operadora de telefonia - tendem a ser **mais formais e padronizadas**. Nestes casos, a linguagem e o contexto são simplificados e é onde os *chatbots* podem desempenhar um bom papel substituindo humanos, em grande parte das situações. E quanto mais **sensível ao contexto** o *chatbot* for, maior chance da conversa ser produtiva para o cliente.
 
