@@ -12,7 +12,7 @@ Imagine você chegando no seu trabalho de manhã e ouvir, de longe, a seguinte c
 Miguel: Já passou da hora de demitir o treinador!
 Nicolas: Pois é, mas a diretoria insiste em mantê-lo.
 ```
-Se você não é o Miguel ou o Nicolas ou não os conhece, provavelmente você são sabe:
+Se você não é o Miguel ou o Nicolas e não os conhece, provavelmente você não sabe:
 
 - De qual esporte estão falando
 - Qual técnico que estão se referindo
@@ -37,9 +37,9 @@ Nicolas: Não sei, só sei que não podemos mantê-lo por mais tempo.
 
 Se o Nicolas fosse seu chefe e se você chegasse alguns segundos depois para ouvir somente este último trecho, poderia até ficar preocupado com seu emprego. Mas como você está *contextualizado*, sabe que estão se referindo ao técnico do time que perdeu ontem. O contexto, portanto, também depende de **informações dinâmicas definidas durante a conversação** e que podem ser alteradas a todo momento.
 
-Conversas naturais possuem contextos bastante complexos e que variam de acordo com a relação entre as pessoas. Pessoas mais próximas precisam trocar menos palavras para se entender, praticamente definindo uma linguagem particular. Já conversas entre pessoas desconhecidas - como as que você tem ao ligar para o *callcenter* da sua operadora de telefonia - tendem a ser **mais formais e padronizadas**. Nestes casos, a linguagem e o contexto são simplificados e é onde os *chatbots* podem desempenhar um bom papel substituindo humanos, em grande parte das situações. E quanto mais **sensível ao contexto** o *chatbot* for, maior chance da conversa ser produtiva para o cliente.
+Conversas naturais possuem contextos bastante complexos e que variam de acordo com a relação entre os indivíduos. Pessoas mais próximas precisam trocar menos palavras para se entenderem, praticamente definindo uma linguagem particular. Já conversas entre pessoas desconhecidas - como as que você tem ao ligar para o *callcenter* da sua operadora de telefonia - tendem a ser **mais formais e padronizadas**. Nestes casos, a linguagem e o contexto são simplificados e os *chatbots* podem desempenhar um bom papel substituindo o atendente em grande parte das situações. E quanto mais **sensível ao contexto** o *chatbot* for, maior chance da conversa ser produtiva para o cliente.
 
-Ao construir um chatbot, deve se considerar que o usuário poderá tentar se comunicar da maneira que ele conversa com outras pessoas da sua lista de contatos. Por outro lado, o **chatbot deve possuir um propósito claro** e delimitar até onde consegue ir. Não adianta tentar responder *qual o sentido da vida* no chatbot da pizzaria, pois a implementação seria inviável devido a complexidade e provavelmente você não atenderia seu cliente bem no que você se propõe - vender pizzas. Desta forma, o contexto do chatbot da pizzaria deveria se preocupar apenas com informações como nome do cliente, endereço e último pedido, dados que já seriam suficientes para atender seu propósito.
+Ao construir um chatbot, deve se considerar que o usuário poderá tentar se comunicar da maneira que ele conversa com pessoas mais próximas. Por outro lado, o **chatbot deve possuir um propósito claro** e delimitar até onde consegue ir. Não adianta tentar responder *qual o sentido da vida* no chatbot da pizzaria, pois a implementação seria inviável devido a complexidade e, provavelmente, você não atenderia seu cliente bem no que você se propõe - vender pizzas. Desta forma, o chatbot da pizzaria deveria se preocupar com informações como nome do cliente, endereço e último pedido, dados que já seriam suficientes para atender ao seu propósito.
 
 ## Utilizando Textc para construir uma conversa contextual
 
@@ -93,7 +93,7 @@ public Task<string> ConfirmOrderAsync(string size, string flavor, string address
 }
 {% endhighlight %}
 
-No código acima, armazenamos o pedido do cliente no contexto e solicitados a confirmação do cliente. Neste caso, o número do pedido fica em uma variável **orderId** e que poderá ser utilizada na sintaxe de confirmação de forma que haverá *match* caso a mesma exista no contexto.
+No código acima, armazenamos o pedido do cliente no contexto e solicitamos a confirmação do cliente. Neste caso, o número do pedido fica em uma variável **orderId**, que poderá ser utilizada na sintaxe de confirmação de forma que haverá *match* caso a mesma exista no contexto.
 
 ```
 :Word(sim) orderId:Long
@@ -172,7 +172,7 @@ Você confirma?
 Seu pedido foi realizado com sucesso!
 Ah, salvamos suas preferências para os próximos pedidos :)
 
-> quero uma pizza media de pepperoni
+> quero uma pizza média de pepperoni
 Seu pedido:
 - Sabor: pepperoni
 - Tamanho: media
