@@ -4,6 +4,7 @@ $lineno-color: #666;
 .highlight {    
     code {
         background: $primary-color;
+        overflow: auto;
     }
 
     table {
