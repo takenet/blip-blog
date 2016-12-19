@@ -1,7 +1,30 @@
 $primary-color: #333;
+$lineno-color: #666;
 
 .highlight {    
     code {
         background: $primary-color;
     }
+
+    table {
+        margin-bottom: 0;
+        td {
+            border-bottom-width: 0;
+
+            &.gutter {
+                user-select: none;
+            }
+        }
+    }
+
+    .lineno { 
+        color: $lineno-color; 
+        display:inline-block; 
+        padding: 0 5px; 
+        border-right:1px solid $lineno-color; 
+    }
 } 
+
+figure.highlight {
+    margin: 0;
+}
