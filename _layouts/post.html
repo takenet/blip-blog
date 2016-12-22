@@ -20,8 +20,8 @@ layout: default
       <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url }}&t={{ page.title }}" title="Compartilhar no Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Compartilhar no Facebook" src="/assets/img/icons/color/Facebook.png"></a>
   </li>
   <li>
-    <a href="https://twitter.com/intent/tweet?source={{ page.url }}&text=:%20{{ page.url }}&via=takenet" target="_blank" title="Tweet"
-      onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/assets/img/icons/color/Twitter.png"></a>
+    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=takenet" target="_blank" title="Tweet"
+      onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent({{ site.url }}{{ page.url }}) + '&text='  + encodeURIComponent({{ page.title }} + '&via=takenet')); return false;"><img alt="Tweet" src="/assets/img/icons/color/Twitter.png"></a>
   </li>
   <li>
     <a href="https://plus.google.com/share?url={{ page.url }}" target="_blank" title="Compartilhar no Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Compartilhar no Google+" src="/assets/img/icons/color/Google+.png"></a>
