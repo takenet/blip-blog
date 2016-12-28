@@ -10,7 +10,7 @@ Se você já criou algum chatbot então provavelmente já precisou de várias fe
 um local seguro ou *trackear* eventos ocorridos, são exemplos de tarefas simples que podem demandar um grande esforço para serem realizadas.
 
 Pensando nisso, a plataforma [BLiP](https://blip.ai/) possui diversas [extensões](https://portal.blip.ai/#/docs/extensions). As extensões são serviços que provêm funcionalidades 
-para facilitar a vida dos desenvolvedores no momento da construção dos chatbots. Imagine que cada extensão seja um plugin, conectado à plataforma, e que pode receber comandos e mensagens, 
+para facilitar a vida dos desenvolvedores no momento da construção dos chatbots. Imagine que cada extensão seja um plugin, conectado à plataforma, que pode receber comandos e mensagens, 
 dos próprios chatbots, para realizar alguma ação.
 
 O objetivo deste artigo é demonstrar como é fácil e rápido, utilizar estas extensões durante a criação de um chatbot. Todos os exemplos apresentados aqui utilizam o [SDK 
@@ -139,9 +139,9 @@ enviar as mensagens para o grupo correto.
 Para resolver este problema basta utilizar a extensão de listas.
 
 1. Adicione a interface *IBroadcastExtension* no construtor de seu MessageReceiver. **Obs.: Ele será injetado automaticamente pelo SDK**
-2. Crie uma nova lista de distribuiçãoUtilize com o método *CreateDistributionListAsync(string listName)*
-3. Adicione um novo usuário a sua lista com o método *AddRecipientAsync(string listName, Identity recipientIdentity)*
-4. Finalmente envie uma mensagem para todos os usuários de sua lista com o método *SendMessageAsync(string listName, Document d)*
+2. Crie uma nova lista de distribuição utilizando o método *CreateDistributionListAsync(string listName)*
+3. Adicione um novo usuário à sua lista com o método *AddRecipientAsync(string listName, Identity recipientIdentity)*
+4. Finalmente, envie uma mensagem para todos os usuários de sua lista com o método *SendMessageAsync(string listName, Document d)*
 
 ```csharp
 public class BroadcastMessageReceiver : IMessageReceiver
@@ -174,9 +174,9 @@ Para isso, vamos precisar de:
 
 1. Adicione a interface *IBucketExtension* no construtor de seu MessageReceiver. **Obs.: Ele será injetado automaticamente pelo SDK**
 2. Utilize o método *SetAsync(string resourceId, Document d)* para armazenar um documento contendo a data de último acesso.
-3. **Obs.: Utilize o método *GetAsync(string resourceId)* para recuperar as informações salvas anteriorment.**
+3. **Obs.: Utilize o método *GetAsync(string resourceId)* para recuperar as informações salvas anteriormente.**
 
-O código abaixo apresenta mostra como salvar um documento json contendo a data de último acesso.
+O código abaixo mostra como salvar um documento json contendo a data de último acesso.
 
 ```csharp
 public class BucketMessageReceiver : IMessageReceiver
