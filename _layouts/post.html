@@ -15,14 +15,28 @@ layout: default
   <div class="post-date">{{ page.date | date: "%d/%m/%Y" }}</div>
   {{ content }}
 
-  <div class="share-page">
-      <p>
-        Compartilhe este artigo &rarr;
-        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Compartilhe no Twitter">Twitter</a>
-        <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Compartilhe no Facebook">Facebook</a>
-        <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Compartilhe no Google+">Google+</a>        
-      </p>
-  </div>  
+  <ul class="share-buttons">
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url }}&t={{ page.title }}" title="Compartilhar no Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Compartilhar no Facebook" src="/assets/img/icons/color/Facebook.png"></a>
+  </li>
+  <li>
+    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=takenet" target="_blank" title="Tweet"
+      onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent({{ site.url }}{{ page.url }}) + '&text='  + encodeURIComponent({{ page.title }} + '&via=takenet')); return false;"><img alt="Tweet" src="/assets/img/icons/color/Twitter.png"></a>
+  </li>
+  <li>
+    <a href="https://plus.google.com/share?url={{ page.url }}" target="_blank" title="Compartilhar no Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Compartilhar no Google+" src="/assets/img/icons/color/Google+.png"></a>
+  </li>
+  <li>
+    <a href="http://www.reddit.com/submit?url={{ page.url }}&title={{ page.title }}" target="_blank" title="Postar no Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Postar no Reddit" src="/assets/img/icons/color/Reddit.png"></a>
+  </li>
+  <li>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url }}&title={{ page.title }}&summary=&source={{ page.url }}" target="_blank"
+      title="Compartilhar no LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Compartilhar no LinkedIn" src="/assets/img/icons/color/LinkedIn.png"></a>
+  </li>
+  <li>
+    <a href="mailto:?subject={{ page.title }}&body=:%20{{ page.url }}" target="_blank" title="Enviar por e-mail" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Enviar por e-mail" src="/assets/img/icons/color/Email.png"></a>
+  </li>
+  </ul>
 </article>
 
 {% if page.comments %}

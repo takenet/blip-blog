@@ -10,16 +10,21 @@ Imagine você chegando no seu trabalho de manhã e ouvir, de longe, a seguinte c
 
 ```
 Miguel: Já passou da hora de demitir o treinador!
-Nicolas: Pois é, mas a diretoria insiste em mantê-lo.
+Pedro: Pois é, mas a diretoria insiste em mantê-lo.
 ```
-Se você não é o Miguel ou o Nicolas e não os conhece, provavelmente você não sabe:
+Se você não é o Miguel ou o Pedro e não os conhece, provavelmente você não sabe:
 
 - De qual esporte estão falando
 - Qual técnico que estão se referindo
 
-Estas informações fazem parte do **contexto** da conversa. O contexto depende de muitas fatores, como por exemplo da **data, horário e local da conversa**. 
+Estas informações fazem parte do **contexto** da conversa. O contexto depende de muitos fatores, como por exemplo da **data, horário e local da conversa**. 
 
 <!--preview--> 
+
+<figure>
+    <img class="alignnone size-full wp-image-166" src="http://esportes.r7.com/blogs/cosme-rimoli/files/2015/08/3ae18.jpg" alt="textc.png" />
+    <figcaption><em>Com a imagem ficou fácil...</em></figcaption>
+</figure>
 
 Imagine que agora você sabe que esta conversa aconteceu numa quinta-feira de manhã, em Belo Horizonte, depois da final da Copa do Brasil de 2016 entre Atlético e Grêmio, sendo que o Atlético perdeu o jogo.
 
@@ -32,10 +37,10 @@ Continuando a conversa:
 
 ```
 Miguel: Mas quem podemos contratar se o mandarmos embora?
-Nicolas: Não sei, só sei que não podemos mantê-lo por mais tempo.
+Pedro: Não sei, só sei que não podemos mantê-lo por mais tempo.
 ```
 
-Se o Nicolas fosse seu chefe e se você chegasse alguns segundos depois para ouvir somente este último trecho, poderia até ficar preocupado com seu emprego. Mas como você está *contextualizado*, sabe que estão se referindo ao técnico do time que perdeu ontem. O contexto, portanto, também depende de **informações dinâmicas definidas durante a conversação** e que podem ser alteradas a todo momento.
+Se o Pedro fosse seu chefe e se você chegasse alguns segundos depois para ouvir somente este último trecho, poderia até ficar preocupado com seu emprego. Mas como você está *contextualizado*, sabe que estão se referindo ao técnico do time que perdeu ontem. O contexto, portanto, também depende de **informações dinâmicas definidas durante a conversação** e que podem ser alteradas a todo momento.
 
 Conversas naturais possuem contextos bastante complexos e que variam de acordo com a relação entre os indivíduos. Pessoas mais próximas precisam trocar menos palavras para se entenderem, praticamente definindo uma linguagem particular. Já conversas entre pessoas desconhecidas - como as que você tem ao ligar para o *callcenter* da sua operadora de telefonia - tendem a ser **mais formais e padronizadas**. Nestes casos, a linguagem e o contexto são simplificados e os *chatbots* podem desempenhar um bom papel substituindo o atendente em grande parte das situações. E quanto mais **sensível ao contexto** o *chatbot* for, maior chance da conversa ser produtiva para o cliente.
 
