@@ -8,7 +8,7 @@ author: pacheco
 
 <figure>
     <img class="alignnone size-full" src="http://i.imgur.com/PXGqPty.png" alt="chatbots" />
-</figure
+</figure>
 
 Se você já criou algum chatbot, provavelmente já precisou de várias ferramentas auxiliares. Agendar o envio de alguma mensagem, salvar informações de seus clientes em 
 um local seguro ou *trackear* eventos ocorridos, são exemplos de tarefas simples que podem demandar um grande esforço para serem realizadas.
