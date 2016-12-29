@@ -1,5 +1,5 @@
 ---
-title:  "Facilitando a criação de seu chatbots através das extensões"
+title:  "Facilitando a criação de seu chatbot através das extensões"
 date:   2016-12-28 14:00:00 +0000
 categories: [Dicas de funcionalidades]
 tags: [Extensões, c#, sdks]
