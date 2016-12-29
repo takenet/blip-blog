@@ -205,7 +205,7 @@ public class BucketMessageReceiver : IMessageReceiver
 }
 ```
 
-## *Track* de usuários que utilizaram uma determinada funcinalidade 
+## *Track* de usuários que utilizaram uma determinada funcionalidade 
 
 Por fim pense na tarefa de *trackear* quantos usuários utilizaram uma determinada funcionalidade (ou enviaram um determinado conteúdo) para o chatbot.
 
