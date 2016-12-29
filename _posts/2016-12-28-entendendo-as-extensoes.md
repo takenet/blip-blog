@@ -6,7 +6,9 @@ tags: [Extensões, c#, sdks]
 author: pacheco
 ---
 
-{% include image.html name="image_0.jpg" alt="Chatbots com extensões" width="693px" %}
+<figure>
+    <img class="alignnone size-full" src="http://i.imgur.com/PXGqPty.png" alt="chatbots" />
+</figure
 
 Se você já criou algum chatbot, provavelmente já precisou de várias ferramentas auxiliares. Agendar o envio de alguma mensagem, salvar informações de seus clientes em 
 um local seguro ou *trackear* eventos ocorridos, são exemplos de tarefas simples que podem demandar um grande esforço para serem realizadas.
@@ -77,7 +79,7 @@ Para exemplificar o uso das extensões vamos criar um chatbot utilizando o SDK C
 [neste link](https://portal.blip.ai/#/docs/sdks/csharp/installing). A utilização de cada extensão será apresentada através de exemplos simples, mas indispensáveis para quem 
 está desenvolvendo qualquer chatbot.
 
-{% include image.html name="image_1.png" alt="Chatbots" width="1024px" %}
+{% include image.html name="image_0.jpg" alt="Chatbots com extensões" width="693px" %}
 
 **Obs.: Todos os casos abaixo foram criados tomando como base a classe *PlainTextMessageReceiver*, adicionada automaticamente no momento da instalação do SDK C#.**
 
