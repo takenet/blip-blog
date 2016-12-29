@@ -8,14 +8,14 @@ author: pacheco
 
 {% include image.html name="image_0.jpg" alt="Chatbots com extensões" width="693px" %}
 
-Se você já criou algum chatbot então provavelmente já precisou de várias ferramentas auxiliares. Agendar o envio de alguma mensagem, salvar informações de seus clientes em 
+Se você já criou algum chatbot, provavelmente já precisou de várias ferramentas auxiliares. Agendar o envio de alguma mensagem, salvar informações de seus clientes em 
 um local seguro ou *trackear* eventos ocorridos, são exemplos de tarefas simples que podem demandar um grande esforço para serem realizadas.
 
 Pensando nisso, a plataforma [BLiP](https://blip.ai/) possui diversas [extensões](https://portal.blip.ai/#/docs/extensions). As extensões são serviços que provêm funcionalidades 
 para facilitar a vida dos desenvolvedores no momento da construção dos chatbots. Imagine que cada extensão seja um plugin, conectado à plataforma, que pode receber comandos e mensagens, 
 dos próprios chatbots, para realizar alguma ação.
 
-O objetivo deste artigo é demonstrar como é fácil e rápido, utilizar estas extensões durante a criação de um chatbot. Todos os exemplos apresentados aqui utilizam o [SDK 
+O objetivo deste artigo é demonstrar como é fácil e rápido utilizar estas extensões durante a criação de um chatbot. Todos os exemplos apresentados aqui utilizam o [SDK 
 C#](https://portal.blip.ai/#/docs/sdks/csharp).
 
 <!--preview-->
@@ -68,7 +68,7 @@ Atualmente, o BLiP possui as seguintes extensões disponíveis:
 </table>
 
 A extensão de **Delegação** é uma extensão especial. Através dela, é possível dar permissão para que outras identidades (extensões ou chatbots) da plataforma envie mensagens 
-em nome do seu chatbot. Atualmente apenas as estensões de **Agendamento** e **Envio em massa** precisam de delegação para funcionarem, entretanto estas já são concedidas, por 
+em nome do seu chatbot. Atualmente, apenas as estensões de **Agendamento** e **Envio em massa** precisam de delegação para funcionarem. Entretanto, estas já são concedidas, por 
 padrão, no momento da criação do chatbot. Dessa forma, para os exemplos que serão apresentados neste artigo não será preciso preocupar com a delegação de permissões.
 
 # Mãos à obra
@@ -101,7 +101,7 @@ Para isso, serão necessários duas modificações em seu MessageReceiver:
 1. Adicione a interface *ISchedulerExtension* no construtor de seu MessageReceiver. **Obs.: Ele será injetado automaticamente pelo SDK**
 2. Utilize o método *ScheduleMessageAsync(Meesage m, DateTimeOffset d)* para agendar sua mensagem
 
-O código abaixo, apresenta a utilização da extensão de agendamento.
+O código abaixo apresenta a utilização da extensão de agendamento.
 
 ```csharp
 //Note that I just changed the MessageReceiver class name from PlainTextMessageReceiver to SchedulerExtensionMessageReceiver
@@ -136,8 +136,8 @@ public class SchedulerExtensionMessageReceiver : IMessageReceiver
 
 ## Crie uma lista de distribuição de conteúdo
 
-Para alguns chatbots, distribuição de conteúdo é a principal funcionalidade. O chatbot de uma empresa varejista, por exemplo, precisa enviar, mensalmente,
-cupons de promoções para um determinado perfil de clientes. Para isso é necessário: separar os clientes que devem receber os cupons daqueles que não devem, e finalmente 
+Para alguns chatbots, a distribuição de conteúdo é a principal funcionalidade. O chatbot de uma empresa varejista, por exemplo, precisa enviar mensalmente
+cupons de promoções para um determinado perfil de clientes. Para isso, é necessário separar os clientes que devem receber os cupons daqueles que não devem e, finalmente, 
 enviar as mensagens para o grupo correto.
 
 Para resolver este problema basta utilizar a extensão de listas.
@@ -207,7 +207,7 @@ public class BucketMessageReceiver : IMessageReceiver
 
 ## *Track* de usuários que utilizaram uma determinada funcionalidade 
 
-Por fim pense na tarefa de *trackear* quantos usuários utilizaram uma determinada funcionalidade (ou enviaram um determinado conteúdo) para o chatbot.
+Por fim, pense na tarefa de *trackear* quantos usuários utilizaram uma determinada funcionalidade (ou enviaram um determinado conteúdo) para o chatbot.
 
 Para isso, vamos utilizar a extensão de análise de eventos:
 
@@ -235,7 +235,7 @@ public class EventTrackMessageReceiver : IMessageReceiver
 
 # Conclusão
 
-Este artigo apresentou o que é, e quais são as extensões da plataforma [BLiP](https://blip.ai/). Através de exemplos reais, do dia a dia de um desenvolvedor, ficou comprovado 
+Este artigo apresentou o que é e quais são as extensões da plataforma [BLiP](https://blip.ai/). Através de exemplos reais, do dia a dia de um desenvolvedor, ficou comprovado 
 que utilizar essas extensões pode ajudar, e muito, a acelerar a implementação de diversas tarefas de um chatbots.
 
 Para ver mais detalhes sobre as extensões, verifique [a seção de mesmo nome na página de documentação](https://portal.blip.ai/#/docs/extensions/) do BLiP
