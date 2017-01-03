@@ -5,7 +5,7 @@ categories: [Novidades]
 tags: [releases]
 author: dabes
 ---
-Agora o [BLiP](https://blip.aim) suporta múltiplos usuários para o mesmo chatbot. É possível criar perfis distintos de usuários baseados em permissões, melhorando a experiência do cliente corporativo. 
+Agora o [BLiP](https://blip.ai) suporta múltiplos usuários para o mesmo chatbot. É possível criar perfis distintos de usuários baseados em permissões, melhorando a experiência do cliente corporativo. 
 
 <figure>
     <img class="alignnone size-full" src="http://i.imgur.com/mkhvZpZ.png" alt="blip" />
