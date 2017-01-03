@@ -5,9 +5,6 @@ categories: [Novidades]
 tags: [releases]
 author: dabes
 ---
-Criação de usuários e permissões no Blip
--------------
-
 Agora o [BLiP](https://blip.aim) suporta múltiplos usuários para o mesmo chatbot. É possível criar perfis distintos de usuários baseados em permissões, melhorando a experiência do cliente corporativo. 
 
 <figure>
