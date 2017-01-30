@@ -76,7 +76,7 @@ Para a configuração do "Data" vamos montar um envelope de uma mensagem com um 
 </table>
 
 
-Observe que a propriedade content é um outro objeto Json. Para informar as propriedades deste objeto utilizamos a sintaxe especial do Zapier com "__" (2 *undercores*) como separador.
+Observe que a propriedade content é um outro objeto Json. Para informar as propriedades deste objeto utilizamos a sintaxe especial do Zapier com "__" (2 *underscores*) como separador.
 Veja como deverá ficar:
 
 {% include image.html name="image_7.png" alt="Mapeamento final" %}
