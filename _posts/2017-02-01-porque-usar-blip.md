@@ -74,7 +74,7 @@ A outra forma de realizar a integração é através de um [Webhook](https://bli
 
 De forma simplista, um *Webhook* é a exposição de um *endpoint* http em sua aplicação para possibilitar que API's de terceiros faça requisições em seus serviços. 
 Nesta estrutura o BLiP realiza requisições em um *endpoint* definido pelo desenvolvedor do chatbot sempre que novas mensagens ou notificações estiverem disponíveis. 
-A principal vantagem deste modelo é não estar amarrado a nenhuma linguagem de programção específica.
+A principal vantagem deste modelo é não estar amarrado a nenhuma linguagem de programação específica.
 
 ### Multicanal
 
