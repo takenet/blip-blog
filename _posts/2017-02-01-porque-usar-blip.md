@@ -1,16 +1,15 @@
 ---
-title:  "4 motivos para fazer seu chatbot no BLiP"
+#title:  "4 motivos para fazer seu chatbot no BLiP"
+title:  "Como o BLiP pode te ajudar em um hackathon"
 date:   2017-02-01 10:00:00 +0000
 categories: [Casos de uso]
 tags: [Extensões, sdk, vantagens]
 author: pacheco
 ---
 
-Como o BLiP pode te ajudar em um hackathon
-
-O objetivo principal da plataforma BLiP é entregar a desenvolvedores(as) todo o suporte necessário para facilitar a criação de chatbots. Ela foi criada **por desenvolvedores** 
-da [Take](www.take.net) (acostumados a construir chatbots há mais de 17 anos) **para desenvolvedores**. 
-Diante disso, este artigo apresentar alguns motivos de porquê você deveria utilizar o BLiP durante a construção de seu chatbot, dentre eles: **extensões**, **client's**, **publicações em multicanais** e **sdk's web e mobile** 
+O objetivo principal da plataforma BLiP é entregar a desenvolvedores(as) todo o suporte necessário para facilitar e agilizar 
+a criação de chatbots. Este artigo apresenta alguns motivos de porquê você deveria utilizar o BLiP durante a construção de 
+seu chatbot, dentre eles: **extensões**, **client's**, **publicações em multicanais** e **sdk's web e mobile** 
 
 <!--preview-->
 
