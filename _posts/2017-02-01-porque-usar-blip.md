@@ -103,7 +103,7 @@ Com algumas linhas de código seu chatbot pode rodar dentro de seu site ou aplic
 durante uma compra. A figura abaixo apresenta um exemplo da utilização do SDK web para a comunicação com o chatbot de um gerente digital.
 
 <figure>
-    <img class="alignnone size-full" style="width=90%" src="http://i.imgur.com/HP4AFkJ.png" alt="blip" />
+    <img class="alignnone size-full" width="80%" src="http://i.imgur.com/HP4AFkJ.png" alt="blip" />
 </figure>
 
 Ficou convencido sobre as vantagens do BLiP ? Acesse agora o [portal](https://portal.blip.ai/#/) e crie seu chatbot gratuitamente. É simples, fácil e rápido.
