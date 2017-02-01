@@ -12,9 +12,11 @@ O objetivo principal da plataforma BLiP é entregar a desenvolvedores(as) todo o
 da [Take](www.take.net) (acostumados a construir chatbots há mais de 17 anos) **para desenvolvedores**. 
 Diante disso, este artigo apresentar alguns motivos de porquê você deveria utilizar o BLiP durante a construção de seu chatbot, dentre eles: **extensões**, **client's**, **publicações em multicanais** e **sdk's web e mobile** 
 
+<!--preview-->
+
 ### Extensões
 
-> Reinventar a roda não é uma opção.
+> "Reinventar a roda não é uma opção."
 
 Se você desenvolve software, assim como eu, deve estar acostumado a utilizar bibliotecas, frameworks e ferramentas que aumentam a produtividade de seu projeto. 
 **Reinventar a roda não é uma opção**. Pensando nisso, o BLiP possui diversas extensões para as principais necessidades de quem está desenvolvendo um chatbot. Você não precisa sequer de banco de dados para armazenar as 
@@ -65,9 +67,9 @@ O artigo ["Entendo as extensões"](http://blog.blip.ai/2016/12/28/entendendo-as-
 
 ### *Clients* de integração
 
-> Por desenvolvedores para desenvolvedores
+> "Por quem desenvolve para quem desenvolve"
 
-O BLiP entrega ao desenvolvedor duas formas diferentes para a construção dos chatbots. A primeira delas é através dos *client's* [C#](https://github.com/takenet/messaginghub-client-csharp/) e 
+O BLiP permite duas formas diferentes para a construção dos chatbots. A primeira delas é através dos *client's* [C#](https://github.com/takenet/messaginghub-client-csharp/) e 
 [JavaScript](http://takenet.github.io/messaginghub-client-js/), a principal vantagem deste modelo é entregar uma enorme facilidade durante o desenvolvimento.
 A outra forma de realizar a integração é através de um [Webhook](https://blip.ai/portal/#/docs/webhook). 
 
@@ -102,7 +104,7 @@ Com algumas linhas de código seu chatbot pode rodar dentro de seu site ou aplic
 durante uma compra. A figura abaixo apresenta um exemplo da utilização do SDK web para a comunicação com o chatbot de um gerente digital.
 
 <figure>
-    <img class="alignnone size-full" src="http://i.imgur.com/HP4AFkJ.png" alt="blip" />
+    <img class="alignnone size-full" style="width=90%" src="http://i.imgur.com/HP4AFkJ.png" alt="blip" />
 </figure>
 
 Ficou convencido sobre as vantagens do BLiP ? Acesse agora o [portal](https://portal.blip.ai/#/) e crie seu chatbot gratuitamente. É simples, fácil e rápido.
