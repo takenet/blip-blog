@@ -19,4 +19,5 @@ E, ao fazer o login do BLiP Web, escolher a opção `Entrar utilizando o e-mail`
 {% include image.html name="blip-email-2.png" alt="Entrar utilizando o e-mail" %}
 
 Desta forma, não é mais necessário um número de telefone para utilizar o BLiP Web. 
+
 Curtiu? Deixe seus comentários ou sugestões abaixo.
