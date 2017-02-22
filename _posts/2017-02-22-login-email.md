@@ -9,7 +9,7 @@ author: andreb
 Lançamos esta semana mais uma atualização da plataforma [BLiP](https://blip.ai) com a seguinte novidades:
 
 ### Login no BLiP Web por e-mail
-Agora é possível utilizar o e-mail do seu login do BLiP para realizar o atendimento através do BLiP Web (https://web.blip.ai). 
+Agora é possível utilizar o e-mail do seu login do BLiP para realizar o atendimento através do [BLiP Web](https://web.blip.ai). 
 Basta selecionar, nas configurações do **atendimento manual** em `Atendente BLiP`, a opção `Atendente BLiP e-mail`. 
 
 {% include image.html name="blip-email-1.png" alt="Atendente BLiP e-mail" %}
