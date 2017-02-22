@@ -6,7 +6,7 @@ tags: [releases]
 author: andreb
 ---
 
-Lançamos esta semana mais uma atualização da plataforma [BLiP](https://blip.ai) com a seguinte novidades:
+Lançamos esta semana mais uma atualização da plataforma [BLiP](https://blip.ai) com a seguinte novidade:
 
 ### Login no BLiP Web por e-mail
 Agora é possível utilizar o e-mail do seu login do BLiP para realizar o atendimento através do [BLiP Web](https://web.blip.ai). 
