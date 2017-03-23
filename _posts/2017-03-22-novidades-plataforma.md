@@ -1,0 +1,29 @@
+---
+title:  "Atualizações da plataforma - março/2017"
+date:   2017-03-22 13:00:00 +0000
+categories: [Novidades]
+tags: [releases]
+author: andreb
+---
+
+O [BLiP](https://blip.ai) ganhou nesta semana várias novidades!
+
+<!--preview-->
+
+### Template FAQ
+Agora é possível ucriar um chatbot do tipo FAQ (sigla em inglês para *Frequently Answered Questions* ou **perguntas frequentes**) utilizando como base o **Watson** da IBM.
+
+{% include image.html name="faq1.png" alt="Template FAQ" %}
+
+Com o FAQ, você pode configurar respostas às perguntas mais comuns que podem ser respondidas automaticamente pelo seu chatbot.
+
+{% include image.html name="faq2.png" alt="Template FAQ" %}
+
+Para isso, basta inserir suas credenciais do [IBM Watson](https://www.ibm.com/watson/) na opção **Inteligência Artificial**, cadastrar suas perguntas e respostas, treinar e publicar seu modelo.
+
+### Menu persistente
+O BLiP agora suporta o novo menu persistente do Messenger, com multiplos níveis de hierarquia.
+
+{% include image.html name="persistent-menu1.png" alt="Menu persistente" %}
+
+Para configurar o menu do seu bot, no menu lateral, vá em **Configurações / Interações**. É possível também agora configurar o menu persistente diretamente do seu bot, através da extensão **Perfil**. Para maiores detalhes, veja nossa [documentação](https://portal.blip.ai/#/docs/extensions/profile).
