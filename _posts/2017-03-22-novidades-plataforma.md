@@ -26,4 +26,15 @@ O BLiP agora suporta o novo menu persistente do Messenger, com multiplos níveis
 
 {% include image.html name="persistent-menu1.png" alt="Menu persistente" %}
 
-Para configurar o menu do seu bot, no menu lateral, vá em **Configurações / Interações**. É possível também agora configurar o menu persistente diretamente do seu bot, através da extensão **Perfil**. Para maiores detalhes, veja nossa [documentação](https://portal.blip.ai/#/docs/extensions/profile).
+Para configurar o menu do seu bot, no menu lateral, vá em **Configurações / Interações**. 
+
+É possível também agora configurar o menu persistente diretamente do seu código, através da extensão **Perfil**. Para maiores detalhes, veja nossa [documentação](https://portal.blip.ai/#/docs/extensions/profile).
+
+### Dashboard
+É possível agora imprimir ou exportar como CSV as informações do dashboard do chatbot.
+
+{% include image.html name="dashboard1.png" alt="Dashboard" %}
+
+Basta clicar nos ícones no canto superior direito da visualização.
+
+
