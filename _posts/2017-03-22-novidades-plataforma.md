@@ -6,7 +6,7 @@ tags: [releases]
 author: andreb
 ---
 
-O [BLiP](https://blip.ai) ganhou nesta semana várias novidades!
+Nesta semana, o [BLiP](https://blip.ai) recebeu várias novidades!
 
 <!--preview-->
 
