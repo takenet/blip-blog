@@ -15,7 +15,7 @@ gems: [jekyll-paginate, jekyll-redirect-from]
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Blog do Blip MessagingHub 
+title: BLiP Blog
 url: "http://blog.blip.ai"
 
 repository: takenet/blip-blog
