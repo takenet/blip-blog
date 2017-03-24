@@ -11,7 +11,7 @@ Nesta semana, o [BLiP](https://blip.ai) recebeu várias novidades!
 <!--preview-->
 
 ### Template FAQ
-Agora é possível criar um chatbot do tipo FAQ (sigla em inglês para *Frequently Asked Questions* ou **perguntas frequentes**) utilizando como base o **Watson** da IBM.
+Agora é possível criar um chatbot do tipo FAQ (sigla em inglês para *Frequently Asked Questions* ou **perguntas frequentes**) utilizando como base o IBM **Watson**.
 
 {% include image.html name="faq1.png" alt="Template FAQ" %}
 
