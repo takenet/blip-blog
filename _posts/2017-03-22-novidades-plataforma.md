@@ -19,7 +19,7 @@ Com o FAQ, você pode configurar respostas automáticas para as perguntas mais c
 
 {% include image.html name="faq2.png" alt="Template FAQ" %}
 
-Para isso, basta inserir suas credenciais do <a horef="https://www.ibm.com/watson/">IBM Watson</a> na opção **Inteligência Artificial**, cadastrar suas perguntas e respostas, treinar e publicar seu modelo.
+Para isso, basta inserir suas credenciais do <a href="https://www.ibm.com/watson/" target="_blank">IBM Watson</a> na opção **Inteligência Artificial**, cadastrar suas perguntas e respostas, treinar e publicar seu modelo.
 
 ### Menu persistente
 O BLiP agora suporta o novo menu persistente do Messenger, com múltiplos níveis de hierarquia.
