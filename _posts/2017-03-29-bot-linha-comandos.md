@@ -24,4 +24,6 @@ Se aprendemos com a história, poderiamos dizer que a resposta é a mesma: na ma
 Um ponto que na minha opinião é bastante mal entendido é a natureza
 *conversacional* dos bots, que é uma das grandes vantagens deste tipo de aplicação. Muitas pessoas entendem isso como o fato de você poder conversar com um robô como se fosse uma pessoa. Mas na verdade, está muito mais relacionado a possibilidade do usuário **voltar na linha do tempo das interações através da thread** com o bot, **mesmo que tenha sido através de botões e elementos visuais**. Este recurso posibilita a criação de um contexto mais rico da interação entre a pessoa e a aplicação. E confesse: em alguns momentos, aposto que você gostaria de enviar um menu a uma pessoa ao invés de uma pergunta aberta.
 
+<img src="http://i.imgur.com/mb7PbdY.png" />
+
 Portanto, se seu usuário não for um hacker, não construa seu bot como um prompt de linha de comandos.
