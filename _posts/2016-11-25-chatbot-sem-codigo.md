@@ -228,3 +228,5 @@ Isto significa que sempre que reiniciar o processo do chatbot ele *esquecerá* o
 
 Uma opção interessante para armazenar permanentemente, que em breve deverá estar disponível no SDK, é utilizar a [extensão de armazenamento](https://blip.ai/portal/#/docs/extensions/bucket) do BLiP.
 Se quiser contribuir com uma implementação que armazene os estados em algum outro meio permanente, nosso repositório no Github está [aqui](https://github.com/takenet/messaginghub-client-csharp).  
+
+Se você quiser testar o que foi ensinado neste post sem instalar o Visual Studio, [baixe este arquivo](https://www.dropbox.com/s/o1iul2zd535p84z/blip.zip), descompacte em uma pasta e edite o arquivo `application.json` da maneira sugerida pelo artigo. Depois, é só executar o arquivo `mhh.exe` que seu bot estará funcionando.
