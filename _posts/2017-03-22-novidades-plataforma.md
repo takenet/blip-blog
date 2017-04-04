@@ -17,14 +17,14 @@ Agora é possível criar um chatbot do tipo FAQ (sigla em inglês para *Frequent
 
 Com o FAQ, você pode configurar respostas automáticas para as perguntas mais comuns feitas no seu chatbot.
 
-{% include image.html name="faq2.png" alt="Template FAQ" %}
+{% include image.html name="faq22.png" alt="Template FAQ" %}
 
 Para isso, basta inserir suas credenciais do <a href="https://www.ibm.com/watson/" target="_blank">IBM Watson</a> na opção **Inteligência Artificial**, cadastrar suas perguntas e respostas, treinar e publicar seu modelo.
 
 ### Menu persistente
 O BLiP agora suporta o novo menu persistente do Messenger, com múltiplos níveis de hierarquia.
 
-{% include image.html name="persistent-menu1.png" alt="Menu persistente" %}
+{% include image.html name="persistent-menu11.png" alt="Menu persistente" %}
 
 Para configurar o menu do seu bot, no menu lateral, vá em **Configurações / Interações**. 
 

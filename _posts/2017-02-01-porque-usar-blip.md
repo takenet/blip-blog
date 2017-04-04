@@ -1,16 +1,15 @@
 ---
-title:  "4 motivos para fazer seu chatbot no BLiP"
+#title:  "4 motivos para fazer seu chatbot no BLiP"
+title:  "Como o BLiP pode te ajudar em um hackathon"
 date:   2017-02-01 10:00:00 +0000
 categories: [Casos de uso]
 tags: [Extensões, sdk, vantagens]
 author: pacheco
 ---
 
-Como o BLiP pode te ajudar em um hackathon
-
-O objetivo principal da plataforma BLiP é entregar a desenvolvedores(as) todo o suporte necessário para facilitar a criação de chatbots. Ela foi criada **por desenvolvedores** 
-da [Take](www.take.net) (acostumados a construir chatbots há mais de 17 anos) **para desenvolvedores**. 
-Diante disso, este artigo apresentar alguns motivos de porquê você deveria utilizar o BLiP durante a construção de seu chatbot, dentre eles: **extensões**, **client's**, **publicações em multicanais** e **sdk's web e mobile** 
+O objetivo principal da plataforma BLiP é entregar a desenvolvedores(as) todo o suporte necessário para facilitar e agilizar 
+a criação de chatbots. Este artigo apresenta alguns motivos de porquê você deveria utilizar o BLiP durante a construção de 
+seu chatbot, dentre eles: **extensões**, **client's**, **publicações em multicanais** e **sdk's web e mobile** 
 
 <!--preview-->
 
@@ -75,7 +74,7 @@ A outra forma de realizar a integração é através de um [Webhook](https://bli
 
 De forma simplista, um *Webhook* é a exposição de um *endpoint* http em sua aplicação para possibilitar que API's de terceiros faça requisições em seus serviços. 
 Nesta estrutura o BLiP realiza requisições em um *endpoint* definido pelo desenvolvedor do chatbot sempre que novas mensagens ou notificações estiverem disponíveis. 
-A principal vantagem deste modelo é não estar amarrado a nenhuma linguagem de programção específica.
+A principal vantagem deste modelo é não estar amarrado a nenhuma linguagem de programação específica.
 
 ### Multicanal
 
@@ -104,7 +103,7 @@ Com algumas linhas de código seu chatbot pode rodar dentro de seu site ou aplic
 durante uma compra. A figura abaixo apresenta um exemplo da utilização do SDK web para a comunicação com o chatbot de um gerente digital.
 
 <figure>
-    <img class="alignnone size-full" style="width=90%" src="http://i.imgur.com/HP4AFkJ.png" alt="blip" />
+    <img class="alignnone size-full" width="80%" src="http://i.imgur.com/HP4AFkJ.png" alt="blip" />
 </figure>
 
 Ficou convencido sobre as vantagens do BLiP ? Acesse agora o [portal](https://portal.blip.ai/#/) e crie seu chatbot gratuitamente. É simples, fácil e rápido.
