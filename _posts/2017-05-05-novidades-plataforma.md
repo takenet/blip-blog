@@ -12,7 +12,7 @@ O [BLiP](https://blip.ai) agora permite a criação e gerenciamento do conteúdo
 
 O gerenciamento dos conteúdos é feito através da funcionalidade **recursos**, que está disponível nos detalhes do chatbot [no portal do BLiP](https://portal.blip.ai) e também como uma [extensão](https://portal.blip.ai/#/docs/extensions/resources).
 
-{% include image.html name="resources1.png" alt="Recursos" %}
+{% include image.html name="resources1.PNG" alt="Recursos" %}
 
 No portal, basta ir na opção **Recursos** no menu lateral para começar a editar os conteúdos das mensagens. E para utilizá-los, basta enviar uma mensagem com o novo tipo de conteúdo [**recurso**](https://portal.blip.ai/#/docs/content-types/resource), informando a chave utilizada no momento da criação.
 
