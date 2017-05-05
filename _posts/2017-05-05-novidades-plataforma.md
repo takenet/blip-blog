@@ -14,6 +14,6 @@ O gerenciamento dos conteúdos é feito através da funcionalidade **recursos**,
 
 {% include image.html name="resources1.PNG" alt="Recursos" %} 
 
-No portal, basta ir na opção **Recursos** no menu lateral para começar a editar os conteúdos das mensagens. E para utilizá-los, basta enviar uma mensagem com o novo tipo de conteúdo [**recurso**](https://portal.blip.ai/#/docs/content-types/resource), informando a chave utilizada no momento da criação.
+No portal, basta ir na opção **Recursos** no menu lateral para começar a editar os conteúdos das mensagens. E para utilizá-los, basta enviar uma mensagem com o novo [tipo de conteúdo **recurso**](https://portal.blip.ai/#/docs/content-types/resource), informando a chave utilizada no momento da criação.
 
 Ficou com alguma dúvida ? Deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
