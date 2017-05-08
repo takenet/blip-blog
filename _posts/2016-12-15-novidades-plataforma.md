@@ -9,7 +9,7 @@ author: andre
 O [BLiP](https://blip.ai) lançou duas novas funcionalidades esta semana:
 
 #### Horário de funcionamento 
-Disponível para chatbots utilque utilizam o modelo de "Atendimento Manual", agora o "dono do chatbot" pode configurar o horário que o "Atendimento Manual" estará disponível para conversar com seus clientes.
+Disponível para chatbots que utilizam o modelo de "Atendimento Manual", agora o "dono do chatbot" pode configurar o horário que o "Atendimento Manual" estará disponível para conversar com seus clientes.
 
 O serviço já está disponível no Painel Blip/Configurações/Resposta Automática/Horário de Funcionamento.
 
