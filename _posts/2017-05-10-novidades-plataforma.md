@@ -62,7 +62,8 @@ Consulte [nossa documentação](https://portal.blip.ai/#/docs/extensions/contact
 
 ### Tela cheia no BLiP Chat
 
+Agora o **BLiP Chat** abre em tela cheia quando acionado dentro de um website mobile. Desta forma, os clientes mobile podem interagir de maneira mais simples com seu chatbot ou atendentes do seu site.
 
+{% include image.html name="blip-chat.gif" alt="BLiP Chat" %}
 
-
-Ficou com alguma dúvida ? Deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
+Gostou? Deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
