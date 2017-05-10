@@ -30,7 +30,7 @@ A nova **extensão contatos** permite o gerenciamento da agenda de contatos do c
 
 ### Variáveis de mensagens
 
-Agora é possível utilizar **variáveis de contatos** nas mensagens enviadas pelos chatbots o que facilita tanto o envio de mensagens individuais quanto o envio de mensagens em massa. Todas informações da agenda de contatos podem ser utilizadas como variáveis. 
+Agora é possível utilizar **variáveis de contatos** nas mensagens enviadas pelos chatbots o que facilita tanto o envio de mensagens individuais quanto o envio de mensagens em massa. Todas as informações da agenda de contatos podem ser utilizadas como variáveis. 
 
 Por exemplo, a seguinte mensagem:
 
