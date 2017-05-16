@@ -1,6 +1,6 @@
 ---
 title:  "BLiP Chat - Tipos de autenticação"
-date:   2017-05-15 15:00:00 +0000
+date:   2017-05-16 13:00:00 +0000
 categories: [Novidades]
 tags: [releases, autenticação]
 author: luizg
