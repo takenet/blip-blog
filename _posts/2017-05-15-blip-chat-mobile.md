@@ -8,9 +8,8 @@ author: victorb
 
 Com o **BLiP Chat** agora você pode colocar o seu chatbot dentro do seu aplicativo Android e iOS de forma super simples.
 
-<figure style="text-align: center">
-    <img class="alignnone size-full" src="../assets/posts/2017-05-15-blip-chat-mobile/chat-android.png" width="270" alt="BLiP Chat Android" /> &nbsp;
-    <img class="alignnone size-full" src="../assets/posts/2017-05-15-blip-chat-mobile/chat-ios.png" width="270" alt="BLiP Chat iOS" />
+<figure>
+    <img class="alignnone size-full" src="/assets/posts/2017-05-15-blip-chat-mobile/blip-chat-initial.jpg" height="490" alt="BLiP Chat Android e iOS" />
 </figure>
 
 # Android
@@ -64,7 +63,7 @@ Para poder utilizar o BLiP Chat seu app deve ter acesso à **Internet** e no And
 No iOS apenas a permissão de localização precisa ser informada. Então caso seu chatbot  em algum momento requisita a **localização** do usuário você deve adicionar uma mensagem para o usuário explicando porque a localização é necessária. Adicione a chave *Privacy - Location When In Use Usage Description* no arquivo **info.plist** do seu projeto.
 
 <figure>
-    <img class="alignnone size-full" src="../assets/posts/2017-05-15-blip-chat-mobile/location-request.png" alt="info.plist" />
+    <img class="alignnone size-full" src="/assets/posts/2017-05-15-blip-chat-mobile/location-request.png" alt="info.plist" />
 </figure>
 
 # Configurando seu Chat
@@ -127,7 +126,7 @@ Existem algumas possibilidades de customização do seu Chat que podem ser confi
 * Login, onde o usuário deve informar seu *nome* e *email* antes de conversar com o chatbot.
 * Dev, onde o desenvolvedor do app é responsável por passar as informações do usuário para o BLiP Chat. Nesse modo o histórico da conversa esta disponível sempre que o usuário se conectar.
 
-Para entender melhor os possíveis modos de autenticação dê uma olhada [nesse post]() que explica de forma detalhada cada tipo.
+Para entender melhor os possíveis modos de autenticação dê uma olhada [nesse post](http://blog.blip.ai/2017/05/16/tipos-autenticacao-blip-chat.html) que explica de forma detalhada cada tipo.
 
 ## Esconder o menu da janela
 A janela de conversa com o seu chatbot possui um menu no canto superior direito que pode ser escondida. Para isso basta definir o valor para a propriedade **hideMenu** dentro do objeto *BlipOptions*. Por padrão essa propriedade é *false*.
@@ -208,9 +207,8 @@ class ViewController: UIViewController {
    
 }
 ```
-<figure style="text-align: center">
-    <img class="alignnone size-full" src="../assets/posts/2017-05-15-blip-chat-mobile/dev-android.png" width="270" alt="BLiP Chat Android" /> &nbsp;
-    <img class="alignnone size-full" src="../assets/posts/2017-05-15-blip-chat-mobile/dev-ios.png" width="270" alt="BLiP Chat iOS" />
+<figure>
+    <img class="alignnone size-full" src="/assets/posts/2017-05-15-blip-chat-mobile/blip-chat-dev.jpg" height="490" alt="BLiP Chat Android e iOS" />
 </figure>
 
 Ficou com alguma dúvida? Deixe seu comentário, ou peça ajuda em nosso [fórum](http://forum.blip.ai/).
