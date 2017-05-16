@@ -16,7 +16,7 @@ Pensando em formas de facilitar a identificação dos seus clientes disponibiliz
 
 #### Guest
 
-A autenticação do tipo Guest pode ser utilizada em um chatbot quando não há necessidade de saber dados específicos do seu usuário,como em um bot para consumo de informações sobre uma banda. Nesse modelo, toda vez que o seu chatbot for acessado o BLiP Chat, ele criará um novo usuário, evitando a necessidade de um cadastro. 
+A autenticação do tipo Guest pode ser utilizada em um chatbot quando não há necessidade de saber dados específicos do seu usuário,como em um bot para consumo de informações sobre uma banda. Nesse modelo, toda vez que o seu chatbot for acessado, o BLiP Chat criará um novo usuário evitando a necessidade de um cadastro. 
 
 A opção Guest é a padrão do BLiP Chat. Portanto, para adicioná-lo em sua página Web, não é necessário passar nenhuma configuração, como mostra o exemplo abaixo:  
 
