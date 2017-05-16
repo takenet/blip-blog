@@ -35,7 +35,7 @@ A opção Guest é a padrão do BLiP Chat. Portanto, para adicioná-lo em sua p�
 A imagem abaixo apresenta a tela inicial do BLiP Chat no modo Guest:
 
 <figure>
-<img class="aligncenter" src="../assets/posts/2017-05-16-tipos-autenticacao-blip-chat/guest-auth.png" alt="Autenticação do tipo Guest" />
+<img class="aligncenter" src="http://blog.blip.ai/assets/posts/2017-05-16-tipos-autenticacao-blip-chat/guest-auth.png" alt="Autenticação do tipo Guest" />
 </figure>
 
 #### Login
@@ -65,7 +65,7 @@ Para habilitar a autenticação do tipo Login, basta defini-la nas configuraçõ
 O chatbot *BLiP ajuda* do [portal](https://blip.ai) do BLiP utiliza o tipo Login, veja como é:
 
 <figure>
-<img class="aligncenter" src="../assets/posts/2017-05-16-tipos-autenticacao-blip-chat/login-auth.png" alt="Autenticação do tipo Login" />
+<img class="aligncenter" src="http://blog.blip.ai/assets/posts/2017-05-16-tipos-autenticacao-blip-chat/login-auth.png" alt="Autenticação do tipo Login" />
 </figure>
 
 #### Dev    
@@ -98,7 +98,7 @@ O tipo de autenticaçao Dev pode ser escolhido quando for necessário manter no 
 Ao definir este modo, o BLiP Chat mantém um histórico de mensagens. Assim, no próximo contato o usuário terá disponível o contexto da última conversa. 
 
 <figure>
-<img class="aligncenter" src="../assets/posts/2017-05-16-tipos-autenticacao-blip-chat/dev-auth.png" alt="Autenticação do tipo Dev" />
+<img class="aligncenter" src="http://blog.blip.ai/assets/posts/2017-05-16-tipos-autenticacao-blip-chat/dev-auth.png" alt="Autenticação do tipo Dev" />
 </figure>
 
 Todos os detalhes para utilização dos modos de autenticação podem ser consultados na documentação do BLiP Chat para as integrações [web](https://github.com/takenet/blip-sdk-web) e mobile [android](https://github.com/takenet/blip-sdk-android) e [iOS](https://github.com/takenet/blip-sdk-ios).
