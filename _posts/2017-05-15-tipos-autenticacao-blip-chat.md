@@ -6,7 +6,7 @@ tags: [releases, autenticação]
 author: luizg
 ---
 
-Com o [BLiP](https://blip.ai) você pode publicar o seu chatbot em vários canais, um deles é o **BLiP Chat**, o nosso canal oficial. Você sabia que é possível definir tipos de autenticação para o seu chatbot publicado no  **BLiP Chat**? Confira todas as possibilidades neste post.
+Com o [BLiP](https://blip.ai), você pode publicar o seu chatbot em vários canais de comunicação, um deles é o **BLiP Chat**, o nosso canal oficial. Você sabia que é possível definir tipos de autenticação para o seu chatbot publicado no  **BLiP Chat**? Confira todas as possibilidades neste post.
 
 <!--preview-->
 
@@ -16,9 +16,9 @@ Pensando em formas de facilitar a identificação dos seus clientes disponibiliz
 
 #### Guest
 
-A autenticação do tipo Guest pode ser utilizada em um chatbot quando não há necessidade de saber dados específicos do seu usuário, por exemplo em um bot para consumo de informações sobre uma banda. Nesse modelo, toda vez que o seu chatbot for acessado o BLiP Chat criará um novo usuário, evitando a necessidade de um cadastro. 
+A autenticação do tipo Guest pode ser utilizada em um chatbot quando não há necessidade de saber dados específicos do seu usuário,como em um bot para consumo de informações sobre uma banda. Nesse modelo, toda vez que o seu chatbot for acessado o BLiP Chat, ele criará um novo usuário, evitando a necessidade de um cadastro. 
 
-A opção Guest é a padrão do BLiP Chat. Portanto, para adicioná-lo em sua página Web não é necessário passar nenhuma configuração, como mostra o exemplo abaixo:  
+A opção Guest é a padrão do BLiP Chat. Portanto, para adicioná-lo em sua página Web, não é necessário passar nenhuma configuração, como mostra o exemplo abaixo:  
 
 ```html
 <script>
@@ -39,9 +39,9 @@ A imagem abaixo apresenta a tela inicial do BLiP Chat no modo Guest:
 
 #### Login
 
-Algumas vezes é necessário identificar o usuário para que você possa abordá-lo de maneira mais pessoal ou solucionar o problema de forma direcionada, podendo, até mesmo entrar em contato por meio do e-mail informado. Nesse caso, o tipo Login irá ajudá-lo, uma vez que solicita ao usuário informações de nome e e-mail.
+Algumas vezes é necessário identificar o usuário para que você possa abordá-lo de maneira mais pessoal ou solucionar o problema de forma direcionada, podendo até mesmo entrar em contato por meio do e-mail informado. Nesse caso, o tipo Login irá ajudá-lo, uma vez que solicita ao usuário informações como nome e e-mail.
 
-Para habilitar a autenticação do tipo Login basta defini-la nas configurações do BLiP Chat. Veja o exemplo abaixo:
+Para habilitar a autenticação do tipo Login, basta defini-la nas configurações do BLiP Chat. Veja o exemplo abaixo:
 
 ```html
 <script>
@@ -92,7 +92,7 @@ O tipo de autenticaçao Dev pode ser escolhido quando for necessário manter no 
 </script>
 ```
 
-Ao definir este modo o BLiP Chat mantém um histórico de mensagens, assim no próximo contato o usuário terá disponível o contexto da última conversa. 
+Ao definir este modo, o BLiP Chat mantém um histórico de mensagens. Assim, no próximo contato o usuário terá disponível o contexto da última conversa. 
 
 {% include image.html name="dev-auth.png" alt="Autenticação do tipo Dev" %}
 
