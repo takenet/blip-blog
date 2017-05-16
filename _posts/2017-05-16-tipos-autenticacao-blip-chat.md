@@ -16,7 +16,7 @@ Pensando em formas de facilitar a identificação dos seus clientes disponibiliz
 
 #### Guest
 
-A autenticação do tipo Guest pode ser utilizada em um chatbot quando não há necessidade de saber dados específicos do seu usuário,como em um bot para consumo de informações sobre uma banda. Nesse modelo, toda vez que o seu chatbot for acessado, o BLiP Chat criará um novo usuário evitando a necessidade de um cadastro. 
+A autenticação do tipo Guest pode ser utilizada em um chatbot quando não há necessidade de saber dados específicos do seu usuário, como em um bot para consumo de informações sobre uma banda. Nesse modelo, toda vez que o seu chatbot for acessado, o BLiP Chat criará um novo usuário evitando a necessidade de um cadastro. 
 
 A opção Guest é a padrão do BLiP Chat. Portanto, para adicioná-lo em sua página Web, não é necessário passar nenhuma configuração, como mostra o exemplo abaixo:  
 
@@ -34,8 +34,9 @@ A opção Guest é a padrão do BLiP Chat. Portanto, para adicioná-lo em sua p�
 
 A imagem abaixo apresenta a tela inicial do BLiP Chat no modo Guest:
 
-{% include image.html name="guest-auth.png" alt="Autenticação do tipo Guest" %}
-
+<figure>
+<img class="aligncenter" src="../assets/posts/2017-05-16-tipos-autenticacao-blip-chat/guest-auth.png" alt="Autenticação do tipo Guest" />
+</figure>
 
 #### Login
 
@@ -63,7 +64,9 @@ Para habilitar a autenticação do tipo Login, basta defini-la nas configuraçõ
 
 O chatbot *BLiP ajuda* do [portal](https://blip.ai) do BLiP utiliza o tipo Login, veja como é:
 
-{% include image.html name="login-auth.png" alt="Autenticação do tipo Login" %}
+<figure>
+<img class="aligncenter" src="../assets/posts/2017-05-16-tipos-autenticacao-blip-chat/login-auth.png" alt="Autenticação do tipo Login" />
+</figure>
 
 #### Dev    
 
@@ -94,7 +97,9 @@ O tipo de autenticaçao Dev pode ser escolhido quando for necessário manter no 
 
 Ao definir este modo, o BLiP Chat mantém um histórico de mensagens. Assim, no próximo contato o usuário terá disponível o contexto da última conversa. 
 
-{% include image.html name="dev-auth.png" alt="Autenticação do tipo Dev" %}
+<figure>
+<img class="aligncenter" src="../assets/posts/2017-05-16-tipos-autenticacao-blip-chat/dev-auth.png" alt="Autenticação do tipo Dev" />
+</figure>
 
 Todos os detalhes para utilização dos modos de autenticação podem ser consultados na documentação do BLiP Chat para as integrações [web](https://github.com/takenet/blip-sdk-web) e mobile [android](https://github.com/takenet/blip-sdk-android) e [iOS](https://github.com/takenet/blip-sdk-ios).
 
