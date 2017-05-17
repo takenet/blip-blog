@@ -3,7 +3,7 @@ title:  "BLiP Chat - Tipos de autenticação"
 date:   2017-05-16 13:00:00 +0000
 categories: [Novidades]
 tags: [releases, autenticação]
-author: luizg
+author: luizguicl
 ---
 
 Com o [BLiP](https://blip.ai), você pode publicar o seu chatbot em vários canais de comunicação, um deles é o **BLiP Chat**, o nosso canal oficial. Você sabia que é possível definir tipos de autenticação para o seu chatbot publicado no  **BLiP Chat**? Confira todas as possibilidades neste post.
