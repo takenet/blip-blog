@@ -13,7 +13,7 @@ Com o **BLiP Chat** agora você pode colocar o seu chatbot dentro do seu aplicat
 </figure>
 
 # Android
-Para utilizar o BLiP Chat dentro do seu app Android você pode escolher o método de instalação. Para isso, adicione a referência do repositório no arquivo *build.gradle* do seu projeto
+Para utilizar o BLiP Chat dentro do seu app Android, você pode escolher o método de instalação. Para isso, adicione a referência do repositório no arquivo *build.gradle* do seu projeto:
 ```groovy
 allprojects {
     repositories {
@@ -37,7 +37,7 @@ ou via Maven:
 ```
 
 # iOS
-No iOS o BLiP Chat suporta aplicativos feitos em *Swift* e *Objective-C*. A instalação é feita através do CocoaPod. Caso ainda não tenha o CocoaPod confira [este guia](https://guides.cocoapods.org/using/using-cocoapods.html) ensinando a configurá-lo. Para usar o BLiP Chat basta adicionar a referência no arquivo *Podfile*:
+No iOS, o BLiP Chat suporta aplicativos feitos em *Swift* e *Objective-C*. A instalação é feita através do CocoaPod. Caso ainda não tenha o CocoaPod confira [este guia](https://guides.cocoapods.org/using/using-cocoapods.html) ensinando a configurá-lo. Para usar o BLiP Chat, basta adicionar a referência no arquivo *Podfile*:
 ```ruby
 target 'MyApp' do
     ...
@@ -50,7 +50,7 @@ E concluir a instalação do pod rodando o comando no diretório de seu projeto:
 $ pod install
 ```
 # Pré-requisitos
-Para poder utilizar o BLiP Chat seu app deve ter acesso à **Internet** e no Android esse acesso precisa ser requisitado dentro do *AndroidManifest.xml*. Para isso adicione a permissão de internet no seu aplicativo. Se o seu chatbot em algum momento requisita a **localização** do usuário, você também deve adicionar a permissão de localização.
+Para poder utilizar o BLiP Chat, seu app deve ter acesso a **Internet**, sendo que no Android esse acesso precisa ser requisitado dentro do *AndroidManifest.xml*. Para isso, adicione a permissão de internet no seu aplicativo. Se o seu chatbot em algum momento requisita a **localização** do usuário, você também deve adicionar a permissão de localização.
 ```xml
 <manifest xlmns:android...>
     ...
@@ -60,14 +60,14 @@ Para poder utilizar o BLiP Chat seu app deve ter acesso à **Internet** e no And
 </manifest>
 ```
 
-No iOS apenas a permissão de localização precisa ser informada. Então caso seu chatbot  em algum momento requisita a **localização** do usuário você deve adicionar uma mensagem para o usuário explicando porque a localização é necessária. Adicione a chave *Privacy - Location When In Use Usage Description* no arquivo **info.plist** do seu projeto.
+No iOS apenas a permissão de localização precisa ser informada. Então, caso seu chatbot  em algum momento requisite a **localização** do usuário, você deve adicionar uma mensagem para o usuário explicando porque a localização é necessária. Adicione a chave *Privacy - Location When In Use Usage Description* no arquivo **info.plist** do seu projeto.
 
 <figure>
     <img class="alignnone size-full" src="/assets/posts/2017-05-15-blip-chat-mobile/location-request.png" alt="info.plist" />
 </figure>
 
 # Configurando seu Chat
-Para incluir o seu chatbot em seu aplicativo você precisa pegar a sua ApiKey. Caso tenha dúvidas você pode conferir este [post ensinando a fazer isso](http://blog.blip.ai/2017/04/05/novidades-plataforma.html).
+Para incluir o seu chatbot em seu aplicativo, você precisa pegar a sua ApiKey. Caso tenha dúvidas, você pode conferir este [post ensinando a fazer isso](http://blog.blip.ai/2017/04/05/novidades-plataforma.html).
 
 ## Abrindo sua janela de conversa
 Para abrir uma conversa com o seu chatbot é muito simples. Use a classe **BlipClient** e chame o método *openBlipThread* passando o seu contexto atual e sua ApiKey. 
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
 Existem algumas possibilidades de customização do seu Chat que podem ser configuradas através do objeto **BlipOptions**. 
 
 ## Autenticação
-É possível definir o tipo de autenticação do usuário que irá conversar com o seu chatbot. Existem três tipos de autenticação possível. 
+É possível definir o tipo de autenticação do usuário que irá conversar com o seu chatbot. Existem três tipos de autenticações possíveis. 
 * Guest, onde cada usuário é tratada como convidado e não há quaisquer informações sobre o usuário.
 * Login, onde o usuário deve informar seu *nome* e *email* antes de conversar com o chatbot.
 * Dev, onde o desenvolvedor do app é responsável por passar as informações do usuário para o BLiP Chat. Nesse modo o histórico da conversa esta disponível sempre que o usuário se conectar.
@@ -129,7 +129,7 @@ Existem algumas possibilidades de customização do seu Chat que podem ser confi
 Para entender melhor os possíveis modos de autenticação dê uma olhada [nesse post](http://blog.blip.ai/2017/05/16/tipos-autenticacao-blip-chat.html) que explica de forma detalhada cada tipo.
 
 ## Esconder o menu da janela
-A janela de conversa com o seu chatbot possui um menu no canto superior direito que pode ser escondida. Para isso basta definir o valor para a propriedade **hideMenu** dentro do objeto *BlipOptions*. Por padrão essa propriedade é *false*.
+A janela de conversa com o seu chatbot possui um menu no canto superior direito que pode ser escondida. Para isso, basta definir o valor para a propriedade **hideMenu** dentro do objeto *BlipOptions*. Por padrão essa propriedade é *false*.
 
 Android:
 ```java
@@ -144,7 +144,7 @@ options.hideMenu = false;
 ```
 
 ## Título da janela
-No iOS a janela do BLiP Chat possui um título que pode ser customizado. Para isso defina o valor da propriedade **windowTitle** com o título apropriado. Por padrão este título é *BLiP Chat*.
+No iOS a janela do BLiP Chat possui um título que pode ser customizado. Para isso, defina o valor da propriedade **windowTitle** com o título apropriado. Por padrão este título é *BLiP Chat*.
 
 ```Swift
 let options = BlipOptions()
@@ -211,4 +211,4 @@ class ViewController: UIViewController {
     <img class="alignnone size-full" src="/assets/posts/2017-05-15-blip-chat-mobile/blip-chat-dev.jpg" height="490" alt="BLiP Chat Android e iOS" />
 </figure>
 
-Ficou com alguma dúvida? Deixe seu comentário, ou peça ajuda em nosso [fórum](http://forum.blip.ai/).
+Ficou com alguma dúvida? Deixe seu comentário ou peça ajuda em nosso [fórum](http://forum.blip.ai/).
