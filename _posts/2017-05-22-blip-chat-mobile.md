@@ -1,5 +1,5 @@
 ---
-title:  "Blip Chat Mobile - maio/2017"
+title:  "Blip Chat Mobile"
 date:   2017-05-22 15:30:00 +0000
 categories: [Novidades]
 tags: [releases, mobile]
@@ -148,7 +148,7 @@ options.hideMenu = false;
 ## Título da janela
 No iOS a janela do BLiP Chat possui um título que pode ser customizado. Para isso, defina o valor da propriedade **windowTitle** com o título apropriado. Por padrão este título é *BLiP Chat*.
 
-```Swift
+```swift
 let options = BlipOptions()
 options.windowTitle = "Seu Título";
 ```
