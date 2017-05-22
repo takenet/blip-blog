@@ -8,6 +8,8 @@ author: victorb
 
 Com o **BLiP Chat** agora você pode colocar o seu chatbot dentro do seu aplicativo Android e iOS de forma super simples.
 
+<!--preview-->
+
 <figure>
     <img class="alignnone size-full" src="/assets/posts/2017-05-15-blip-chat-mobile/blip-chat-initial.jpg" height="490" alt="BLiP Chat Android e iOS" />
 </figure>
