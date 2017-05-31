@@ -17,7 +17,7 @@ Agora o BLiP conta com uma funcionalidade bem interessante que viabiliza um bot 
 
 Quando o usuário cria um bot utilizando o template Master ele define um conjunto de bots, formado por um bot principal e bots secundários, que trabalharão juntos para responder as mensagens dos clientes. Na prática, o bot Master recebe todas as mensagens e as redireciona para o bot principal ou para os bots secundários. A qualquer momento é possível solicitar ao bot Master a troca do contexto do usuário para qualquer um dos subbots (principal ou secundários).
 
-{% include image.html name="master.png" alt="Template Master" %}
+{% include image.html name="templateMaster.png" alt="Template Master" %}
 
 Para informações sobre como configurar e utilizar o modelo Master, [consulte nossa documentação](https://portal.blip.ai/#/docs/templates/master).
 
