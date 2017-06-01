@@ -31,7 +31,7 @@ No portal do BLiP agora você já pode ver a agenda de contatos do bot, basta ac
 
 ### BLiP Chat
 
-Agora no BLiP chat, quando o Bot envia uma imagem e o cliente clica, ela aparece em fullscreen. Para obter essa nova funcionalidade basta atualizar o BLiP Chat para a versão mais nova ( Web = 0.1.19, Android = 0.0.24, iOS = 0.0.28 )
+Agora no BLiP chat, quando o Bot envia uma imagem e o cliente clica, ela aparece em *full screen*. Para obter essa nova funcionalidade basta atualizar o BLiP Chat para a versão mais nova ( Web = 0.1.19, Android = 0.0.24, iOS = 0.0.28 )
 
 Exemplo:
 ```html
