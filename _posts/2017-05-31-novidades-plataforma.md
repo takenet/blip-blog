@@ -35,7 +35,7 @@ Agora no BLiP chat, quando o Bot envia uma imagem e o cliente clica, ela aparece
 
 Exemplo:
 ```html
-<script src="https://unpkg.com/blip-chat-web@0.1.19" type="text/javascript"></script>
+<script src="https://unpkg.com/blip-chat-web@0.1.22" type="text/javascript"></script>
 ```
 
 {% include image.html name="full1.png" alt="Image full 1" width="100%" %}
