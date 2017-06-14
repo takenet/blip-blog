@@ -9,10 +9,10 @@ author: pacheco
 Confira as novidades da atualização de junho da plataforma [BLiP](https://blip.ai) 😃!
 Na última release foram lançadas as seguintes features:
 
-* Melhorias na organização do portal
-* Novo layout para emails de alerta
-* Possibilidade de marcar usuários de teste
-* Correção de alguns bugs e melhorias de performance
+* [Melhorias na organização do portal](#melhorias-na-organização-do-portal)
+* [Novo layout para emails de alerta](#novo-layout-para-emails-de-alerta)
+* [Possibilidade de marcar usuários de teste](#possibilidade-de-marcar-usuários-de-teste)
+* [Correção de alguns bugs e melhorias de performance](#correção-de-alguns-bugs-e-melhorias-de-performance)
 
 <!--preview-->
 
@@ -20,11 +20,11 @@ Na última release foram lançadas as seguintes features:
 
 A partir de agora o menu lateral do portal do BLiP conta com duas novas opções: **Interações** e **Inteligência Artificial**. 
 
-- Interações
+- **Interações**
 
 Na opção de interações é possível configurar as principais informações relacionadas as interações entre os usuários e seu chatbot. 
 
-- Inteligência Artificial
+- **Inteligência Artificial**
 
 Anteriormente, o módulo de IA - Inteligência Artificial só estava disponível no portal para bots do tipo FAQ. 
 Agora, qualquer bot do tipo SDK ou Webhook também pode administrar (no portal) seu módulo de IA.
