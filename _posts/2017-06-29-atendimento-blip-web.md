@@ -6,7 +6,7 @@ tags: [releases]
 author: samantha
 ---
 
-No post [Atendimento Manual]() falamos sobre como incluir múltiplos atendentes em chatbot de template Atendimento manual, e já vimos como configurar [respostas automáticas](). Neste post vamos conhecer mais sobre como realizar atendimento através do Blip Web.
+No post [Atendimento Manual.blip.](http://blogai/2017/06/29/atendimento.html) falamos sobre como incluir múltiplos atendentes em chatbot de template Atendimento manual, e já vimos como configurar [respostas automáticas](http://blogai/2017/06/29/atendimento-resposta-automatica.html). Neste post vamos conhecer mais sobre como realizar atendimento através do Blip Web.
 
 <!--preview-->
 
@@ -29,7 +29,7 @@ Após realizar o atendimento ao usuário, o atendente poderá finalizar clicando
 {% include image.html name="4.png" alt="Concluir atendimento" width="100%" %}
 
 Para finalizar essa série de posts sobre atendimento manual, no próximo post vamos conhecer incluir gráficos para análise de dados referentes aos atendimentos realizados.
-Acesse o próximo post [aqui]().
+Acesse o próximo post [aqui](http://blogai/2017/06/29/atendimento-graficos.html).
 
 
 
