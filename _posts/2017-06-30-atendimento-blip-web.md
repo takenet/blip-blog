@@ -29,7 +29,7 @@ Após realizar o atendimento ao usuário, o atendente poderá finalizar clicando
 {% include image.html name="4.png" alt="Concluir atendimento" width="100%" %}
 
 Para finalizar essa série de posts sobre atendimento manual, no próximo post vamos conhecer incluir gráficos para análise de dados referentes aos atendimentos realizados.
-Acesse o próximo post [aqui](http://blogai/2017/06/30/atendimento-graficos.html).
+Acesse o próximo post [aqui](http://blog.blip.ai/2017/06/30/atendimento-graficos.html).
 
 
 
