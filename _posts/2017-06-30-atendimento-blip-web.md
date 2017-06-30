@@ -1,6 +1,6 @@
 ---
 title:  "Realizar atendimento através do Blip Web"
-date:   2017-06-29 10:00:00 +0000
+date:   2017-06-30 10:00:00 +0000
 categories: [Novidades]
 tags: [releases]
 author: samantha

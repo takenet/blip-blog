@@ -28,9 +28,9 @@ Para inserir os gráficos, clique no botão “Novo gráfico”.
 
 Na tela Novo gráfico, selecione o gráfico que gostaria de inserir e logo depois o tipo: Lista, Linha, Pizza ou Barras, e clique em Confirmar.
 
-{% include image.html name="2.png" alt="Criar novo gráfico" width="50%" %}
+{% include image.html name="2.png" alt="Criar novo gráfico" width="60%" %}
 
-{% include image.html name="3.png" alt="Gráfico de Quantidade de atendimentos" width="50%" %}
+{% include image.html name="3.png" alt="Gráfico de Quantidade de atendimentos" width="60%" %}
 
 Gostou das novidades? Por favor, deixe seu comentário ou peça ajuda em nosso fórum.
 
