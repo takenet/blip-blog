@@ -6,7 +6,7 @@ tags: [releases]
 author: samantha
 ---
 
-No post [Atendimento Manual.blip.](http://blogai/2017/06/30/atendimento.html) falamos sobre como incluir múltiplos atendentes em chatbot de template Atendimento manual, e já vimos como configurar [respostas automáticas](http://blogai/2017/06/30/atendimento-resposta-automatica.html). Neste post vamos conhecer mais sobre como realizar atendimento através do Blip Web.
+No post [Atendimento Manual.blip.](http://blog.blip.ai/2017/06/30/atendimento.html) falamos sobre como incluir múltiplos atendentes em chatbot de template Atendimento manual, e já vimos como configurar [respostas automáticas](http://blog.blip.ai/2017/06/30/atendimento-resposta-automatica.html). Neste post vamos conhecer mais sobre como realizar atendimento através do Blip Web.
 
 <!--preview-->
 
@@ -14,7 +14,7 @@ No post [Atendimento Manual.blip.](http://blogai/2017/06/30/atendimento.html) fa
 
 Quando um usuário é convidado para a equipe, recebe um e-mail para acessar o chatbot como a imagem abaixo: 
 
-{% include image.html name="1.png" alt="Convite para fazer parte da equipe" width="100%" %}
+{% include image.html name="1.png" alt="Convite para fazer parte da equipe" width="50%" %}
 
 Ao clicar no link e acessar o portal, será exibido o menu Atendimento, como demonstrado abaixo. 
 

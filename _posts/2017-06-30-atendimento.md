@@ -22,9 +22,9 @@ Ao clicar  no campo “Selecione um membro da equipe” será exibida uma lista 
 
 Preencha o campo de e-mail e selecione as permissões que seu atendente poderá ter, e clique em Confirmar. Para saber mais sobre permissões [clique aqui](http://blog.blip.ai/2017/06/28/novidades-plataforma.html).
 
-{% include image.html name="3.png" alt="Incluir novo membro na equipe" width="100%" %}
+{% include image.html name="3.png" alt="Incluir novo membro na equipe" width="50%" %}
 
-{% include image.html name="4.png" alt="Confirmação de inclusão de novo membro na equipe" width="100%" %}
+{% include image.html name="4.png" alt="Confirmação de inclusão de novo membro na equipe" width="50%" %}
 
 Retorne ao menu *Configurações > Canais de atendimento* e selecione o usuário que foi inserido, selecione o novo atendente e clique em Salvar.
 

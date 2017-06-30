@@ -1,6 +1,6 @@
 ---
 title:  "Incluir gráficos para análise de dados referentes aos atendimentos"
-date:   2017-06-23 09:00:00 +0000
+date:   2017-06-30 09:00:00 +0000
 categories: [Novidades]
 tags: [releases]
 author: samantha
@@ -28,9 +28,9 @@ Para inserir os gráficos, clique no botão “Novo gráfico”.
 
 Na tela Novo gráfico, selecione o gráfico que gostaria de inserir e logo depois o tipo: Lista, Linha, Pizza ou Barras, e clique em Confirmar.
 
-{% include image.html name="2.png" alt="Criar novo gráfico" width="100%" %}
+{% include image.html name="2.png" alt="Criar novo gráfico" width="50%" %}
 
-{% include image.html name="3.png" alt="Gráfico de Quantidade de atendimentos" width="100%" %}
+{% include image.html name="3.png" alt="Gráfico de Quantidade de atendimentos" width="50%" %}
 
 Gostou das novidades? Por favor, deixe seu comentário ou peça ajuda em nosso fórum.
 
