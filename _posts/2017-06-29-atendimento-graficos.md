@@ -1,15 +1,15 @@
 ---
 title:  "Incluir gráficos para análise de dados referentes aos atendimentos"
-date:   2017-06-29 10:00:00 +0000
+date:   2017-06-23 09:00:00 +0000
 categories: [Novidades]
 tags: [releases]
 author: samantha
 ---
 
 Em junho lançamos a nova versão do template de Atendimento manual. Nessa série de posts sobre o template de atendimento manual vimos como: 
-* [Inserir múltiplos atendentes]()
-* [Configurar um resposta automática]()
-* [Realizar atendimento através do Blip Web]()
+* [Inserir múltiplos atendentes](http://blog.blip.ai/2017/06/30/atendimento.html)
+* [Configurar um resposta automática](http://blog.blip.ai/2017/06/30/atendimento-resposta-automatica.html)
+* [Realizar atendimento através do Blip Web](http://blog.blip.ai/2017/06/30/atendimento-blip-web.html)
 
 E para finalizar, neste post você vamos conhecer sobre como incluir gráficos para análise de dados referentes aos atendimentos realizados.
 

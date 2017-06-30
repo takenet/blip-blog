@@ -1,6 +1,6 @@
 ---
 title:  "Atendimento Manual"
-date:   2017-06-29 18:00:00 +0000
+date:   2017-06-30 12:00:00 +0000
 categories: [Novidades]
 tags: [releases]
 author: samantha
@@ -34,5 +34,5 @@ As mensagens recebidas serão divididas entre todos os atendentes disponíveis. 
 
 Espero que tenham gostado!!
 
-Conheça mais sobre como configurar as respostas automáticas para o seu chatbot, acesse o próximo post dessa série sobre as novidades do Atendimento manual [aqui](http://blog.blip.ai/2017/06/29/atendimento-resposta-automatica.html).
+Conheça mais sobre como configurar as respostas automáticas para o seu chatbot, acesse o próximo post dessa série sobre as novidades do Atendimento manual [aqui](http://blog.blip.ai/2017/06/30/atendimento-resposta-automatica.html).
 

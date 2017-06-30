@@ -1,12 +1,12 @@
 ---
 title:  "Configurar resposta automática"
-date:   2017-06-29 10:00:00 +0000
+date:   2017-06-30 11:00:00 +0000
 categories: [Novidades]
 tags: [releases]
 author: samantha
 ---
 
-No post [Atendimento Manual](http://blog.blip.ai/2017/06/29/atendimento.html) vimos que agora é possível incluir múltiplos atendentes em chatbot de template Atendimento Manual. Neste post vamos conhecer mais sobre a configuração de mensagens automáticas.
+No post [Atendimento Manual](http://blog.blip.ai/2017/06/30/atendimento.html) vimos que agora é possível incluir múltiplos atendentes em chatbot de template Atendimento Manual. Neste post vamos conhecer mais sobre a configuração de mensagens automáticas.
 
 <!--preview-->
 
@@ -30,7 +30,7 @@ Para verificar se existem atendentes online, basta acessar o menu Canais de aten
 
 Espero que tenham gostado!!
 
-Quer saber como realizar atendimento através do Blip Web? Acesse o próximo post dessa série sobre as novidades do Atendimento manual [aqui](http://blog.blip.ai/2017/06/29/atendimento-graficos.html).
+Quer saber como realizar atendimento através do Blip Web? Acesse o próximo post dessa série sobre as novidades do Atendimento manual [aqui](http://blog.blip.ai/2017/06/30/atendimento-blip-web.html).
 
 
 
