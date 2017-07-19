@@ -62,13 +62,12 @@ Com o modelo publicado, deve-se utilizar a [**extensão de inteligência artific
 
 É possível visualizar todas as análises realizadas com seu modelo e as intenções identificadas. Para cada análise, o BLiP permite **sugerir uma intenção diferente** da identificada pelo provedor de IA.
 
-{% include image.html name="enhancement1.png" alt="Publicação" width="70%" %}
+{% include image.html name="enhancement1.png" alt="Aprimoramento" width="70%" %}
 
 Isso permite que o modelo **evolua a partir do feedback** dos usuários. Ao realizar a associação, é gerada uma sugestão que deve ser aprovada pelo  responsável do modelo. 
 
-{% include image.html name="enhancement2.png" alt="Publicação" width="70%" %}
+{% include image.html name="enhancement2.png" alt="Aprimoramento" width="70%" %}
 
 Se aprovada, a frase do usuário é **associada à intenção sugerida** e passa a ser válida para esta intenção no próximo treinamento do modelo.
-
 
 Ficou com alguma dúvida ? Deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
