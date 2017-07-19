@@ -1,5 +1,5 @@
 ---
-title:  "Atualizações da plataforma - julho/2017 - atualização 2"
+title:  "Hub de inteligência artificial - julho/2017 - atualização 2"
 date:   2017-07-20 10:00:00 +0000
 categories: [Novidades]
 tags: [releases]
