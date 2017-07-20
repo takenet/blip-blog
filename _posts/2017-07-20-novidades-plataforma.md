@@ -38,7 +38,7 @@ A inclusão de entidades é feita através do menu *Inteligência artificial* > 
 
 {% include image.html name="entity1.png" alt="Entidade" width="70%" %}
 
-Ao incluir uma nova entidade, deve-se informar os valores possíveis da mesma, além de sinônimos para cada um destes valores, para aumentar a assertividade do reconhecimento das mesmas.
+Ao incluir uma nova entidade, deve-se informar os valores possíveis da mesma, além de sinônimos para cada um destes valores, para aumentar a assertividade do reconhecimento.
 
 {% include image.html name="entity2.png" alt="Entidade" width="70%" %}
 
@@ -70,4 +70,4 @@ Isso permite que o modelo **evolua a partir do feedback** dos usuários. Ao real
 
 Se aprovada, a frase do usuário é **associada à intenção sugerida** e passa a ser válida para esta intenção no próximo treinamento do modelo.
 
-Ficou com alguma dúvida ? Deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
+Ficou com alguma dúvida ? Deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai). E confira nossa [documentação](https://portal.blip.ai/#/docs/extensions/artificial-intelligence) para maiores informações.
