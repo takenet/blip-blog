@@ -25,6 +25,3 @@ Siga todas as instruções dos 4 passos necessários para publicar seu bot, conf
 Pronto, é só isso 😎, seu bot já pode ser utilizado dentro do *Workplace*
 
 Gostou das novidades ❤️ ? Sentiu falta de alguma coisa ? Tem alguma sugestão ou crítica ? Por favor, deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
-
-
-
