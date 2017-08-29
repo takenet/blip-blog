@@ -19,11 +19,11 @@ A partir de agora, além de criar gráficos customizados por bot, é possível t
 
 A partir de agora, o antigo módulo **Painel** passa a se chamar **Análise de dados**, refletindo ainda mais o propósito da funcionalidade.
 
-{% include image.html name="compPermissions.png" alt="Comparação entre o modo de permissão novo e antigo" width="70%" %}
+{% include image.html name="compPermissions.png" alt="Comparação entre o modo de permissão novo e antigo" width="90%" %}
 
 A permissão **Análise de dados** foi substituida pela permissão **Relatórios customizados**. 
 
-{% include image.html name="compAnalyses.png" alt="Comparação entre o módulo de Análise de dados novo e antigo" width="70%" %}
+{% include image.html name="compAnalyses.png" alt="Comparação entre o módulo de Análise de dados novo e antigo" width="60%" %}
 
 - Os usuários que tiverem permissão de leitura, poderão **apenas ver** todos os gráficos de todos os relatórios *públicos*.
 - Os usuários que tiverem permissão de leitura e escrita, poderão **ver, editar, mudar a ordem e exlcuir** todos os gráficos de todos os relatórios *públicos*. Além disso, usuários com permissão de escrita podem criar seus próprios relatórios.
@@ -45,7 +45,11 @@ Caso a opção **Visível somente para mim** seja selecionada o relatório __nã
 
 Depois de criar um relatório, o usuário pode incluir quantos gráficos achar necessário. Para isto, basta clicar no botão *Adicionar Gráfico*, escolher um formato, definir o nome e a categoria de eventos que servirá como fonte dos dados para o gráfico (conforme imagens abaixo).
 
+Passo 1:
+
 {% include image.html name="createGraph.png" alt="Criando um gráfico em um relatório" width="70%" %}
+
+Passo 2:
 
 {% include image.html name="createGraphStep2.png" alt="Criando um gráfico em um relatório - Passo 2" width="70%" %}
 
