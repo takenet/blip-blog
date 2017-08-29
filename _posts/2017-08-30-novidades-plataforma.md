@@ -7,7 +7,7 @@ author: pacheco
 ---
 
 Com o intuito de facilitar ainda mais a análise de dados dos bots, o [BLiP](https://blip.ai) lançou mais uma super novidade. 
-A partir de agora, além de criar gráficos customizados por bot é possível também:
+A partir de agora, além de criar gráficos customizados por bot, é possível também:
 
 * Categorizar os gráficos em relatórios personalizados;
 * Criar múltiplos relatórios (públicos ou privados);
@@ -17,11 +17,11 @@ A partir de agora, além de criar gráficos customizados por bot é possível ta
 
 ## O que mudou ?
 
-1. A partir de agora, o antigo módulo **Painel** passa a se chamar **Análise de dados**, refletindo ainda mais o propósito da funcionalidade.
+A partir de agora, o antigo módulo **Painel** passa a se chamar **Análise de dados**, refletindo ainda mais o propósito da funcionalidade.
 
 {% include image.html name="compPermissions.png" alt="Comparação entre o modo de permissão novo e antigo" width="70%" %}
 
-2. A permissão **Análise de dados** foi substituida pela permissão **Relatórios customizados**. 
+A permissão **Análise de dados** foi substituida pela permissão **Relatórios customizados**. 
 
 {% include image.html name="compAnalyses.png" alt="Comparação entre o módulo de Análise de dados novo e antigo" width="70%" %}
 
