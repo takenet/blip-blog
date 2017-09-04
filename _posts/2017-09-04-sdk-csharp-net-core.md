@@ -6,7 +6,7 @@ tags: [releases]
 author: andreb
 ---
 
-Agora é possível criar chatbots multiplataforma utilizando o **SDK C# no BLiP**!
+Agora é possível criar chatbots multiplataforma utilizando a nova versão do **SDK C# no BLiP**!
 
 <!--preview-->
 
@@ -14,14 +14,14 @@ Lançamos na semana passa uma nova versão no **[SDK C# do BLiP](https://portal.
 
 Consulte [nossa documentação](https://portal.blip.ai/#/docs/sdks/csharp/installing) para saber como começar a utilizá-lo.
 
-## Migrando do antigo SDK
+### Migrando do antigo SDK
 
 Para realizar a migração de um chatbot que utiliza a versão antiga do SDK (baseada no pacote `Takenet.MessagingHub.Client`) é necessário realizar os seguintes passos:
 
-- Criar um novo projeto utilizando o template do BLiP, utilizando o comando `dotnet new blip-console` (como descrito no tópico [**Instalação**]((https://portal.blip.ai/#/docs/sdks/csharp/installing) da documentação)
-- Copiar as classes e o arquivo `application.json` para o novo projeto e instalar as demais dependências (exceto do SDK do BLiP, que já está instalada no template)
-- Substituir o nome das interfaces e classes antigas para o SDK novo (mapeado abaixo)
-- Ajustar as chamadas dos métodos com assinaturas alteradas (mapeado abaixo)
+- Criar um novo projeto utilizando o template do BLiP, utilizando o comando `dotnet new blip-console` (como descrito no tópico [**Instalação**](https://portal.blip.ai/#/docs/sdks/csharp/installing) da documentação).
+- Copiar as classes e o arquivo `application.json` para o novo projeto e instalar as demais dependências (exceto do SDK do BLiP, que já está instalada no template).
+- Substituir o nome das interfaces e classes antigas para o SDK novo (mapeado abaixo).
+- Ajustar as chamadas dos métodos com assinaturas alteradas (mapeado abaixo).
 
 Não é possível reutilizar os projetos antigos pois os mesmos se baseiam na versão antiga do `.csproj` do .NET, que é incompatível com projetos .NET Standard / .NET Core utilizados no novo SDK do BLiP.
 
