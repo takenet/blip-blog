@@ -26,7 +26,7 @@ A permissão **Análise de dados** foi substituida pela permissão **Relatórios
 {% include image.html name="compPermissions.png" alt="Comparação entre o modo de permissão novo e antigo" width="90%" %}
 
 - Os usuários que tiverem permissão de leitura, poderão **apenas ver** todos os gráficos de todos os relatórios *públicos*.
-- Os usuários que tiverem permissão de leitura e escrita, poderão **ver, editar, mudar a ordem e exlcuir** todos os gráficos criados em seus próprios relatórios. Além disso, usuários com permissão de leitura ou escrita podem visualizar relatórios *públicos* de outras pessoas.
+- Os usuários que tiverem permissão de leitura e escrita, poderão **ver, editar, mudar a ordem e excluir** todos os gráficos criados em seus próprios relatórios. Além disso, usuários com permissão de leitura ou escrita podem visualizar relatórios *públicos* de outras pessoas.
 - Os usuários que não tiverem a permissão **Relatórios customizados** não poderão ver nem criar relatórios customizados. Entretanto, os mesmos ainda poderão ver os dados de **Visão geral** do bot.
 
 > **Obs.: Todos os gráficos que existiam na aba Análise de dados foram mantidos, mas podem ser excluídos a partir de agora**
