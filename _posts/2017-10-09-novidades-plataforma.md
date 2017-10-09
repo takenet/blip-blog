@@ -114,4 +114,8 @@ Para ativar o processamento nos envios, basta incluir nos medatados da mensagem 
 }
 ```
 
+Confira nossa documentação para mais informações [sobre **spinning syntax**](http://hmg.portal.blip.ai/#/docs/content-types).
+
+---
+
 Gostou das novidades ❤️? Sentiu falta de alguma coisa? Tem alguma sugestão ou crítica? Por favor, deixe seu comentário ou peça ajuda em nosso [fórum](https://forum.blip.ai).
