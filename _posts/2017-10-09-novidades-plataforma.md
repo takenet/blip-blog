@@ -12,7 +12,7 @@ Nas últimas semanas o [BLiP](https://blip.ai) recebeu novas funcionalidades par
 
 ## Transcrição das conversas dos contatos
 
-É possível agora visualizar as conversas com cada contato na lista de contatos do bot. Para isso, basta encontrar o contato e escolher a opção **Ver mais**.
+É possível agora visualizar as conversas com cada cliente na lista de contatos do bot. Para isso, basta encontrar o contato e escolher a opção **Ver mais**.
 
 {% include image.html name="contacts1.png" alt="self" width="70%" %}
 
