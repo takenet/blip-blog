@@ -75,11 +75,11 @@ Por exemplo, ao enviar o seguinte documento no BLiP:
 
 O mesmo é exibido da seguinte forma no Messenger:
 
-{% include image.html name="aspect-ratio1.png" alt="self" width="70%" %}
+{% include image.html name="aspect-ratio1.png" alt="self" width="50%" %}
 
 Se for enviada sem a opção `aspectRatio`, a mesma seria exibida assim:
 
-{% include image.html name="aspect-ratio2.png" alt="self" width="70%" %}
+{% include image.html name="aspect-ratio2.png" alt="self" width="50%" %}
 
 Confira a documentação do tipo [**menu multimídia**](http://hmg.portal.blip.ai/#/docs/content-types/media-link) para mais informações.
 
