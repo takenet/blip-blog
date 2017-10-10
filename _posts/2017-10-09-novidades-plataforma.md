@@ -30,7 +30,7 @@ Você pode definir qualquer URL HTTP para receber os eventos de forma assíncron
 
 {% include image.html name="webhook2.png" alt="self" width="70%" %}
 
-## Métricas dos BLiP em dashboard personalizado
+## Métricas do BLiP em dashboard personalizado
 
 Agora é possível incluir as métricas que o BLiP gera automaticamente para os bots em relatório personalizados que são gerados a partir dos dados da extensão **análise de eventos**.
 
@@ -81,7 +81,7 @@ Se for enviada sem a opção `aspectRatio`, a mesma seria exibida assim:
 
 {% include image.html name="aspect-ratio2.png" alt="self" %}
 
-Confira a documentação do tipo [**menu multimídia**](http://hmg.portal.blip.ai/#/docs/content-types/media-link) para mais informações.
+Confira a documentação do tipo [**link de mídia**](http://hmg.portal.blip.ai/#/docs/content-types/media-link) para mais informações.
 
 ## Texto rotativo com spintax
 
